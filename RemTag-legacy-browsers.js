@@ -969,11 +969,11 @@ function Pre_RewardRoutineEnd(snapshot) {
         }
     
     pre_reward_response.stop();
-    if (key_resp.corr) {
+    if (pre_reward_response.corr) {
         num_correct += 1;
         console.log("correct");
     }
-    console.log(key_resp.keys);
+    console.log(pre_reward_response.keys);
     
     return Scheduler.Event.NEXT;
   };
@@ -1472,13 +1472,8 @@ function RewardRoutineEachFrame(snapshot) {
     if (reward_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       reward_text.setAutoDraw(false);
     }
-    if (key_resp_2.keys) {
-        console.log("***");
-        console.log(key_resp_2.keys);
-        console.log(corr_resp);
-        console.log((Number.parseInt(key_resp_2.keys) === Number.parseInt(corr_resp)));
-        console.log("***");
-        if ((Number.parseInt(key_resp_2.keys) === Number.parseInt(corr_resp))) {
+    if (reward_response.keys) {
+        if (reward_response.corr) {
             reward_text.text = "Hit! You Won!";
             reward_star.opacity = 1.0;
             num_correct += 1;
