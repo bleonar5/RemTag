@@ -190,6 +190,9 @@ function Pre_RewardRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(9.100000);
     // update component parameters for each repeat
+    enc.setImage(stim_name_enc);
+    left.setImage(stim_name_left);
+    right.setImage(stim_name_right);
     key_resp.keys = undefined;
     key_resp.rt = undefined;
     _key_resp_allKeys = [];
@@ -237,10 +240,6 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       enc.setAutoDraw(false);
     }
     
-    if (enc.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      enc.setImage(stim_name_enc);
-    }
-    
     // *cross* updates
     if (t >= 2.0 && cross.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -269,10 +268,6 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       left.setAutoDraw(false);
     }
     
-    if (left.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      left.setImage(stim_name_left);
-    }
-    
     // *right* updates
     if (t >= 7.0 && right.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -285,10 +280,6 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (right.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       right.setAutoDraw(false);
-    }
-    
-    if (right.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      right.setImage(stim_name_right);
     }
     
     // *isi* updates
