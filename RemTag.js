@@ -55,10 +55,10 @@ flowScheduler.add(repeat_practiceLoopEnd);
 flowScheduler.add(continue_2RoutineBegin());
 flowScheduler.add(continue_2RoutineEachFrame());
 flowScheduler.add(continue_2RoutineEnd());
-const trialsLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsLoopBegin, trialsLoopScheduler);
-flowScheduler.add(trialsLoopScheduler);
-flowScheduler.add(trialsLoopEnd);
+const trials_1LoopScheduler = new Scheduler(psychoJS);
+flowScheduler.add(trials_1LoopBegin, trials_1LoopScheduler);
+flowScheduler.add(trials_1LoopScheduler);
+flowScheduler.add(trials_1LoopEnd);
 flowScheduler.add(reward_insRoutineBegin());
 flowScheduler.add(reward_insRoutineEachFrame());
 flowScheduler.add(reward_insRoutineEnd());
@@ -157,7 +157,7 @@ function experimentInit() {
     text: 'In this experiment, you will perform several tasks and complete several questionnaires.\n\nYou will be paid X for participation, and you will have the opportunity to earn up to X based on your performance.\n\nThis is a two-day experiment. The second part of the experiment will take place 24 hours from now. If you do not return in 24 hours, you will not receive any payment.\n\nPress the space bar to continue.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -172,7 +172,7 @@ function experimentInit() {
     text: 'On each trial, you will see an image. After a 5-second delay, you will  then be shown two images, one of which will match the image you saw previously (TARGET), and one of which is new. \n\nYour task is to indicate within 600ms which image is the target image. \n\nUse the “1” key to indicate that the target is on the left, and use the “2” key to indicate that the target is on the right.\n\nPlease try to respond as quickly and as accurately as possible. Press space bar to continue.\n',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -238,7 +238,7 @@ function experimentInit() {
     text: 'You will now begin the first phase of the experiment.\n\nPress space bar to continue.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -302,7 +302,7 @@ function experimentInit() {
     text: 'In the next phase of the experiment, you will complete the same task that you did previously. This time, you will have the opportunity to earn a bonus by correct performance. \n\nOn each trial, you will receive feedback after indicating which item is the target in the form of GREEN and WHITE stars. \n\nPerformance of 90% or more on the GREEN star trials will result in a bonus of X.\n\nPerformance of 90% or more on the WHITE star trials will result in a bonus of X. You will receive information about the total bonus you earned tomorrow, at the end of the experiment.\n\nAs in the last phase, use the “1” key to indicate that the target is on the left, and use the “2” key to indicate that the target is on the right. Press spacebar to continue.\n',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -701,35 +701,35 @@ function repeat_practiceLoopEnd() {
 }
 
 
-var trials;
-function trialsLoopBegin(trialsLoopScheduler) {
+var trials_1;
+function trials_1LoopBegin(trials_1LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
-  trials = new TrialHandler({
+  trials_1 = new TrialHandler({
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'sample_list_phase1.csv',
-    seed: undefined, name: 'trials'
+    seed: undefined, name: 'trials_1'
   });
-  psychoJS.experiment.addLoop(trials); // add the loop to the experiment
-  currentLoop = trials;  // we're now the current loop
+  psychoJS.experiment.addLoop(trials_1); // add the loop to the experiment
+  currentLoop = trials_1;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
-  for (const thisTrial of trials) {
-    const snapshot = trials.getSnapshot();
-    trialsLoopScheduler.add(importConditions(snapshot));
-    trialsLoopScheduler.add(Pre_RewardRoutineBegin(snapshot));
-    trialsLoopScheduler.add(Pre_RewardRoutineEachFrame(snapshot));
-    trialsLoopScheduler.add(Pre_RewardRoutineEnd(snapshot));
-    trialsLoopScheduler.add(endLoopIteration(trialsLoopScheduler, snapshot));
+  for (const thisTrial_1 of trials_1) {
+    const snapshot = trials_1.getSnapshot();
+    trials_1LoopScheduler.add(importConditions(snapshot));
+    trials_1LoopScheduler.add(Pre_RewardRoutineBegin(snapshot));
+    trials_1LoopScheduler.add(Pre_RewardRoutineEachFrame(snapshot));
+    trials_1LoopScheduler.add(Pre_RewardRoutineEnd(snapshot));
+    trials_1LoopScheduler.add(endLoopIteration(trials_1LoopScheduler, snapshot));
   }
 
   return Scheduler.Event.NEXT;
 }
 
 
-function trialsLoopEnd() {
-  psychoJS.experiment.removeLoop(trials);
+function trials_1LoopEnd() {
+  psychoJS.experiment.removeLoop(trials_1);
 
   return Scheduler.Event.NEXT;
 }
@@ -779,6 +779,9 @@ function Pre_RewardRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(9.100000);
     // update component parameters for each repeat
+    enc.setImage(stim_name_enc);
+    left.setImage(stim_name_left);
+    right.setImage(stim_name_right);
     key_resp.keys = undefined;
     key_resp.rt = undefined;
     _key_resp_allKeys = [];
@@ -824,10 +827,6 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       enc.setAutoDraw(false);
     }
     
-    if (enc.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      enc.setImage(stim_name_enc);
-    }
-    
     // *cross* updates
     if (t >= 2.0 && cross.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -856,10 +855,6 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       left.setAutoDraw(false);
     }
     
-    if (left.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      left.setImage(stim_name_left);
-    }
-    
     // *right* updates
     if (t >= 7.0 && right.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -872,10 +867,6 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (right.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       right.setAutoDraw(false);
-    }
-    
-    if (right.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      right.setImage(stim_name_right);
     }
     
     // *isi* updates
@@ -1310,6 +1301,9 @@ function RewardRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(10.100000);
     // update component parameters for each repeat
+    enc2.setImage(stim_name_enc);
+    left2.setImage(stim_name_left);
+    right2.setImage(stim_name_right);
     key_resp_2.keys = undefined;
     key_resp_2.rt = undefined;
     _key_resp_2_allKeys = [];
@@ -1357,10 +1351,6 @@ function RewardRoutineEachFrame(snapshot) {
       enc2.setAutoDraw(false);
     }
     
-    if (enc2.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      enc2.setImage(stim_name_enc);
-    }
-    
     // *cross_2* updates
     if (t >= 2.0 && cross_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -1389,10 +1379,6 @@ function RewardRoutineEachFrame(snapshot) {
       left2.setAutoDraw(false);
     }
     
-    if (left2.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      left2.setImage(stim_name_left);
-    }
-    
     // *right2* updates
     if (t >= 7.0 && right2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -1405,10 +1391,6 @@ function RewardRoutineEachFrame(snapshot) {
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (right2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       right2.setAutoDraw(false);
-    }
-    
-    if (right2.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      right2.setImage(stim_name_right);
     }
     
     // *isi_2* updates

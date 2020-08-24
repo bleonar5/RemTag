@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.2),
-    on Mon Aug 24 11:26:51 2020
+    on Mon Aug 24 12:56:23 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -28,8 +28,6 @@ import sys  # to get file system encoding
 
 from psychopy.hardware import keyboard
 
-num_correct = 0
-num_correct = 0
 
 
 # Ensure that relative paths start from the same directory as this script
@@ -87,7 +85,7 @@ instructionsClock = core.Clock()
 instructions_page = visual.TextStim(win=win, name='instructions_page',
     text='In this experiment, you will perform several tasks and complete several questionnaires.\n\nYou will be paid X for participation, and you will have the opportunity to earn up to X based on your performance.\n\nThis is a two-day experiment. The second part of the experiment will take place 24 hours from now. If you do not return in 24 hours, you will not receive any payment.\n\nPress the space bar to continue.',
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -98,7 +96,7 @@ pre_re_insClock = core.Clock()
 text_2 = visual.TextStim(win=win, name='text_2',
     text='On each trial, you will see an image. After a 5-second delay, you will  then be shown two images, one of which will match the image you saw previously (TARGET), and one of which is new. \n\nYour task is to indicate within 600ms which image is the target image. \n\nUse the “1” key to indicate that the target is on the left, and use the “2” key to indicate that the target is on the right.\n\nPlease try to respond as quickly and as accurately as possible. Press space bar to continue.\n',
     font='Arial',
-    pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -154,7 +152,7 @@ continue_2Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
     text='You will now begin the first phase of the experiment.\n\nPress space bar to continue.',
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -207,7 +205,7 @@ reward_insClock = core.Clock()
 instructions_page_2 = visual.TextStim(win=win, name='instructions_page_2',
     text='In the next phase of the experiment, you will complete the same task that you did previously. This time, you will have the opportunity to earn a bonus by correct performance. \n\nOn each trial, you will receive feedback after indicating which item is the target in the form of GREEN and WHITE stars. \n\nPerformance of 90% or more on the GREEN star trials will result in a bonus of X.\n\nPerformance of 90% or more on the WHITE star trials will result in a bonus of X. You will receive information about the total bonus you earned tomorrow, at the end of the experiment.\n\nAs in the last phase, use the “1” key to indicate that the target is on the left, and use the “2” key to indicate that the target is on the right. Press spacebar to continue.\n',
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -367,6 +365,7 @@ if key_resp_3.keys != None:  # we had a response
 thisExp.addData('key_resp_3.started', key_resp_3.tStartRefresh)
 thisExp.addData('key_resp_3.stopped', key_resp_3.tStopRefresh)
 thisExp.nextEntry()
+num_correct = 0
 # the Routine "instructions" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -508,6 +507,9 @@ for thisRepeat_practice in repeat_practice:
         continueRoutine = True
         routineTimer.add(9.100000)
         # update component parameters for each repeat
+        enc.setImage(stim_name_enc)
+        left.setImage(stim_name_left)
+        right.setImage(stim_name_right)
         key_resp.keys = []
         key_resp.rt = []
         _key_resp_allKeys = []
@@ -551,8 +553,6 @@ for thisRepeat_practice in repeat_practice:
                     enc.frameNStop = frameN  # exact frame index
                     win.timeOnFlip(enc, 'tStopRefresh')  # time at next scr refresh
                     enc.setAutoDraw(False)
-            if enc.status == STARTED:  # only update if drawing
-                enc.setImage(stim_name_enc, log=False)
             
             # *cross* updates
             if cross.status == NOT_STARTED and tThisFlip >= 2.0-frameTolerance:
@@ -587,8 +587,6 @@ for thisRepeat_practice in repeat_practice:
                     left.frameNStop = frameN  # exact frame index
                     win.timeOnFlip(left, 'tStopRefresh')  # time at next scr refresh
                     left.setAutoDraw(False)
-            if left.status == STARTED:  # only update if drawing
-                left.setImage(stim_name_left, log=False)
             
             # *right* updates
             if right.status == NOT_STARTED and tThisFlip >= 7.0-frameTolerance:
@@ -606,8 +604,6 @@ for thisRepeat_practice in repeat_practice:
                     right.frameNStop = frameN  # exact frame index
                     win.timeOnFlip(right, 'tStopRefresh')  # time at next scr refresh
                     right.setAutoDraw(False)
-            if right.status == STARTED:  # only update if drawing
-                right.setImage(stim_name_right, log=False)
             
             # *isi* updates
             if isi.status == NOT_STARTED and tThisFlip >= 7.6-frameTolerance:
@@ -871,28 +867,31 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=1, method='sequential', 
+trials_1 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('sample_list_phase1.csv'),
-    seed=None, name='trials')
-thisExp.addLoop(trials)  # add the loop to the experiment
-thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
-# abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-if thisTrial != None:
-    for paramName in thisTrial:
-        exec('{} = thisTrial[paramName]'.format(paramName))
+    seed=None, name='trials_1')
+thisExp.addLoop(trials_1)  # add the loop to the experiment
+thisTrial_1 = trials_1.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisTrial_1.rgb)
+if thisTrial_1 != None:
+    for paramName in thisTrial_1:
+        exec('{} = thisTrial_1[paramName]'.format(paramName))
 
-for thisTrial in trials:
-    currentLoop = trials
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-    if thisTrial != None:
-        for paramName in thisTrial:
-            exec('{} = thisTrial[paramName]'.format(paramName))
+for thisTrial_1 in trials_1:
+    currentLoop = trials_1
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_1.rgb)
+    if thisTrial_1 != None:
+        for paramName in thisTrial_1:
+            exec('{} = thisTrial_1[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "Pre_Reward"-------
     continueRoutine = True
     routineTimer.add(9.100000)
     # update component parameters for each repeat
+    enc.setImage(stim_name_enc)
+    left.setImage(stim_name_left)
+    right.setImage(stim_name_right)
     key_resp.keys = []
     key_resp.rt = []
     _key_resp_allKeys = []
@@ -936,8 +935,6 @@ for thisTrial in trials:
                 enc.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(enc, 'tStopRefresh')  # time at next scr refresh
                 enc.setAutoDraw(False)
-        if enc.status == STARTED:  # only update if drawing
-            enc.setImage(stim_name_enc, log=False)
         
         # *cross* updates
         if cross.status == NOT_STARTED and tThisFlip >= 2.0-frameTolerance:
@@ -972,8 +969,6 @@ for thisTrial in trials:
                 left.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(left, 'tStopRefresh')  # time at next scr refresh
                 left.setAutoDraw(False)
-        if left.status == STARTED:  # only update if drawing
-            left.setImage(stim_name_left, log=False)
         
         # *right* updates
         if right.status == NOT_STARTED and tThisFlip >= 7.0-frameTolerance:
@@ -991,8 +986,6 @@ for thisTrial in trials:
                 right.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(right, 'tStopRefresh')  # time at next scr refresh
                 right.setAutoDraw(False)
-        if right.status == STARTED:  # only update if drawing
-            right.setImage(stim_name_right, log=False)
         
         # *isi* updates
         if isi.status == NOT_STARTED and tThisFlip >= 7.6-frameTolerance:
@@ -1065,16 +1058,16 @@ for thisTrial in trials:
     for thisComponent in Pre_RewardComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials.addData('enc.started', enc.tStartRefresh)
-    trials.addData('enc.stopped', enc.tStopRefresh)
-    trials.addData('cross.started', cross.tStartRefresh)
-    trials.addData('cross.stopped', cross.tStopRefresh)
-    trials.addData('left.started', left.tStartRefresh)
-    trials.addData('left.stopped', left.tStopRefresh)
-    trials.addData('right.started', right.tStartRefresh)
-    trials.addData('right.stopped', right.tStopRefresh)
-    trials.addData('isi.started', isi.tStartRefresh)
-    trials.addData('isi.stopped', isi.tStopRefresh)
+    trials_1.addData('enc.started', enc.tStartRefresh)
+    trials_1.addData('enc.stopped', enc.tStopRefresh)
+    trials_1.addData('cross.started', cross.tStartRefresh)
+    trials_1.addData('cross.stopped', cross.tStopRefresh)
+    trials_1.addData('left.started', left.tStartRefresh)
+    trials_1.addData('left.stopped', left.tStopRefresh)
+    trials_1.addData('right.started', right.tStartRefresh)
+    trials_1.addData('right.stopped', right.tStopRefresh)
+    trials_1.addData('isi.started', isi.tStartRefresh)
+    trials_1.addData('isi.stopped', isi.tStopRefresh)
     # check responses
     if key_resp.keys in ['', [], None]:  # No response was made
         key_resp.keys = None
@@ -1083,20 +1076,20 @@ for thisTrial in trials:
            key_resp.corr = 1;  # correct non-response
         else:
            key_resp.corr = 0;  # failed to respond (incorrectly)
-    # store data for trials (TrialHandler)
-    trials.addData('key_resp.keys',key_resp.keys)
-    trials.addData('key_resp.corr', key_resp.corr)
+    # store data for trials_1 (TrialHandler)
+    trials_1.addData('key_resp.keys',key_resp.keys)
+    trials_1.addData('key_resp.corr', key_resp.corr)
     if key_resp.keys != None:  # we had a response
-        trials.addData('key_resp.rt', key_resp.rt)
-    trials.addData('key_resp.started', key_resp.tStartRefresh)
-    trials.addData('key_resp.stopped', key_resp.tStopRefresh)
+        trials_1.addData('key_resp.rt', key_resp.rt)
+    trials_1.addData('key_resp.started', key_resp.tStartRefresh)
+    trials_1.addData('key_resp.stopped', key_resp.tStopRefresh)
     if key_resp.corr:
         num_correct += 1
         print('correct')
     print(key_resp.keys)
     thisExp.nextEntry()
     
-# completed 1 repeats of 'trials'
+# completed 1 repeats of 'trials_1'
 
 
 # ------Prepare to start Routine "reward_ins"-------
@@ -1218,6 +1211,9 @@ for thisTrial_2 in trials_2:
     continueRoutine = True
     routineTimer.add(10.100000)
     # update component parameters for each repeat
+    enc2.setImage(stim_name_enc)
+    left2.setImage(stim_name_left)
+    right2.setImage(stim_name_right)
     key_resp_2.keys = []
     key_resp_2.rt = []
     _key_resp_2_allKeys = []
@@ -1262,8 +1258,6 @@ for thisTrial_2 in trials_2:
                 enc2.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(enc2, 'tStopRefresh')  # time at next scr refresh
                 enc2.setAutoDraw(False)
-        if enc2.status == STARTED:  # only update if drawing
-            enc2.setImage(stim_name_enc, log=False)
         
         # *cross_2* updates
         if cross_2.status == NOT_STARTED and tThisFlip >= 2.0-frameTolerance:
@@ -1298,8 +1292,6 @@ for thisTrial_2 in trials_2:
                 left2.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(left2, 'tStopRefresh')  # time at next scr refresh
                 left2.setAutoDraw(False)
-        if left2.status == STARTED:  # only update if drawing
-            left2.setImage(stim_name_left, log=False)
         
         # *right2* updates
         if right2.status == NOT_STARTED and tThisFlip >= 7.0-frameTolerance:
@@ -1317,8 +1309,6 @@ for thisTrial_2 in trials_2:
                 right2.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(right2, 'tStopRefresh')  # time at next scr refresh
                 right2.setAutoDraw(False)
-        if right2.status == STARTED:  # only update if drawing
-            right2.setImage(stim_name_right, log=False)
         
         # *isi_2* updates
         if isi_2.status == NOT_STARTED and tThisFlip >= 8.6-frameTolerance:
