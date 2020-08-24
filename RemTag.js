@@ -1511,6 +1511,7 @@ function continue_2RoutineEnd(snapshot) {
 
 
 var _instructions_continue_4_allKeys;
+var pre_reward_accuracy;
 var reward_insComponents;
 function reward_insRoutineBegin(snapshot) {
   return function () {
@@ -1522,6 +1523,8 @@ function reward_insRoutineBegin(snapshot) {
     instructions_continue_4.keys = undefined;
     instructions_continue_4.rt = undefined;
     _instructions_continue_4_allKeys = [];
+    pre_reward_accuracy = num_correct;
+    
     // keep track of which components have finished
     reward_insComponents = [];
     reward_insComponents.push(instructions_page_2);
@@ -1620,7 +1623,6 @@ function reward_insRoutineEnd(snapshot) {
         }
     
     instructions_continue_4.stop();
-    RemTag.addData("pre_reward_acc", num_correct);
     num_correct = 0;
     
     // the Routine "reward_ins" was not non-slip safe, so reset the non-slip timer
@@ -2170,6 +2172,7 @@ function continue_3RoutineEnd(snapshot) {
 }
 
 
+var reward_accuracy;
 var finalComponents;
 function finalRoutineBegin(snapshot) {
   return function () {
@@ -2178,6 +2181,8 @@ function finalRoutineBegin(snapshot) {
     finalClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    reward_accuracy = num_correct;
+    
     // keep track of which components have finished
     finalComponents = [];
     
@@ -2233,8 +2238,6 @@ function finalRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    RemTag.saveData("reward_acc", num_correct);
-    
     // the Routine "final" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
