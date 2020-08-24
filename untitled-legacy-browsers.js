@@ -32,10 +32,10 @@ psychoJS.scheduleCondition(function() { return (psychoJS.gui.dialogComponent.but
 // flowScheduler gets run if the participants presses OK
 flowScheduler.add(updateInfo); // add timeStamp
 flowScheduler.add(experimentInit);
-const trialsLoopScheduler = new Scheduler(psychoJS);
-flowScheduler.add(trialsLoopBegin, trialsLoopScheduler);
-flowScheduler.add(trialsLoopScheduler);
-flowScheduler.add(trialsLoopEnd);
+const trials_1LoopScheduler = new Scheduler(psychoJS);
+flowScheduler.add(trials_1LoopBegin, trials_1LoopScheduler);
+flowScheduler.add(trials_1LoopScheduler);
+flowScheduler.add(trials_1LoopEnd);
 flowScheduler.add(quitPsychoJS, '', true);
 
 // quit if user presses Cancel in dialog box:
@@ -142,37 +142,37 @@ function experimentInit() {
 }
 
 
-var trials;
+var trials_1;
 var currentLoop;
-function trialsLoopBegin(trialsLoopScheduler) {
+function trials_1LoopBegin(trials_1LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
-  trials = new TrialHandler({
+  trials_1 = new TrialHandler({
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'sample_list_phase1.csv',
-    seed: undefined, name: 'trials'
+    seed: undefined, name: 'trials_1'
   });
-  psychoJS.experiment.addLoop(trials); // add the loop to the experiment
-  currentLoop = trials;  // we're now the current loop
+  psychoJS.experiment.addLoop(trials_1); // add the loop to the experiment
+  currentLoop = trials_1;  // we're now the current loop
 
   // Schedule all the trials in the trialList:
-  trials.forEach(function() {
-    const snapshot = trials.getSnapshot();
+  trials_1.forEach(function() {
+    const snapshot = trials_1.getSnapshot();
 
-    trialsLoopScheduler.add(importConditions(snapshot));
-    trialsLoopScheduler.add(Pre_RewardRoutineBegin(snapshot));
-    trialsLoopScheduler.add(Pre_RewardRoutineEachFrame(snapshot));
-    trialsLoopScheduler.add(Pre_RewardRoutineEnd(snapshot));
-    trialsLoopScheduler.add(endLoopIteration(trialsLoopScheduler, snapshot));
+    trials_1LoopScheduler.add(importConditions(snapshot));
+    trials_1LoopScheduler.add(Pre_RewardRoutineBegin(snapshot));
+    trials_1LoopScheduler.add(Pre_RewardRoutineEachFrame(snapshot));
+    trials_1LoopScheduler.add(Pre_RewardRoutineEnd(snapshot));
+    trials_1LoopScheduler.add(endLoopIteration(trials_1LoopScheduler, snapshot));
   });
 
   return Scheduler.Event.NEXT;
 }
 
 
-function trialsLoopEnd() {
-  psychoJS.experiment.removeLoop(trials);
+function trials_1LoopEnd() {
+  psychoJS.experiment.removeLoop(trials_1);
 
   return Scheduler.Event.NEXT;
 }
