@@ -1895,6 +1895,12 @@ function RewardRoutineEachFrame(snapshot) {
       if (_reward_response_allKeys.length > 0) {
         reward_response.keys = _reward_response_allKeys[_reward_response_allKeys.length - 1].name;  // just the last key pressed
         reward_response.rt = _reward_response_allKeys[_reward_response_allKeys.length - 1].rt;
+        // was this correct?
+        if (reward_response.keys == corr_resp) {
+            reward_response.corr = 1;
+        } else {
+            reward_response.corr = 0;
+        }
       }
     }
     
@@ -1969,7 +1975,17 @@ function RewardRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    // was no response the correct answer?!
+    if (reward_response.keys === undefined) {
+      if (['None','none',undefined].includes(corr_resp)) {
+         reward_response.corr = 1;  // correct non-response
+      } else {
+         reward_response.corr = 0;  // failed to respond (incorrectly)
+      }
+    }
+    // store data for thisExp (ExperimentHandler)
     psychoJS.experiment.addData('reward_response.keys', reward_response.keys);
+    psychoJS.experiment.addData('reward_response.corr', reward_response.corr);
     if (typeof reward_response.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('reward_response.rt', reward_response.rt);
         }
