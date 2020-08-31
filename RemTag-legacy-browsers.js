@@ -81,24 +81,24 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'stimuli/pizza.jpeg', 'path': 'stimuli/pizza.jpeg'},
-    {'name': 'stimuli/woman.jpeg', 'path': 'stimuli/woman.jpeg'},
-    {'name': 'stimuli/tools/monkeywrench.jpg', 'path': 'stimuli/tools/monkeywrench.jpg'},
-    {'name': 'stimuli/car.jpeg', 'path': 'stimuli/car.jpeg'},
-    {'name': 'stimuli/tools/shovel.jpg', 'path': 'stimuli/tools/shovel.jpg'},
-    {'name': 'stimuli/man.jpeg', 'path': 'stimuli/man.jpeg'},
-    {'name': 'sample_list_phase2.csv', 'path': 'sample_list_phase2.csv'},
-    {'name': 'stimuli/tree.jpeg', 'path': 'stimuli/tree.jpeg'},
     {'name': 'stimuli/animals/pelican.jpg', 'path': 'stimuli/animals/pelican.jpg'},
-    {'name': 'stimuli/greenstar.png', 'path': 'stimuli/greenstar.png'},
-    {'name': 'sample_list_phase1.csv', 'path': 'sample_list_phase1.csv'},
-    {'name': 'sample_list_phase1_practice.csv', 'path': 'sample_list_phase1_practice.csv'},
-    {'name': 'stimuli/animals/tiger.jpg', 'path': 'stimuli/animals/tiger.jpg'},
     {'name': 'sample_list_phase2_practice.csv', 'path': 'sample_list_phase2_practice.csv'},
-    {'name': 'stimuli/whitestar.png', 'path': 'stimuli/whitestar.png'},
-    {'name': 'stimuli/mask.jpg', 'path': 'stimuli/mask.jpg'},
     {'name': 'stimuli/flowers.jpeg', 'path': 'stimuli/flowers.jpeg'},
-    {'name': 'stimuli/kid.jpeg', 'path': 'stimuli/kid.jpeg'}
+    {'name': 'stimuli/kid.jpeg', 'path': 'stimuli/kid.jpeg'},
+    {'name': 'stimuli/woman.jpeg', 'path': 'stimuli/woman.jpeg'},
+    {'name': 'stimuli/man.jpeg', 'path': 'stimuli/man.jpeg'},
+    {'name': 'sample_list_phase1.csv', 'path': 'sample_list_phase1.csv'},
+    {'name': 'stimuli/whitestar.png', 'path': 'stimuli/whitestar.png'},
+    {'name': 'stimuli/tree.jpeg', 'path': 'stimuli/tree.jpeg'},
+    {'name': 'sample_list_phase2.csv', 'path': 'sample_list_phase2.csv'},
+    {'name': 'stimuli/animals/tiger.jpg', 'path': 'stimuli/animals/tiger.jpg'},
+    {'name': 'stimuli/tools/monkeywrench.jpg', 'path': 'stimuli/tools/monkeywrench.jpg'},
+    {'name': 'stimuli/pizza.jpeg', 'path': 'stimuli/pizza.jpeg'},
+    {'name': 'stimuli/greenstar.png', 'path': 'stimuli/greenstar.png'},
+    {'name': 'sample_list_phase1_practice.csv', 'path': 'sample_list_phase1_practice.csv'},
+    {'name': 'stimuli/car.jpeg', 'path': 'stimuli/car.jpeg'},
+    {'name': 'stimuli/mask.jpg', 'path': 'stimuli/mask.jpg'},
+    {'name': 'stimuli/tools/shovel.jpg', 'path': 'stimuli/tools/shovel.jpg'}
   ]
 });
 
@@ -1526,6 +1526,7 @@ function reward_insRoutineBegin(snapshot) {
     instructions_continue_4.rt = undefined;
     _instructions_continue_4_allKeys = [];
     pre_reward_accuracy = num_correct;
+    num_correct = 0;
     
     // keep track of which components have finished
     reward_insComponents = [];
