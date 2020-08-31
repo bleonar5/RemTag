@@ -1525,6 +1525,7 @@ function reward_insRoutineBegin(snapshot) {
     _instructions_continue_4_allKeys = [];
     pre_reward_accuracy = num_correct;
     num_correct = 0;
+    console.log("now setting num_correct to 0");
     
     // keep track of which components have finished
     reward_insComponents = [];
