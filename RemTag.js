@@ -1929,6 +1929,15 @@ function RewardRoutineEachFrame(snapshot) {
     if (reward_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       reward_text.setAutoDraw(false);
     }
+    if (reward_response.keys) {
+        if (reward_response.corr) {
+            reward_text.text = "Hit! You Won!";
+            reward_star.opacity = 1.0;
+            num_correct += 1;
+            console.log(("correct: " + num_correct));
+        }
+    }
+    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1980,15 +1989,6 @@ function RewardRoutineEnd(snapshot) {
         }
     
     reward_response.stop();
-    if (reward_response.keys) {
-        if (reward_response.corr) {
-            reward_text.text = "Hit! You Won!";
-            reward_star.opacity = 1.0;
-            num_correct += 1;
-            console.log(("correct: " + num_correct));
-        }
-    }
-    
     return Scheduler.Event.NEXT;
   };
 }
