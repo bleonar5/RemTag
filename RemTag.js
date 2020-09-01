@@ -1790,6 +1790,7 @@ function RewardRoutineBegin(snapshot) {
 }
 
 
+var correct;
 function RewardRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Reward'-------
@@ -1929,8 +1930,9 @@ function RewardRoutineEachFrame(snapshot) {
     if (reward_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       reward_text.setAutoDraw(false);
     }
-    if (reward_response.keys) {
-        if (reward_response.corr) {
+    if ((reward_response.keys && (! correct))) {
+        if ((Number.parseInt(reward_response) === Number.parseInt(corr_resp))) {
+            correct = true;
             reward_text.text = "Hit! You Won!";
             reward_star.opacity = 1.0;
             num_correct += 1;
