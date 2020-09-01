@@ -1931,7 +1931,7 @@ function RewardRoutineEachFrame(snapshot) {
       reward_text.setAutoDraw(false);
     }
     if ((reward_response.keys && (! correct))) {
-        if ((Number.parseInt(reward_response) === Number.parseInt(corr_resp))) {
+        if ((Number.parseInt(reward_response.keys) === Number.parseInt(corr_resp))) {
             correct = true;
             reward_text.text = "Hit! You Won!";
             reward_star.opacity = 1.0;
