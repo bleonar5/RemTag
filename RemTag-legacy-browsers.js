@@ -1774,6 +1774,9 @@ function RewardRoutineBegin(snapshot) {
     reward_response.rt = undefined;
     _reward_response_allKeys = [];
     reward_star.setImage(star_name);
+    reward_text.text = "Miss!";
+    console.log("setting text to miss");
+    
     // keep track of which components have finished
     RewardComponents = [];
     RewardComponents.push(enc2);
@@ -1935,7 +1938,9 @@ function RewardRoutineEachFrame(snapshot) {
     if (reward_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       reward_text.setAutoDraw(false);
     }
+    console.log("frame");
     if ((reward_response.keys && (! correct))) {
+        console.log("keypress and no repeat");
         if ((Number.parseInt(reward_response.keys) === Number.parseInt(corr_resp))) {
             correct = true;
             reward_text.text = "Hit! You Won!";
@@ -1996,8 +2001,6 @@ function RewardRoutineEnd(snapshot) {
         }
     
     reward_response.stop();
-    reward_text.text = "Miss!";
-    
     return Scheduler.Event.NEXT;
   };
 }
@@ -2012,6 +2015,7 @@ function check_reward_practiceRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     correct = false;
+    console.log("setting correct false");
     if ((num_correct === 4)) {
         repeat_reward_practice.finished = true;
         console.log("finished");
