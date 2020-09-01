@@ -1754,6 +1754,7 @@ function practice_instructions_rewardRoutineEnd(snapshot) {
 
 
 var _reward_response_allKeys;
+var correct;
 var RewardComponents;
 function RewardRoutineBegin(snapshot) {
   return function () {
@@ -1772,6 +1773,7 @@ function RewardRoutineBegin(snapshot) {
     reward_star.setImage(star_name);
     reward_text.text = "Miss!";
     reward_star.opacity = 0.0;
+    correct = false;
     console.log("setting text to miss");
     
     // keep track of which components have finished
@@ -1794,7 +1796,6 @@ function RewardRoutineBegin(snapshot) {
 }
 
 
-var correct;
 function RewardRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Reward'-------
@@ -2010,7 +2011,6 @@ function check_reward_practiceRoutineBegin(snapshot) {
     check_reward_practiceClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    correct = false;
     console.log("setting correct false");
     if ((num_correct === 4)) {
         repeat_reward_practice.finished = true;
