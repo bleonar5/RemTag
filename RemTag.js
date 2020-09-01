@@ -1771,7 +1771,7 @@ function RewardRoutineBegin(snapshot) {
     _reward_response_allKeys = [];
     reward_star.setImage(star_name);
     reward_text.text = "Miss!";
-    reward_star.opacity = 1.0;
+    reward_star.opacity = 0.0;
     console.log("setting text to miss");
     
     // keep track of which components have finished
