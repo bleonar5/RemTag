@@ -1996,6 +1996,8 @@ function RewardRoutineEnd(snapshot) {
         }
     
     reward_response.stop();
+    reward_text.text = "Miss!";
+    
     return Scheduler.Event.NEXT;
   };
 }
@@ -2009,6 +2011,7 @@ function check_reward_practiceRoutineBegin(snapshot) {
     check_reward_practiceClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    correct = false;
     if ((num_correct === 4)) {
         repeat_reward_practice.finished = true;
         console.log("finished");
