@@ -27,7 +27,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'RemTag';  // from the Builder filename that created this script
-let expInfo = {'participant': '', 'session': '001'};
+let expInfo = {'participant': '', 'session': '001', 'group': '1'};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -91,24 +91,141 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
+    {'name': 'stimuli/animals/ostrich.jpg', 'path': 'stimuli/animals/ostrich.jpg'},
+    {'name': 'stimuli/tools/tape.jpg', 'path': 'stimuli/tools/tape.jpg'},
+    {'name': 'phase2_practice.csv', 'path': 'phase2_practice.csv'},
+    {'name': 'stimuli/tools/carabiner.jpg', 'path': 'stimuli/tools/carabiner.jpg'},
+    {'name': 'stimuli_practice/manmade/baseball01a.jpg', 'path': 'stimuli_practice/manmade/baseball01a.jpg'},
+    {'name': 'phase1_practice.csv', 'path': 'phase1_practice.csv'},
+    {'name': 'stimuli/animals/firebug.jpg', 'path': 'stimuli/animals/firebug.jpg'},
+    {'name': 'stimuli/tools/reflexhammer.jpg', 'path': 'stimuli/tools/reflexhammer.jpg'},
+    {'name': 'stimuli/tools/sawblade.jpg', 'path': 'stimuli/tools/sawblade.jpg'},
+    {'name': 'stimuli/animals/flounder.jpg', 'path': 'stimuli/animals/flounder.jpg'},
+    {'name': 'stimuli/tools/bevelgauge.jpg', 'path': 'stimuli/tools/bevelgauge.jpg'},
+    {'name': 'stimuli/tools/clippers.jpg', 'path': 'stimuli/tools/clippers.jpg'},
+    {'name': 'stimuli/tools/tubingbender.jpg', 'path': 'stimuli/tools/tubingbender.jpg'},
+    {'name': 'stimuli/tools/ruler.jpg', 'path': 'stimuli/tools/ruler.jpg'},
+    {'name': 'stimuli/tools/drillpress.jpg', 'path': 'stimuli/tools/drillpress.jpg'},
+    {'name': 'stimuli/tools/planer.jpg', 'path': 'stimuli/tools/planer.jpg'},
+    {'name': 'stimuli/animals/slug.jpg', 'path': 'stimuli/animals/slug.jpg'},
+    {'name': 'stimuli/tools/lighterbic.jpg', 'path': 'stimuli/tools/lighterbic.jpg'},
+    {'name': 'stimuli/animals/salamander.jpg', 'path': 'stimuli/animals/salamander.jpg'},
+    {'name': 'stimuli/animals/goldfish.jpg', 'path': 'stimuli/animals/goldfish.jpg'},
+    {'name': 'stimuli/animals/manatee.jpg', 'path': 'stimuli/animals/manatee.jpg'},
+    {'name': 'stimuli/animals/duck.jpg', 'path': 'stimuli/animals/duck.jpg'},
+    {'name': 'stimuli_practice/natural/rock01a.jpg', 'path': 'stimuli_practice/natural/rock01a.jpg'},
+    {'name': 'stimuli/tools/glove.jpg', 'path': 'stimuli/tools/glove.jpg'},
+    {'name': 'stimuli/animals/waterbuffalo.jpg', 'path': 'stimuli/animals/waterbuffalo.jpg'},
+    {'name': 'stimuli/animals/dolphin.jpg', 'path': 'stimuli/animals/dolphin.jpg'},
+    {'name': 'stimuli/tools/drill.jpg', 'path': 'stimuli/tools/drill.jpg'},
+    {'name': 'stimuli_practice/natural/feather03a.jpg', 'path': 'stimuli_practice/natural/feather03a.jpg'},
+    {'name': 'stimuli/tools/thermometer.jpg', 'path': 'stimuli/tools/thermometer.jpg'},
+    {'name': 'stimuli/tools/television.jpg', 'path': 'stimuli/tools/television.jpg'},
+    {'name': 'stimuli/tools/magnifyingglass.jpg', 'path': 'stimuli/tools/magnifyingglass.jpg'},
+    {'name': 'stimuli/animals/shark.jpg', 'path': 'stimuli/animals/shark.jpg'},
     {'name': 'stimuli/animals/pelican.jpg', 'path': 'stimuli/animals/pelican.jpg'},
-    {'name': 'sample_list_phase2_practice.csv', 'path': 'sample_list_phase2_practice.csv'},
-    {'name': 'stimuli/flowers.jpeg', 'path': 'stimuli/flowers.jpeg'},
-    {'name': 'stimuli/kid.jpeg', 'path': 'stimuli/kid.jpeg'},
-    {'name': 'stimuli/woman.jpeg', 'path': 'stimuli/woman.jpeg'},
-    {'name': 'stimuli/man.jpeg', 'path': 'stimuli/man.jpeg'},
-    {'name': 'sample_list_phase1.csv', 'path': 'sample_list_phase1.csv'},
-    {'name': 'stimuli/whitestar.png', 'path': 'stimuli/whitestar.png'},
-    {'name': 'stimuli/tree.jpeg', 'path': 'stimuli/tree.jpeg'},
-    {'name': 'sample_list_phase2.csv', 'path': 'sample_list_phase2.csv'},
+    {'name': 'stimuli/animals/hummingbird.jpg', 'path': 'stimuli/animals/hummingbird.jpg'},
+    {'name': 'stimuli/animals/koala.jpg', 'path': 'stimuli/animals/koala.jpg'},
+    {'name': 'stimuli/tools/shovel.jpg', 'path': 'stimuli/tools/shovel.jpg'},
+    {'name': 'stimuli/tools/fishingpole.jpg', 'path': 'stimuli/tools/fishingpole.jpg'},
+    {'name': 'stimuli/tools/sewingmachine.jpg', 'path': 'stimuli/tools/sewingmachine.jpg'},
+    {'name': 'stimuli/animals/cranebug.jpg', 'path': 'stimuli/animals/cranebug.jpg'},
+    {'name': 'stimuli/animals/gorilla.jpg', 'path': 'stimuli/animals/gorilla.jpg'},
+    {'name': 'stimuli/animals/lemur.jpg', 'path': 'stimuli/animals/lemur.jpg'},
+    {'name': 'stimuli_practice/manmade/plasticgallon.jpg', 'path': 'stimuli_practice/manmade/plasticgallon.jpg'},
+    {'name': 'stimuli/animals/carp.jpg', 'path': 'stimuli/animals/carp.jpg'},
+    {'name': 'stimuli_practice/natural/soil.jpg', 'path': 'stimuli_practice/natural/soil.jpg'},
+    {'name': 'stimuli/tools/caliper.jpg', 'path': 'stimuli/tools/caliper.jpg'},
+    {'name': 'stimuli/animals/ram.jpg', 'path': 'stimuli/animals/ram.jpg'},
+    {'name': 'stimuli/animals/pigeon.jpg', 'path': 'stimuli/animals/pigeon.jpg'},
+    {'name': 'stimuli_practice/cues/cue_green.jpg', 'path': 'stimuli_practice/cues/cue_green.jpg'},
+    {'name': 'stimuli/animals/chipmunk.jpg', 'path': 'stimuli/animals/chipmunk.jpg'},
+    {'name': 'stimuli/tools/crutches.jpg', 'path': 'stimuli/tools/crutches.jpg'},
+    {'name': 'stimuli/tools/measuringdevice.jpg', 'path': 'stimuli/tools/measuringdevice.jpg'},
+    {'name': 'stimuli_practice/cues/cue_white.jpg', 'path': 'stimuli_practice/cues/cue_white.jpg'},
+    {'name': 'stimuli/tools/oven.jpg', 'path': 'stimuli/tools/oven.jpg'},
+    {'name': 'stimuli/tools/scale.jpg', 'path': 'stimuli/tools/scale.jpg'},
+    {'name': 'stimuli/tools/tubeflaring.jpg', 'path': 'stimuli/tools/tubeflaring.jpg'},
+    {'name': 'stimuli/cues/cue_green.jpg', 'path': 'stimuli/cues/cue_green.jpg'},
+    {'name': 'stimuli/tools/pencilsharpener.jpg', 'path': 'stimuli/tools/pencilsharpener.jpg'},
+    {'name': 'stimuli/tools/plunger.jpg', 'path': 'stimuli/tools/plunger.jpg'},
+    {'name': 'stimuli/animals/salmon.jpg', 'path': 'stimuli/animals/salmon.jpg'},
+    {'name': 'stimuli/animals/racoon.jpg', 'path': 'stimuli/animals/racoon.jpg'},
+    {'name': 'stimuli/animals/redpalmweevil.jpg', 'path': 'stimuli/animals/redpalmweevil.jpg'},
+    {'name': 'stimuli/animals/hippo.jpg', 'path': 'stimuli/animals/hippo.jpg'},
+    {'name': 'stimuli/tools/sponge.jpg', 'path': 'stimuli/tools/sponge.jpg'},
+    {'name': 'stimuli/tools/spoon.jpg', 'path': 'stimuli/tools/spoon.jpg'},
+    {'name': 'stimuli/animals/seahorse.jpg', 'path': 'stimuli/animals/seahorse.jpg'},
+    {'name': 'stimuli/animals/llama.jpg', 'path': 'stimuli/animals/llama.jpg'},
+    {'name': 'stimuli/animals/sparrow.jpg', 'path': 'stimuli/animals/sparrow.jpg'},
+    {'name': 'stimuli/tools/microscope.jpg', 'path': 'stimuli/tools/microscope.jpg'},
+    {'name': 'stimuli/animals/waterdragon.jpg', 'path': 'stimuli/animals/waterdragon.jpg'},
+    {'name': 'stimuli/tools/stopwatch.jpg', 'path': 'stimuli/tools/stopwatch.jpg'},
+    {'name': 'stimuli/tools/weldershammer.jpg', 'path': 'stimuli/tools/weldershammer.jpg'},
     {'name': 'stimuli/animals/tiger.jpg', 'path': 'stimuli/animals/tiger.jpg'},
-    {'name': 'stimuli/tools/monkeywrench.jpg', 'path': 'stimuli/tools/monkeywrench.jpg'},
-    {'name': 'stimuli/pizza.jpeg', 'path': 'stimuli/pizza.jpeg'},
-    {'name': 'stimuli/greenstar.png', 'path': 'stimuli/greenstar.png'},
-    {'name': 'sample_list_phase1_practice.csv', 'path': 'sample_list_phase1_practice.csv'},
-    {'name': 'stimuli/car.jpeg', 'path': 'stimuli/car.jpeg'},
-    {'name': 'stimuli/mask.jpg', 'path': 'stimuli/mask.jpg'},
-    {'name': 'stimuli/tools/shovel.jpg', 'path': 'stimuli/tools/shovel.jpg'}
+    {'name': 'stimuli/tools/microwave.jpg', 'path': 'stimuli/tools/microwave.jpg'},
+    {'name': 'stimuli/animals/alligator.jpg', 'path': 'stimuli/animals/alligator.jpg'},
+    {'name': 'stimuli/animals/meerkat.jpg', 'path': 'stimuli/animals/meerkat.jpg'},
+    {'name': 'stimuli/animals/wasp.jpg', 'path': 'stimuli/animals/wasp.jpg'},
+    {'name': 'stimuli/animals/balloonfish.jpg', 'path': 'stimuli/animals/balloonfish.jpg'},
+    {'name': 'stimuli/animals/caterpillar.jpg', 'path': 'stimuli/animals/caterpillar.jpg'},
+    {'name': 'stimuli/tools/hairdryer.jpg', 'path': 'stimuli/tools/hairdryer.jpg'},
+    {'name': 'stimuli/tools/stethoscope.jpg', 'path': 'stimuli/tools/stethoscope.jpg'},
+    {'name': 'stimuli/animals/perch.jpg', 'path': 'stimuli/animals/perch.jpg'},
+    {'name': 'stimuli/tools/battery.jpg', 'path': 'stimuli/tools/battery.jpg'},
+    {'name': 'stimuli/tools/headphones.jpg', 'path': 'stimuli/tools/headphones.jpg'},
+    {'name': 'stimuli/tools/wateringcan.jpg', 'path': 'stimuli/tools/wateringcan.jpg'},
+    {'name': 'stimuli/animals/baboon.jpg', 'path': 'stimuli/animals/baboon.jpg'},
+    {'name': 'stimuli/animals/reindeer.jpg', 'path': 'stimuli/animals/reindeer.jpg'},
+    {'name': 'stimuli_practice/manmade/mousetrap.jpg', 'path': 'stimuli_practice/manmade/mousetrap.jpg'},
+    {'name': 'stimuli/animals/chimp.jpg', 'path': 'stimuli/animals/chimp.jpg'},
+    {'name': 'stimuli/animals/finch.jpg', 'path': 'stimuli/animals/finch.jpg'},
+    {'name': 'stimuli_practice/natural/starfish01.jpg', 'path': 'stimuli_practice/natural/starfish01.jpg'},
+    {'name': 'stimuli/animals/elephantafrican.jpg', 'path': 'stimuli/animals/elephantafrican.jpg'},
+    {'name': 'stimuli/tools/carjack.jpg', 'path': 'stimuli/tools/carjack.jpg'},
+    {'name': 'stimuli/tools/stove.jpg', 'path': 'stimuli/tools/stove.jpg'},
+    {'name': 'stimuli/animals/iguana.jpg', 'path': 'stimuli/animals/iguana.jpg'},
+    {'name': 'stimuli/tools/toaster.jpg', 'path': 'stimuli/tools/toaster.jpg'},
+    {'name': 'stimuli/tools/mixer.jpg', 'path': 'stimuli/tools/mixer.jpg'},
+    {'name': 'phase2_order8.csv', 'path': 'phase2_order8.csv'},
+    {'name': 'stimuli/tools/whistle.jpg', 'path': 'stimuli/tools/whistle.jpg'},
+    {'name': 'stimuli/animals/octopus.jpg', 'path': 'stimuli/animals/octopus.jpg'},
+    {'name': 'stimuli/animals/stinkbug.jpg', 'path': 'stimuli/animals/stinkbug.jpg'},
+    {'name': 'stimuli/animals/dragonfly.jpg', 'path': 'stimuli/animals/dragonfly.jpg'},
+    {'name': 'stimuli/animals/leopard.jpg', 'path': 'stimuli/animals/leopard.jpg'},
+    {'name': 'stimuli/animals/deer.jpg', 'path': 'stimuli/animals/deer.jpg'},
+    {'name': 'stimuli/animals/wolf.jpg', 'path': 'stimuli/animals/wolf.jpg'},
+    {'name': 'stimuli/animals/emu.jpg', 'path': 'stimuli/animals/emu.jpg'},
+    {'name': 'stimuli/animals/partridge.jpg', 'path': 'stimuli/animals/partridge.jpg'},
+    {'name': 'stimuli/tools/compass.jpg', 'path': 'stimuli/tools/compass.jpg'},
+    {'name': 'stimuli/tools/chisel.jpg', 'path': 'stimuli/tools/chisel.jpg'},
+    {'name': 'stimuli/tools/anvil.jpg', 'path': 'stimuli/tools/anvil.jpg'},
+    {'name': 'stimuli/tools/telephone.jpg', 'path': 'stimuli/tools/telephone.jpg'},
+    {'name': 'stimuli/tools/magnet.jpg', 'path': 'stimuli/tools/magnet.jpg'},
+    {'name': 'stimuli/animals/watusi.jpg', 'path': 'stimuli/animals/watusi.jpg'},
+    {'name': 'stimuli/animals/mouse.jpg', 'path': 'stimuli/animals/mouse.jpg'},
+    {'name': 'stimuli/animals/crow.jpg', 'path': 'stimuli/animals/crow.jpg'},
+    {'name': 'stimuli/tools/burnisher.jpg', 'path': 'stimuli/tools/burnisher.jpg'},
+    {'name': 'stimuli/tools/computermouse.jpg', 'path': 'stimuli/tools/computermouse.jpg'},
+    {'name': 'stimuli/animals/tragopan.jpg', 'path': 'stimuli/animals/tragopan.jpg'},
+    {'name': 'stimuli/cues/cue_white.jpg', 'path': 'stimuli/cues/cue_white.jpg'},
+    {'name': 'stimuli/tools/hammer.jpg', 'path': 'stimuli/tools/hammer.jpg'},
+    {'name': 'stimuli/tools/routerplane.jpg', 'path': 'stimuli/tools/routerplane.jpg'},
+    {'name': 'stimuli/animals/cat.jpg', 'path': 'stimuli/animals/cat.jpg'},
+    {'name': 'stimuli/animals/beardeddragon.jpg', 'path': 'stimuli/animals/beardeddragon.jpg'},
+    {'name': 'stimuli/tools/woodchipper.jpg', 'path': 'stimuli/tools/woodchipper.jpg'},
+    {'name': 'stimuli/animals/chinchilla.jpg', 'path': 'stimuli/animals/chinchilla.jpg'},
+    {'name': 'stimuli/tools/fertilzerspread.jpg', 'path': 'stimuli/tools/fertilzerspread.jpg'},
+    {'name': 'stimuli/tools/auger.jpg', 'path': 'stimuli/tools/auger.jpg'},
+    {'name': 'stimuli/tools/lantern.jpg', 'path': 'stimuli/tools/lantern.jpg'},
+    {'name': 'stimuli/tools/extensioncord.jpg', 'path': 'stimuli/tools/extensioncord.jpg'},
+    {'name': 'stimuli_practice/manmade/pictureframe04.jpg', 'path': 'stimuli_practice/manmade/pictureframe04.jpg'},
+    {'name': 'stimuli/tools/bolt.jpg', 'path': 'stimuli/tools/bolt.jpg'},
+    {'name': 'stimuli/animals/clownfish.jpg', 'path': 'stimuli/animals/clownfish.jpg'},
+    {'name': 'stimuli/animals/crane.jpg', 'path': 'stimuli/animals/crane.jpg'},
+    {'name': 'stimuli/animals/mole.jpg', 'path': 'stimuli/animals/mole.jpg'},
+    {'name': 'stimuli/tools/hedgeshears.jpg', 'path': 'stimuli/tools/hedgeshears.jpg'},
+    {'name': 'stimuli/tools/electricpipethreader.jpg', 'path': 'stimuli/tools/electricpipethreader.jpg'}
   ]
 });
 
@@ -143,6 +260,7 @@ var instructions_continue_2;
 var practice_instructions_pre_rewardClock;
 var text_3;
 var instruction_continue_5;
+var scriptClock;
 var Pre_RewardClock;
 var enc;
 var cross;
@@ -150,6 +268,7 @@ var left;
 var right;
 var isi;
 var pre_reward_response;
+var skip;
 var check_practiceClock;
 var continue_2Clock;
 var text;
@@ -222,6 +341,8 @@ function experimentInit() {
   
   instruction_continue_5 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "script"
+  scriptClock = new util.Clock();
   // Initialize components for Routine "Pre_Reward"
   Pre_RewardClock = new util.Clock();
   enc = new visual.ImageStim({
@@ -270,6 +391,8 @@ function experimentInit() {
   });
   
   pre_reward_response = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  skip = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "check_practice"
   check_practiceClock = new util.Clock();
@@ -288,6 +411,8 @@ function experimentInit() {
   
   instructions_continue_3 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "script"
+  scriptClock = new util.Clock();
   // Initialize components for Routine "Pre_Reward"
   Pre_RewardClock = new util.Clock();
   enc = new visual.ImageStim({
@@ -336,6 +461,8 @@ function experimentInit() {
   });
   
   pre_reward_response = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  skip = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "reward_ins"
   reward_insClock = new util.Clock();
@@ -367,6 +494,8 @@ function experimentInit() {
   
   instruction_continue_6 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "script"
+  scriptClock = new util.Clock();
   // Initialize components for Routine "Reward"
   RewardClock = new util.Clock();
   enc2 = new visual.ImageStim({
@@ -453,6 +582,8 @@ function experimentInit() {
   
   instruction_continue_7 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "script"
+  scriptClock = new util.Clock();
   // Initialize components for Routine "Reward"
   RewardClock = new util.Clock();
   enc2 = new visual.ImageStim({
@@ -631,6 +762,8 @@ function instructionsRoutineEachFrame(snapshot) {
 
 
 var num_correct;
+var prereward_cond;
+var reward_cond;
 function instructionsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'instructions'-------
@@ -647,6 +780,8 @@ function instructionsRoutineEnd(snapshot) {
     
     instructions_continue.stop();
     num_correct = 0;
+    prereward_cond = (("phase1_order" + expInfo["group"].toString()) + ".csv");
+    reward_cond = (("phase2_order" + expInfo["group"].toString()) + ".csv");
     
     // the Routine "instructions" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -931,7 +1066,7 @@ function practiceLoopBegin(practiceLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'sample_list_phase1_practice.csv',
+    trialList: 'phase1_practice.csv',
     seed: undefined, name: 'practice'
   });
   psychoJS.experiment.addLoop(practice); // add the loop to the experiment
@@ -941,6 +1076,9 @@ function practiceLoopBegin(practiceLoopScheduler) {
   for (const thisPractice of practice) {
     const snapshot = practice.getSnapshot();
     practiceLoopScheduler.add(importConditions(snapshot));
+    practiceLoopScheduler.add(scriptRoutineBegin(snapshot));
+    practiceLoopScheduler.add(scriptRoutineEachFrame(snapshot));
+    practiceLoopScheduler.add(scriptRoutineEnd(snapshot));
     practiceLoopScheduler.add(Pre_RewardRoutineBegin(snapshot));
     practiceLoopScheduler.add(Pre_RewardRoutineEachFrame(snapshot));
     practiceLoopScheduler.add(Pre_RewardRoutineEnd(snapshot));
@@ -972,7 +1110,7 @@ function pre_reward_trialsLoopBegin(pre_reward_trialsLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'sample_list_phase1.csv',
+    trialList: prereward_cond,
     seed: undefined, name: 'pre_reward_trials'
   });
   psychoJS.experiment.addLoop(pre_reward_trials); // add the loop to the experiment
@@ -982,6 +1120,9 @@ function pre_reward_trialsLoopBegin(pre_reward_trialsLoopScheduler) {
   for (const thisPre_reward_trial of pre_reward_trials) {
     const snapshot = pre_reward_trials.getSnapshot();
     pre_reward_trialsLoopScheduler.add(importConditions(snapshot));
+    pre_reward_trialsLoopScheduler.add(scriptRoutineBegin(snapshot));
+    pre_reward_trialsLoopScheduler.add(scriptRoutineEachFrame(snapshot));
+    pre_reward_trialsLoopScheduler.add(scriptRoutineEnd(snapshot));
     pre_reward_trialsLoopScheduler.add(Pre_RewardRoutineBegin(snapshot));
     pre_reward_trialsLoopScheduler.add(Pre_RewardRoutineEachFrame(snapshot));
     pre_reward_trialsLoopScheduler.add(Pre_RewardRoutineEnd(snapshot));
@@ -1037,7 +1178,7 @@ function reward_practiceLoopBegin(reward_practiceLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'sample_list_phase2_practice.csv',
+    trialList: 'phase2_practice.csv',
     seed: undefined, name: 'reward_practice'
   });
   psychoJS.experiment.addLoop(reward_practice); // add the loop to the experiment
@@ -1047,6 +1188,9 @@ function reward_practiceLoopBegin(reward_practiceLoopScheduler) {
   for (const thisReward_practice of reward_practice) {
     const snapshot = reward_practice.getSnapshot();
     reward_practiceLoopScheduler.add(importConditions(snapshot));
+    reward_practiceLoopScheduler.add(scriptRoutineBegin(snapshot));
+    reward_practiceLoopScheduler.add(scriptRoutineEachFrame(snapshot));
+    reward_practiceLoopScheduler.add(scriptRoutineEnd(snapshot));
     reward_practiceLoopScheduler.add(RewardRoutineBegin(snapshot));
     reward_practiceLoopScheduler.add(RewardRoutineEachFrame(snapshot));
     reward_practiceLoopScheduler.add(RewardRoutineEnd(snapshot));
@@ -1078,7 +1222,7 @@ function reward_trialsLoopBegin(reward_trialsLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'sample_list_phase2.csv',
+    trialList: 'phase2_order8.csv',
     seed: undefined, name: 'reward_trials'
   });
   psychoJS.experiment.addLoop(reward_trials); // add the loop to the experiment
@@ -1088,6 +1232,9 @@ function reward_trialsLoopBegin(reward_trialsLoopScheduler) {
   for (const thisReward_trial of reward_trials) {
     const snapshot = reward_trials.getSnapshot();
     reward_trialsLoopScheduler.add(importConditions(snapshot));
+    reward_trialsLoopScheduler.add(scriptRoutineBegin(snapshot));
+    reward_trialsLoopScheduler.add(scriptRoutineEachFrame(snapshot));
+    reward_trialsLoopScheduler.add(scriptRoutineEnd(snapshot));
     reward_trialsLoopScheduler.add(RewardRoutineBegin(snapshot));
     reward_trialsLoopScheduler.add(RewardRoutineEachFrame(snapshot));
     reward_trialsLoopScheduler.add(RewardRoutineEnd(snapshot));
@@ -1105,7 +1252,93 @@ function reward_trialsLoopEnd() {
 }
 
 
+var scriptComponents;
+function scriptRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'script'-------
+    t = 0;
+    scriptClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    // keep track of which components have finished
+    scriptComponents = [];
+    
+    for (const thisComponent of scriptComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function scriptRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'script'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = scriptClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of scriptComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+var stim_name_enc;
+var star_name;
+function scriptRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'script'-------
+    for (const thisComponent of scriptComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    if ((corr_resp === 1)) {
+        stim_name_enc = stim_name_left;
+    } else {
+        stim_name_enc = stim_name_right;
+    }
+    console.log(stim_name_enc);
+    if ((conditionedCat === stim_cat_enc)) {
+        star_name = "stimuli/greenstar.jpg";
+    } else {
+        star_name = "stimuli/whitestar.jpg";
+    }
+    
+    // the Routine "script" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var _pre_reward_response_allKeys;
+var _skip_allKeys;
 var Pre_RewardComponents;
 function Pre_RewardRoutineBegin(snapshot) {
   return function () {
@@ -1113,7 +1346,6 @@ function Pre_RewardRoutineBegin(snapshot) {
     t = 0;
     Pre_RewardClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(9.100000);
     // update component parameters for each repeat
     enc.setImage(stim_name_enc);
     left.setImage(stim_name_left);
@@ -1121,6 +1353,9 @@ function Pre_RewardRoutineBegin(snapshot) {
     pre_reward_response.keys = undefined;
     pre_reward_response.rt = undefined;
     _pre_reward_response_allKeys = [];
+    skip.keys = undefined;
+    skip.rt = undefined;
+    _skip_allKeys = [];
     // keep track of which components have finished
     Pre_RewardComponents = [];
     Pre_RewardComponents.push(enc);
@@ -1129,6 +1364,7 @@ function Pre_RewardRoutineBegin(snapshot) {
     Pre_RewardComponents.push(right);
     Pre_RewardComponents.push(isi);
     Pre_RewardComponents.push(pre_reward_response);
+    Pre_RewardComponents.push(skip);
     
     for (const thisComponent of Pre_RewardComponents)
       if ('status' in thisComponent)
@@ -1251,6 +1487,41 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       }
     }
     
+    console.log(skip.corr);
+    if (skip.corr) {
+        repeat_practice.finished = true;
+    }
+    
+    
+    // *skip* updates
+    if (t >= 0.0 && skip.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      skip.tStart = t;  // (not accounting for frame time here)
+      skip.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { skip.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { skip.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { skip.clearEvents(); });
+    }
+
+    if (skip.status === PsychoJS.Status.STARTED) {
+      let theseKeys = skip.getKeys({keyList: ['space'], waitRelease: false});
+      _skip_allKeys = _skip_allKeys.concat(theseKeys);
+      if (_skip_allKeys.length > 0) {
+        skip.keys = _skip_allKeys[_skip_allKeys.length - 1].name;  // just the last key pressed
+        skip.rt = _skip_allKeys[_skip_allKeys.length - 1].rt;
+        // was this correct?
+        if (skip.keys == 'space') {
+            skip.corr = 1;
+        } else {
+            skip.corr = 0;
+        }
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1269,7 +1540,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1307,6 +1578,26 @@ function Pre_RewardRoutineEnd(snapshot) {
         console.log("correct");
     }
     console.log(pre_reward_response.keys);
+    
+    // was no response the correct answer?!
+    if (skip.keys === undefined) {
+      if (['None','none',undefined].includes('space')) {
+         skip.corr = 1;  // correct non-response
+      } else {
+         skip.corr = 0;  // failed to respond (incorrectly)
+      }
+    }
+    // store data for thisExp (ExperimentHandler)
+    psychoJS.experiment.addData('skip.keys', skip.keys);
+    psychoJS.experiment.addData('skip.corr', skip.corr);
+    if (typeof skip.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('skip.rt', skip.rt);
+        routineTimer.reset();
+        }
+    
+    skip.stop();
+    // the Routine "Pre_Reward" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
     
     return Scheduler.Event.NEXT;
   };
@@ -1770,7 +2061,7 @@ function RewardRoutineBegin(snapshot) {
     reward_response.keys = undefined;
     reward_response.rt = undefined;
     _reward_response_allKeys = [];
-    reward_star.setImage(star_name);
+    reward_star.setImage(corr_image);
     reward_text.text = "Miss!";
     reward_star.opacity = 0.0;
     correct = false;
@@ -1943,7 +2234,7 @@ function RewardRoutineEachFrame(snapshot) {
             reward_text.text = "Hit! You Won!";
             reward_star.opacity = 1.0;
             num_correct += 1;
-            console.log(("correct: " + num_correct));
+            console.log(("correct: " + num_correct.toString()));
         }
     }
     
@@ -2311,6 +2602,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
