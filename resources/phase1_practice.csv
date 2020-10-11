@@ -1,0 +1,5 @@
+order,conditionedCat,trial,stim_cat_enc,stim_number_enc,stim_cat_left,stim_number_left,stim_name_left,stim_cat_right,stim_number_right,stim_name_right,corr_cat,corr_resp
+practice,NA,1,2,11,2,11,stimuli_practice/natural/soil.jpg,2,12,stimuli_practice/natural/starfish01.jpg,2,1
+practice,NA,2,1,1,1,1,stimuli_practice/manmade/baseball01a.jpg,1,4,stimuli_practice/manmade/mousetrap.jpg,1,1
+practice,NA,3,1,5,1,6,stimuli_practice/manmade/plasticgallon.jpg,1,5,stimuli_practice/manmade/pictureframe04.jpg,1,2
+practice,NA,4,2,8,2,8,stimuli_practice/natural/feather03a.jpg,2,10,stimuli_practice/natural/rock01a.jpg,2,1

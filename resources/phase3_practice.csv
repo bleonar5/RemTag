@@ -1,0 +1,5 @@
+order,conditionedCat,trial,stim_cat_num,stim_number,stim_name,stim_oldnew,stim_firstphase
+practice,NA,1,1,3,stimuli_practice/manmade/mitten04.jpg,2,3
+practice,NA,2,1,4,stimuli_practice/manmade/mousetrap.jpg,1,2
+practice,NA,3,2,10,stimuli_practice/natural/rock01a.jpg,1,2
+practice,NA,4,2,7,stimuli_practice/natural/egg01a.jpg,2,3
