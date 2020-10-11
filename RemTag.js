@@ -580,6 +580,7 @@ var left;
 var right;
 var isi;
 var pre_reward_response;
+var key_resp;
 var check_practiceClock;
 var continue_2Clock;
 var text;
@@ -703,6 +704,8 @@ function experimentInit() {
   
   pre_reward_response = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "check_practice"
   check_practiceClock = new util.Clock();
   // Initialize components for Routine "continue_2"
@@ -770,6 +773,8 @@ function experimentInit() {
   });
   
   pre_reward_response = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "reward_ins"
   reward_insClock = new util.Clock();
@@ -1645,6 +1650,7 @@ function scriptRoutineEnd(snapshot) {
 
 
 var _pre_reward_response_allKeys;
+var _key_resp_allKeys;
 var Pre_RewardComponents;
 function Pre_RewardRoutineBegin(snapshot) {
   return function () {
@@ -1652,7 +1658,6 @@ function Pre_RewardRoutineBegin(snapshot) {
     t = 0;
     Pre_RewardClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(9.100000);
     // update component parameters for each repeat
     enc.setImage(stim_name_enc);
     left.setImage(stim_name_left);
@@ -1660,6 +1665,9 @@ function Pre_RewardRoutineBegin(snapshot) {
     pre_reward_response.keys = undefined;
     pre_reward_response.rt = undefined;
     _pre_reward_response_allKeys = [];
+    key_resp.keys = undefined;
+    key_resp.rt = undefined;
+    _key_resp_allKeys = [];
     // keep track of which components have finished
     Pre_RewardComponents = [];
     Pre_RewardComponents.push(enc);
@@ -1668,6 +1676,7 @@ function Pre_RewardRoutineBegin(snapshot) {
     Pre_RewardComponents.push(right);
     Pre_RewardComponents.push(isi);
     Pre_RewardComponents.push(pre_reward_response);
+    Pre_RewardComponents.push(key_resp);
     
     for (const thisComponent of Pre_RewardComponents)
       if ('status' in thisComponent)
@@ -1790,6 +1799,30 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       }
     }
     
+    
+    // *key_resp* updates
+    if (t >= 0.0 && key_resp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp.tStart = t;  // (not accounting for frame time here)
+      key_resp.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp.clearEvents(); });
+    }
+
+    if (key_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_allKeys = _key_resp_allKeys.concat(theseKeys);
+      if (_key_resp_allKeys.length > 0) {
+        key_resp.keys = _key_resp_allKeys[_key_resp_allKeys.length - 1].name;  // just the last key pressed
+        key_resp.rt = _key_resp_allKeys[_key_resp_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1808,7 +1841,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1846,6 +1879,16 @@ function Pre_RewardRoutineEnd(snapshot) {
         console.log("correct");
     }
     console.log(pre_reward_response.keys);
+    
+    psychoJS.experiment.addData('key_resp.keys', key_resp.keys);
+    if (typeof key_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('key_resp.rt', key_resp.rt);
+        routineTimer.reset();
+        }
+    
+    key_resp.stop();
+    // the Routine "Pre_Reward" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
     
     return Scheduler.Event.NEXT;
   };
