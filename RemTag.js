@@ -3737,7 +3737,7 @@ function quitPsychoJS(message, isCompleted) {
   
   
   
-  psychoJS.experiment.addData("reward_total_corr", reward_total_core);
+  psychoJS.experiment.addData("reward_total_corr", reward_total_corr);
   
   
   
