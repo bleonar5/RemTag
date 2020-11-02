@@ -2227,6 +2227,7 @@ function continue_2RoutineEnd(snapshot) {
 
 
 var _pre_reward_response_allKeys;
+var prereward_total_corr;
 var _skip_allKeys;
 var Pre_RewardComponents;
 function Pre_RewardRoutineBegin(snapshot) {
@@ -2235,6 +2236,7 @@ function Pre_RewardRoutineBegin(snapshot) {
     t = 0;
     Pre_RewardClock.reset(); // clock
     frameN = -1;
+    routineTimer.add(9.100000);
     // update component parameters for each repeat
     enc.setImage(stim_name_enc);
     left.setImage(stim_name_left);
@@ -2242,6 +2244,11 @@ function Pre_RewardRoutineBegin(snapshot) {
     pre_reward_response.keys = undefined;
     pre_reward_response.rt = undefined;
     _pre_reward_response_allKeys = [];
+    console.log(prereward_total_corr);
+    if ((pre_reward_trials.thisN === 0)) {
+        prereward_total_corr = 0;
+    }
+    
     skip.keys = undefined;
     skip.rt = undefined;
     _skip_allKeys = [];
@@ -2429,7 +2436,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     });
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -2489,9 +2496,6 @@ function Pre_RewardRoutineEnd(snapshot) {
         }
     
     skip.stop();
-    // the Routine "Pre_Reward" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
