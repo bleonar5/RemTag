@@ -2241,10 +2241,10 @@ function Pre_RewardRoutineBegin(snapshot) {
     pre_reward_response.keys = undefined;
     pre_reward_response.rt = undefined;
     _pre_reward_response_allKeys = [];
-    console.log(prereward_total_corr);
     if ((pre_reward_trials.thisN === 0)) {
         prereward_total_corr = 0;
     }
+    console.log(prereward_total_corr);
     
     skip.keys = undefined;
     skip.rt = undefined;
@@ -3306,6 +3306,7 @@ function continue_3RoutineEnd(snapshot) {
 
 
 var _reward_response_allKeys;
+var reward_total_corr;
 var _skip2_allKeys;
 var RewardComponents;
 function RewardRoutineBegin(snapshot) {
@@ -3323,6 +3324,8 @@ function RewardRoutineBegin(snapshot) {
     reward_response.rt = undefined;
     _reward_response_allKeys = [];
     reward_star.setImage(corr_image);
+    if(reward_trials.thisN == 0)
+        reward_total_corr = 0;
     reward_text.text = "Miss!";
     reward_star.opacity = 0.0;
     correct = false;
@@ -3728,7 +3731,11 @@ function quitPsychoJS(message, isCompleted) {
     psychoJS.experiment.nextEntry();
   }
   
+  psychoJS.experiment.addData("prereward_total_corr", prereward_total_core);
   
+  
+  
+  psychoJS.experiment.addData("reward_total_corr", reward_total_core);
   
   
   
