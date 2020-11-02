@@ -279,6 +279,7 @@ psychoJS.start({
     {'name': 'stimuli/tools/pencilsharpener.jpg', 'path': 'stimuli/tools/pencilsharpener.jpg'},
     {'name': 'stimuli/animals/snapper.jpg', 'path': 'stimuli/animals/snapper.jpg'},
     {'name': 'stimuli/animals/bison.jpg', 'path': 'stimuli/animals/bison.jpg'},
+    {'name': 'html/stimuli/cues/cue_white.jpg', 'path': 'html/stimuli/cues/cue_white.jpg'},
     {'name': 'stimuli/animals/rainbowtrout.jpg', 'path': 'stimuli/animals/rainbowtrout.jpg'},
     {'name': 'phase3_practice.csv', 'path': 'phase3_practice.csv'},
     {'name': 'stimuli_practice/natural/soil.jpg', 'path': 'stimuli_practice/natural/soil.jpg'},
@@ -523,6 +524,7 @@ psychoJS.start({
     {'name': 'stimuli/animals/lizard.jpg', 'path': 'stimuli/animals/lizard.jpg'},
     {'name': 'stimuli/tools/iron.jpg', 'path': 'stimuli/tools/iron.jpg'},
     {'name': 'stimuli/animals/squirel.jpg', 'path': 'stimuli/animals/squirel.jpg'},
+    {'name': 'html/stimuli/cues/cue_green.jpg', 'path': 'html/stimuli/cues/cue_green.jpg'},
     {'name': 'stimuli/animals/canary.jpg', 'path': 'stimuli/animals/canary.jpg'},
     {'name': 'stimuli/animals/caterpillarpeacockmoth.jpg', 'path': 'stimuli/animals/caterpillarpeacockmoth.jpg'},
     {'name': 'stimuli/animals/yak.jpg', 'path': 'stimuli/animals/yak.jpg'},
@@ -612,6 +614,7 @@ var reward_star_2;
 var reward_text_2;
 var skip2_2;
 var check_reward_practiceClock;
+var text_7;
 var continue_3Clock;
 var text_4;
 var instruction_continue_7;
@@ -732,7 +735,7 @@ function experimentInit() {
   text_6 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_6',
-    text: 'You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target images, using the 1 and 2 keys.\n\nYou will now begin the first phase of the experiment.\n\nPress space bar to continue.',
+    text: 'You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys.\n\nYou will now begin the first phase of the experiment.\n\nPress space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
@@ -915,6 +918,17 @@ function experimentInit() {
   
   // Initialize components for Routine "check_reward_practice"
   check_reward_practiceClock = new util.Clock();
+  text_7 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_7',
+    text: 'You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys.\n\nYou will now begin the first phase of the experiment.\n\nPress space bar to continue.',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
   // Initialize components for Routine "continue_3"
   continue_3Clock = new util.Clock();
   text_4 = new visual.TextStim({
@@ -3006,6 +3020,13 @@ function Reward_PracticeRoutineEnd(snapshot) {
     reward_response_2.stop();
     if (skip2_2.corr) {
         num_correct += 1;
+    } else {
+        if (reward_response_2.corr) {
+            console.log("null");
+        } else {
+            practice_failed = true;
+            reward_practice.finished = true;
+        }
     }
     
     // was no response the correct answer?!
@@ -3038,17 +3059,20 @@ function check_reward_practiceRoutineBegin(snapshot) {
     check_reward_practiceClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    console.log("setting correct false");
-    if ((num_correct === 4)) {
+    if ((! practice_failed)) {
         repeat_reward_practice.finished = true;
         console.log("finished");
+        practice_failed = false;
         num_correct = 0;
     } else {
+        text_7.text = "You must answer correctly on all practice trials to proceed. Restarting practice trials now. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. Press space bar to continue.";
         num_correct = 0;
+        practice_failed = false;
     }
     
     // keep track of which components have finished
     check_reward_practiceComponents = [];
+    check_reward_practiceComponents.push(text_7);
     
     for (const thisComponent of check_reward_practiceComponents)
       if ('status' in thisComponent)
@@ -3067,6 +3091,16 @@ function check_reward_practiceRoutineEachFrame(snapshot) {
     t = check_reward_practiceClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *text_7* updates
+    if (t >= 0.0 && text_7.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_7.tStart = t;  // (not accounting for frame time here)
+      text_7.frameNStart = frameN;  // exact frame index
+      
+      text_7.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
