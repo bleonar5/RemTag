@@ -91,453 +91,18 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'stimuli/animals/gecko.jpg', 'path': 'stimuli/animals/gecko.jpg'},
-    {'name': 'stimuli/animals/ibises.jpg', 'path': 'stimuli/animals/ibises.jpg'},
-    {'name': 'stimuli/animals/chipmunk.jpg', 'path': 'stimuli/animals/chipmunk.jpg'},
-    {'name': 'stimuli/tools/vegetablepeeler.jpg', 'path': 'stimuli/tools/vegetablepeeler.jpg'},
-    {'name': 'stimuli/animals/caterpillarhawkmoth.jpg', 'path': 'stimuli/animals/caterpillarhawkmoth.jpg'},
-    {'name': 'stimuli/tools/file.jpg', 'path': 'stimuli/tools/file.jpg'},
-    {'name': 'stimuli/tools/bevelgauge.jpg', 'path': 'stimuli/tools/bevelgauge.jpg'},
-    {'name': 'stimuli/animals/malaysianleafkatayid.jpg', 'path': 'stimuli/animals/malaysianleafkatayid.jpg'},
-    {'name': 'stimuli/animals/sparrow.jpg', 'path': 'stimuli/animals/sparrow.jpg'},
-    {'name': 'stimuli/tools/cart.jpg', 'path': 'stimuli/tools/cart.jpg'},
-    {'name': 'stimuli/animals/pillmillipede.jpg', 'path': 'stimuli/animals/pillmillipede.jpg'},
-    {'name': 'stimuli/tools/binoculars.jpg', 'path': 'stimuli/tools/binoculars.jpg'},
-    {'name': 'stimuli/animals/turkey.jpg', 'path': 'stimuli/animals/turkey.jpg'},
-    {'name': 'stimuli/animals/cockatiel.jpg', 'path': 'stimuli/animals/cockatiel.jpg'},
-    {'name': 'stimuli/tools/handdrill.jpg', 'path': 'stimuli/tools/handdrill.jpg'},
-    {'name': 'stimuli/tools/stapler.jpg', 'path': 'stimuli/tools/stapler.jpg'},
-    {'name': 'stimuli/tools/broom.jpg', 'path': 'stimuli/tools/broom.jpg'},
-    {'name': 'stimuli/animals/phasmagigas.jpg', 'path': 'stimuli/animals/phasmagigas.jpg'},
-    {'name': 'stimuli/animals/pachnoda.jpg', 'path': 'stimuli/animals/pachnoda.jpg'},
-    {'name': 'stimuli/animals/rosechafer.jpg', 'path': 'stimuli/animals/rosechafer.jpg'},
-    {'name': 'stimuli/tools/tirespoon.jpg', 'path': 'stimuli/tools/tirespoon.jpg'},
-    {'name': 'stimuli/tools/glove.jpg', 'path': 'stimuli/tools/glove.jpg'},
-    {'name': 'stimuli/animals/duck.jpg', 'path': 'stimuli/animals/duck.jpg'},
-    {'name': 'stimuli/tools/extensioncord.jpg', 'path': 'stimuli/tools/extensioncord.jpg'},
-    {'name': 'stimuli/animals/emu.jpg', 'path': 'stimuli/animals/emu.jpg'},
-    {'name': 'stimuli/animals/iguana.jpg', 'path': 'stimuli/animals/iguana.jpg'},
-    {'name': 'stimuli/tools/tuner.jpg', 'path': 'stimuli/tools/tuner.jpg'},
-    {'name': 'stimuli/tools/drillpress.jpg', 'path': 'stimuli/tools/drillpress.jpg'},
-    {'name': 'stimuli/animals/panda.jpg', 'path': 'stimuli/animals/panda.jpg'},
-    {'name': 'stimuli/animals/manatee.jpg', 'path': 'stimuli/animals/manatee.jpg'},
-    {'name': 'stimuli/tools/wrench.jpg', 'path': 'stimuli/tools/wrench.jpg'},
-    {'name': 'phase2_order6.csv', 'path': 'phase2_order6.csv'},
-    {'name': 'stimuli/animals/chinchilla.jpg', 'path': 'stimuli/animals/chinchilla.jpg'},
-    {'name': 'stimuli/animals/racoon.jpg', 'path': 'stimuli/animals/racoon.jpg'},
-    {'name': 'stimuli/tools/weldinghelmet.jpg', 'path': 'stimuli/tools/weldinghelmet.jpg'},
-    {'name': 'stimuli/tools/jumpercables.jpg', 'path': 'stimuli/tools/jumpercables.jpg'},
-    {'name': 'stimuli/tools/generator.jpg', 'path': 'stimuli/tools/generator.jpg'},
-    {'name': 'stimuli/tools/battery.jpg', 'path': 'stimuli/tools/battery.jpg'},
-    {'name': 'stimuli/tools/plow.jpg', 'path': 'stimuli/tools/plow.jpg'},
-    {'name': 'stimuli/animals/gerbil.jpg', 'path': 'stimuli/animals/gerbil.jpg'},
-    {'name': 'stimuli/animals/highlandcow.jpg', 'path': 'stimuli/animals/highlandcow.jpg'},
-    {'name': 'stimuli/animals/skunk.jpg', 'path': 'stimuli/animals/skunk.jpg'},
-    {'name': 'stimuli/tools/wateringcan.jpg', 'path': 'stimuli/tools/wateringcan.jpg'},
-    {'name': 'stimuli/animals/caterpillarpeacockmoth.jpg', 'path': 'stimuli/animals/caterpillarpeacockmoth.jpg'},
-    {'name': 'stimuli/tools/pencilsharpener.jpg', 'path': 'stimuli/tools/pencilsharpener.jpg'},
-    {'name': 'stimuli/animals/marmot.jpg', 'path': 'stimuli/animals/marmot.jpg'},
-    {'name': 'stimuli/animals/bear.jpg', 'path': 'stimuli/animals/bear.jpg'},
-    {'name': 'stimuli/animals/mealworm.jpg', 'path': 'stimuli/animals/mealworm.jpg'},
-    {'name': 'stimuli/tools/weedeater.jpg', 'path': 'stimuli/tools/weedeater.jpg'},
-    {'name': 'stimuli/animals/lobster.jpg', 'path': 'stimuli/animals/lobster.jpg'},
-    {'name': 'stimuli/animals/pigeon.jpg', 'path': 'stimuli/animals/pigeon.jpg'},
-    {'name': 'phase2_order2.csv', 'path': 'phase2_order2.csv'},
-    {'name': 'phase2_order7.csv', 'path': 'phase2_order7.csv'},
-    {'name': 'stimuli/animals/herculesbeetle.jpg', 'path': 'stimuli/animals/herculesbeetle.jpg'},
-    {'name': 'stimuli/tools/hairbrush.jpg', 'path': 'stimuli/tools/hairbrush.jpg'},
-    {'name': 'stimuli/animals/beetle.jpg', 'path': 'stimuli/animals/beetle.jpg'},
-    {'name': 'stimuli/tools/rollingpin.jpg', 'path': 'stimuli/tools/rollingpin.jpg'},
-    {'name': 'phase3_order5.csv', 'path': 'phase3_order5.csv'},
-    {'name': 'stimuli/tools/microwave.jpg', 'path': 'stimuli/tools/microwave.jpg'},
-    {'name': 'stimuli/tools/razorblade.jpg', 'path': 'stimuli/tools/razorblade.jpg'},
-    {'name': 'stimuli/tools/spraybottle.jpg', 'path': 'stimuli/tools/spraybottle.jpg'},
-    {'name': 'stimuli/animals/redpanda.jpg', 'path': 'stimuli/animals/redpanda.jpg'},
-    {'name': 'stimuli/animals/rooster.jpg', 'path': 'stimuli/animals/rooster.jpg'},
-    {'name': 'stimuli/animals/crane.jpg', 'path': 'stimuli/animals/crane.jpg'},
-    {'name': 'stimuli/animals/dockbug.jpg', 'path': 'stimuli/animals/dockbug.jpg'},
-    {'name': 'stimuli/tools/plunger.jpg', 'path': 'stimuli/tools/plunger.jpg'},
-    {'name': 'stimuli/tools/microscope.jpg', 'path': 'stimuli/tools/microscope.jpg'},
-    {'name': 'stimuli/animals/assassinbug.jpg', 'path': 'stimuli/animals/assassinbug.jpg'},
-    {'name': 'stimuli/animals/dolphin.jpg', 'path': 'stimuli/animals/dolphin.jpg'},
-    {'name': 'stimuli/tools/spoon.jpg', 'path': 'stimuli/tools/spoon.jpg'},
-    {'name': 'stimuli/tools/airpump.jpg', 'path': 'stimuli/tools/airpump.jpg'},
-    {'name': 'phase3_order8.csv', 'path': 'phase3_order8.csv'},
-    {'name': 'stimuli/animals/woodlouse.jpg', 'path': 'stimuli/animals/woodlouse.jpg'},
-    {'name': 'stimuli/animals/palmcockatoo.jpg', 'path': 'stimuli/animals/palmcockatoo.jpg'},
-    {'name': 'stimuli/tools/beadingtool.jpg', 'path': 'stimuli/tools/beadingtool.jpg'},
-    {'name': 'stimuli/tools/telephone.jpg', 'path': 'stimuli/tools/telephone.jpg'},
-    {'name': 'phase1_order8.csv', 'path': 'phase1_order8.csv'},
-    {'name': 'stimuli/animals/leopard.jpg', 'path': 'stimuli/animals/leopard.jpg'},
-    {'name': 'stimuli/tools/fishingpole.jpg', 'path': 'stimuli/tools/fishingpole.jpg'},
-    {'name': 'stimuli/tools/ducttape.jpg', 'path': 'stimuli/tools/ducttape.jpg'},
-    {'name': 'stimuli/animals/elephantasian.jpg', 'path': 'stimuli/animals/elephantasian.jpg'},
-    {'name': 'stimuli/animals/prayingmantis.jpg', 'path': 'stimuli/animals/prayingmantis.jpg'},
-    {'name': 'stimuli/tools/bottleopener.jpg', 'path': 'stimuli/tools/bottleopener.jpg'},
-    {'name': 'stimuli/animals/lobsterspiny.jpg', 'path': 'stimuli/animals/lobsterspiny.jpg'},
-    {'name': 'stimuli/tools/stroller.jpg', 'path': 'stimuli/tools/stroller.jpg'},
-    {'name': 'stimuli/tools/hourglass.jpg', 'path': 'stimuli/tools/hourglass.jpg'},
-    {'name': 'stimuli/animals/wasp.jpg', 'path': 'stimuli/animals/wasp.jpg'},
-    {'name': 'stimuli/animals/deer.jpg', 'path': 'stimuli/animals/deer.jpg'},
-    {'name': 'phase1_order2.csv', 'path': 'phase1_order2.csv'},
-    {'name': 'stimuli/tools/airhorn.jpg', 'path': 'stimuli/tools/airhorn.jpg'},
-    {'name': 'stimuli/animals/porcupine.jpg', 'path': 'stimuli/animals/porcupine.jpg'},
-    {'name': 'stimuli/animals/macaw.jpg', 'path': 'stimuli/animals/macaw.jpg'},
-    {'name': 'stimuli/animals/cheetah.jpg', 'path': 'stimuli/animals/cheetah.jpg'},
-    {'name': 'stimuli/animals/armadillo.jpg', 'path': 'stimuli/animals/armadillo.jpg'},
-    {'name': 'stimuli/animals/koala.jpg', 'path': 'stimuli/animals/koala.jpg'},
-    {'name': 'stimuli/animals/flounder.jpg', 'path': 'stimuli/animals/flounder.jpg'},
-    {'name': 'stimuli/animals/springhare.jpg', 'path': 'stimuli/animals/springhare.jpg'},
-    {'name': 'phase1_order6.csv', 'path': 'phase1_order6.csv'},
-    {'name': 'stimuli/tools/paintbrush.jpg', 'path': 'stimuli/tools/paintbrush.jpg'},
-    {'name': 'stimuli/animals/minnow.jpg', 'path': 'stimuli/animals/minnow.jpg'},
-    {'name': 'stimuli/animals/hippo.jpg', 'path': 'stimuli/animals/hippo.jpg'},
-    {'name': 'stimuli/tools/viceclamp.jpg', 'path': 'stimuli/tools/viceclamp.jpg'},
-    {'name': 'phase1_order1.csv', 'path': 'phase1_order1.csv'},
-    {'name': 'stimuli/tools/woodchipper.jpg', 'path': 'stimuli/tools/woodchipper.jpg'},
-    {'name': 'stimuli/tools/treadmill.jpg', 'path': 'stimuli/tools/treadmill.jpg'},
-    {'name': 'stimuli/tools/stopwatch.jpg', 'path': 'stimuli/tools/stopwatch.jpg'},
-    {'name': 'stimuli/animals/bat.jpg', 'path': 'stimuli/animals/bat.jpg'},
-    {'name': 'stimuli/tools/camera.jpg', 'path': 'stimuli/tools/camera.jpg'},
-    {'name': 'stimuli/animals/snail.jpg', 'path': 'stimuli/animals/snail.jpg'},
-    {'name': 'stimuli/animals/vulture.jpg', 'path': 'stimuli/animals/vulture.jpg'},
-    {'name': 'stimuli/animals/scorpion_threat.jpg', 'path': 'stimuli/animals/scorpion_threat.jpg'},
-    {'name': 'stimuli/animals/wolf.jpg', 'path': 'stimuli/animals/wolf.jpg'},
-    {'name': 'stimuli/animals/canary.jpg', 'path': 'stimuli/animals/canary.jpg'},
-    {'name': 'stimuli/animals/salmon.jpg', 'path': 'stimuli/animals/salmon.jpg'},
-    {'name': 'stimuli/tools/faxmachine.jpg', 'path': 'stimuli/tools/faxmachine.jpg'},
-    {'name': 'stimuli/tools/pliers.jpg', 'path': 'stimuli/tools/pliers.jpg'},
-    {'name': 'stimuli/animals/sheep.jpg', 'path': 'stimuli/animals/sheep.jpg'},
-    {'name': 'stimuli/animals/ant.jpg', 'path': 'stimuli/animals/ant.jpg'},
-    {'name': 'stimuli/animals/rat.jpg', 'path': 'stimuli/animals/rat.jpg'},
-    {'name': 'stimuli/tools/electricsander.jpg', 'path': 'stimuli/tools/electricsander.jpg'},
-    {'name': 'stimuli/tools/measuringcups.jpg', 'path': 'stimuli/tools/measuringcups.jpg'},
-    {'name': 'stimuli/tools/tongs.jpg', 'path': 'stimuli/tools/tongs.jpg'},
-    {'name': 'stimuli/tools/whisk.jpg', 'path': 'stimuli/tools/whisk.jpg'},
-    {'name': 'stimuli/tools/magnet.jpg', 'path': 'stimuli/tools/magnet.jpg'},
-    {'name': 'stimuli/tools/curlingiron.jpg', 'path': 'stimuli/tools/curlingiron.jpg'},
-    {'name': 'stimuli/animals/grasshopper.jpg', 'path': 'stimuli/animals/grasshopper.jpg'},
-    {'name': 'stimuli/tools/beaker.jpg', 'path': 'stimuli/tools/beaker.jpg'},
-    {'name': 'stimuli/tools/stove.jpg', 'path': 'stimuli/tools/stove.jpg'},
-    {'name': 'stimuli/tools/lighterbic.jpg', 'path': 'stimuli/tools/lighterbic.jpg'},
-    {'name': 'stimuli/animals/tortoise.jpg', 'path': 'stimuli/animals/tortoise.jpg'},
-    {'name': 'stimuli/tools/tape.jpg', 'path': 'stimuli/tools/tape.jpg'},
-    {'name': 'stimuli/tools/planer.jpg', 'path': 'stimuli/tools/planer.jpg'},
-    {'name': 'stimuli/animals/lemur.jpg', 'path': 'stimuli/animals/lemur.jpg'},
-    {'name': 'phase3_order6.csv', 'path': 'phase3_order6.csv'},
-    {'name': 'stimuli/animals/moth.jpg', 'path': 'stimuli/animals/moth.jpg'},
-    {'name': 'stimuli/animals/waterdragon.jpg', 'path': 'stimuli/animals/waterdragon.jpg'},
-    {'name': 'stimuli/tools/workbench.jpg', 'path': 'stimuli/tools/workbench.jpg'},
-    {'name': 'stimuli/animals/pelican.jpg', 'path': 'stimuli/animals/pelican.jpg'},
-    {'name': 'stimuli/tools/level.jpg', 'path': 'stimuli/tools/level.jpg'},
-    {'name': 'phase1_order4.csv', 'path': 'phase1_order4.csv'},
-    {'name': 'stimuli/tools/sledgehammer.jpg', 'path': 'stimuli/tools/sledgehammer.jpg'},
-    {'name': 'stimuli/animals/meerkat.jpg', 'path': 'stimuli/animals/meerkat.jpg'},
-    {'name': 'stimuli/tools/laptop.jpg', 'path': 'stimuli/tools/laptop.jpg'},
-    {'name': 'stimuli/tools/sewingmachine.jpg', 'path': 'stimuli/tools/sewingmachine.jpg'},
-    {'name': 'stimuli/animals/hermitcrab.jpg', 'path': 'stimuli/animals/hermitcrab.jpg'},
-    {'name': 'stimuli/tools/gong.jpg', 'path': 'stimuli/tools/gong.jpg'},
-    {'name': 'stimuli/animals/caracal.jpg', 'path': 'stimuli/animals/caracal.jpg'},
-    {'name': 'stimuli/tools/jawsoflife.jpg', 'path': 'stimuli/tools/jawsoflife.jpg'},
-    {'name': 'stimuli/tools/edger.jpg', 'path': 'stimuli/tools/edger.jpg'},
-    {'name': 'stimuli/animals/cow.jpg', 'path': 'stimuli/animals/cow.jpg'},
-    {'name': 'stimuli/tools/mixer.jpg', 'path': 'stimuli/tools/mixer.jpg'},
-    {'name': 'stimuli/animals/giraffe.jpg', 'path': 'stimuli/animals/giraffe.jpg'},
-    {'name': 'stimuli/tools/sander.jpg', 'path': 'stimuli/tools/sander.jpg'},
-    {'name': 'stimuli/tools/cuttingboard.jpg', 'path': 'stimuli/tools/cuttingboard.jpg'},
-    {'name': 'stimuli/tools/ladder.jpg', 'path': 'stimuli/tools/ladder.jpg'},
-    {'name': 'stimuli/tools/carpetblower.jpg', 'path': 'stimuli/tools/carpetblower.jpg'},
-    {'name': 'stimuli/animals/rabbit.jpg', 'path': 'stimuli/animals/rabbit.jpg'},
-    {'name': 'stimuli/tools/weldershammer.jpg', 'path': 'stimuli/tools/weldershammer.jpg'},
-    {'name': 'stimuli/animals/lion_threat.jpg', 'path': 'stimuli/animals/lion_threat.jpg'},
-    {'name': 'stimuli/tools/wheelbarrow.jpg', 'path': 'stimuli/tools/wheelbarrow.jpg'},
-    {'name': 'stimuli_practice/manmade/baseball01a.jpg', 'path': 'stimuli_practice/manmade/baseball01a.jpg'},
-    {'name': 'stimuli/animals/gorilla.jpg', 'path': 'stimuli/animals/gorilla.jpg'},
-    {'name': 'stimuli/animals/seahorse.jpg', 'path': 'stimuli/animals/seahorse.jpg'},
-    {'name': 'phase3_order7.csv', 'path': 'phase3_order7.csv'},
-    {'name': 'stimuli/animals/firebug.jpg', 'path': 'stimuli/animals/firebug.jpg'},
-    {'name': 'stimuli_practice/natural/feather03a.jpg', 'path': 'stimuli_practice/natural/feather03a.jpg'},
-    {'name': 'stimuli/tools/gardenhose.jpg', 'path': 'stimuli/tools/gardenhose.jpg'},
-    {'name': 'stimuli/animals/starfish.jpg', 'path': 'stimuli/animals/starfish.jpg'},
-    {'name': 'stimuli_practice/natural/rock01a.jpg', 'path': 'stimuli_practice/natural/rock01a.jpg'},
-    {'name': 'stimuli/animals/pike.jpg', 'path': 'stimuli/animals/pike.jpg'},
-    {'name': 'stimuli/animals/hedgehog.jpg', 'path': 'stimuli/animals/hedgehog.jpg'},
-    {'name': 'stimuli_practice/natural/soil.jpg', 'path': 'stimuli_practice/natural/soil.jpg'},
-    {'name': 'stimuli/tools/cheesegrater.jpg', 'path': 'stimuli/tools/cheesegrater.jpg'},
-    {'name': 'stimuli/animals/dockbug2.jpg', 'path': 'stimuli/animals/dockbug2.jpg'},
-    {'name': 'stimuli/tools/flashlight.jpg', 'path': 'stimuli/tools/flashlight.jpg'},
-    {'name': 'stimuli/animals/plantbug.jpg', 'path': 'stimuli/animals/plantbug.jpg'},
-    {'name': 'stimuli/animals/tiger.jpg', 'path': 'stimuli/animals/tiger.jpg'},
-    {'name': 'stimuli/animals/toucan.jpg', 'path': 'stimuli/animals/toucan.jpg'},
-    {'name': 'stimuli/animals/ferret.jpg', 'path': 'stimuli/animals/ferret.jpg'},
-    {'name': 'stimuli/tools/blackboard.jpg', 'path': 'stimuli/tools/blackboard.jpg'},
-    {'name': 'stimuli/tools/reflexhammer.jpg', 'path': 'stimuli/tools/reflexhammer.jpg'},
-    {'name': 'stimuli/tools/bucket.jpg', 'path': 'stimuli/tools/bucket.jpg'},
-    {'name': 'stimuli/tools/stethoscope.jpg', 'path': 'stimuli/tools/stethoscope.jpg'},
-    {'name': 'stimuli/animals/bullfrog.jpg', 'path': 'stimuli/animals/bullfrog.jpg'},
-    {'name': 'stimuli/tools/blower.jpg', 'path': 'stimuli/tools/blower.jpg'},
-    {'name': 'stimuli/animals/cod.jpg', 'path': 'stimuli/animals/cod.jpg'},
-    {'name': 'phase3_order4.csv', 'path': 'phase3_order4.csv'},
-    {'name': 'stimuli/tools/shoehorn.jpg', 'path': 'stimuli/tools/shoehorn.jpg'},
-    {'name': 'stimuli/tools/carjack.jpg', 'path': 'stimuli/tools/carjack.jpg'},
-    {'name': 'stimuli/tools/television.jpg', 'path': 'stimuli/tools/television.jpg'},
-    {'name': 'stimuli/animals/salamander.jpg', 'path': 'stimuli/animals/salamander.jpg'},
-    {'name': 'stimuli/animals/lizard.jpg', 'path': 'stimuli/animals/lizard.jpg'},
-    {'name': 'stimuli/tools/pick.jpg', 'path': 'stimuli/tools/pick.jpg'},
-    {'name': 'stimuli/tools/mellonballer.jpg', 'path': 'stimuli/tools/mellonballer.jpg'},
-    {'name': 'stimuli/animals/pig.jpg', 'path': 'stimuli/animals/pig.jpg'},
-    {'name': 'stimuli/animals/carp.jpg', 'path': 'stimuli/animals/carp.jpg'},
-    {'name': 'stimuli/tools/thermometer.jpg', 'path': 'stimuli/tools/thermometer.jpg'},
-    {'name': 'stimuli/tools/circularsaw.jpg', 'path': 'stimuli/tools/circularsaw.jpg'},
-    {'name': 'stimuli/animals/rainbowtrout.jpg', 'path': 'stimuli/animals/rainbowtrout.jpg'},
-    {'name': 'phase1_order5.csv', 'path': 'phase1_order5.csv'},
-    {'name': 'stimuli/animals/heckcattle.jpg', 'path': 'stimuli/animals/heckcattle.jpg'},
-    {'name': 'stimuli/animals/penguin.jpg', 'path': 'stimuli/animals/penguin.jpg'},
-    {'name': 'stimuli/animals/finch.jpg', 'path': 'stimuli/animals/finch.jpg'},
-    {'name': 'stimuli/tools/dremel.jpg', 'path': 'stimuli/tools/dremel.jpg'},
-    {'name': 'stimuli/animals/redpalmweevil.jpg', 'path': 'stimuli/animals/redpalmweevil.jpg'},
-    {'name': 'stimuli/animals/caiman.jpg', 'path': 'stimuli/animals/caiman.jpg'},
-    {'name': 'phase3_order3.csv', 'path': 'phase3_order3.csv'},
-    {'name': 'stimuli/tools/anvil.jpg', 'path': 'stimuli/tools/anvil.jpg'},
-    {'name': 'stimuli/tools/ruler.jpg', 'path': 'stimuli/tools/ruler.jpg'},
-    {'name': 'stimuli/animals/frog.jpg', 'path': 'stimuli/animals/frog.jpg'},
-    {'name': 'stimuli_practice/cues/cue_white.jpg', 'path': 'stimuli_practice/cues/cue_white.jpg'},
-    {'name': 'stimuli/animals/earthworm.jpg', 'path': 'stimuli/animals/earthworm.jpg'},
-    {'name': 'stimuli/tools/kettle.jpg', 'path': 'stimuli/tools/kettle.jpg'},
-    {'name': 'stimuli/tools/gentssaw.jpg', 'path': 'stimuli/tools/gentssaw.jpg'},
-    {'name': 'stimuli/animals/partridge.jpg', 'path': 'stimuli/animals/partridge.jpg'},
-    {'name': 'stimuli/animals/hyena.jpg', 'path': 'stimuli/animals/hyena.jpg'},
-    {'name': 'stimuli/tools/electricsewingmachine.jpg', 'path': 'stimuli/tools/electricsewingmachine.jpg'},
-    {'name': 'stimuli/tools/bolt.jpg', 'path': 'stimuli/tools/bolt.jpg'},
-    {'name': 'stimuli/tools/eraser.jpg', 'path': 'stimuli/tools/eraser.jpg'},
-    {'name': 'stimuli/animals/lion.jpg', 'path': 'stimuli/animals/lion.jpg'},
-    {'name': 'stimuli/tools/corkscrew.jpg', 'path': 'stimuli/tools/corkscrew.jpg'},
-    {'name': 'stimuli/tools/computermouse.jpg', 'path': 'stimuli/tools/computermouse.jpg'},
-    {'name': 'stimuli/animals/halibut.jpg', 'path': 'stimuli/animals/halibut.jpg'},
-    {'name': 'stimuli/animals/owl.jpg', 'path': 'stimuli/animals/owl.jpg'},
-    {'name': 'stimuli/tools/suctioncup.jpg', 'path': 'stimuli/tools/suctioncup.jpg'},
-    {'name': 'stimuli/tools/nails.jpg', 'path': 'stimuli/tools/nails.jpg'},
-    {'name': 'stimuli/animals/mahimahi.jpg', 'path': 'stimuli/animals/mahimahi.jpg'},
-    {'name': 'stimuli/tools/watch.jpg', 'path': 'stimuli/tools/watch.jpg'},
-    {'name': 'stimuli/tools/loom.jpg', 'path': 'stimuli/tools/loom.jpg'},
-    {'name': 'stimuli/animals/wildabeast.jpg', 'path': 'stimuli/animals/wildabeast.jpg'},
-    {'name': 'stimuli/tools/tubeflaring.jpg', 'path': 'stimuli/tools/tubeflaring.jpg'},
-    {'name': 'stimuli/animals/catfish.jpg', 'path': 'stimuli/animals/catfish.jpg'},
-    {'name': 'stimuli/tools/hedgeshears.jpg', 'path': 'stimuli/tools/hedgeshears.jpg'},
-    {'name': 'stimuli/tools/telescope.jpg', 'path': 'stimuli/tools/telescope.jpg'},
-    {'name': 'stimuli/animals/jaguar_threat.jpg', 'path': 'stimuli/animals/jaguar_threat.jpg'},
-    {'name': 'stimuli/tools/burnisher.jpg', 'path': 'stimuli/tools/burnisher.jpg'},
-    {'name': 'phase2_order4.csv', 'path': 'phase2_order4.csv'},
-    {'name': 'stimuli/tools/sponge.jpg', 'path': 'stimuli/tools/sponge.jpg'},
-    {'name': 'stimuli/tools/hairdryer.jpg', 'path': 'stimuli/tools/hairdryer.jpg'},
-    {'name': 'phase2_order3.csv', 'path': 'phase2_order3.csv'},
-    {'name': 'stimuli/animals/bluejay.jpg', 'path': 'stimuli/animals/bluejay.jpg'},
-    {'name': 'stimuli/animals/bushdog.jpg', 'path': 'stimuli/animals/bushdog.jpg'},
-    {'name': 'stimuli/tools/vicegrips.jpg', 'path': 'stimuli/tools/vicegrips.jpg'},
-    {'name': 'stimuli/animals/koi.jpg', 'path': 'stimuli/animals/koi.jpg'},
-    {'name': 'stimuli/tools/fertilzerspread.jpg', 'path': 'stimuli/tools/fertilzerspread.jpg'},
-    {'name': 'stimuli/tools/iron.jpg', 'path': 'stimuli/tools/iron.jpg'},
-    {'name': 'stimuli/animals/slug.jpg', 'path': 'stimuli/animals/slug.jpg'},
-    {'name': 'stimuli/tools/chisel.jpg', 'path': 'stimuli/tools/chisel.jpg'},
-    {'name': 'stimuli/tools/engine.jpg', 'path': 'stimuli/tools/engine.jpg'},
-    {'name': 'phase3_order2.csv', 'path': 'phase3_order2.csv'},
-    {'name': 'stimuli/animals/orangutan.jpg', 'path': 'stimuli/animals/orangutan.jpg'},
-    {'name': 'stimuli/animals/ram.jpg', 'path': 'stimuli/animals/ram.jpg'},
-    {'name': 'stimuli/tools/pliers2.jpg', 'path': 'stimuli/tools/pliers2.jpg'},
-    {'name': 'stimuli/tools/electricpipethreader.jpg', 'path': 'stimuli/tools/electricpipethreader.jpg'},
-    {'name': 'stimuli/animals/alligator.jpg', 'path': 'stimuli/animals/alligator.jpg'},
-    {'name': 'stimuli/tools/trowel.jpg', 'path': 'stimuli/tools/trowel.jpg'},
-    {'name': 'phase3_practice.csv', 'path': 'phase3_practice.csv'},
-    {'name': 'stimuli/tools/blender.jpg', 'path': 'stimuli/tools/blender.jpg'},
-    {'name': 'stimuli/animals/pachnodasinuata.jpg', 'path': 'stimuli/animals/pachnodasinuata.jpg'},
-    {'name': 'stimuli/tools/saw.jpg', 'path': 'stimuli/tools/saw.jpg'},
-    {'name': 'stimuli/animals/brown_bear.jpg', 'path': 'stimuli/animals/brown_bear.jpg'},
-    {'name': 'stimuli/animals/otter.jpg', 'path': 'stimuli/animals/otter.jpg'},
-    {'name': 'stimuli/tools/caulkinggun.jpg', 'path': 'stimuli/tools/caulkinggun.jpg'},
-    {'name': 'stimuli/tools/oven.jpg', 'path': 'stimuli/tools/oven.jpg'},
-    {'name': 'stimuli/tools/smartphone.jpg', 'path': 'stimuli/tools/smartphone.jpg'},
-    {'name': 'stimuli/tools/sprinkler.jpg', 'path': 'stimuli/tools/sprinkler.jpg'},
-    {'name': 'stimuli/animals/chimp.jpg', 'path': 'stimuli/animals/chimp.jpg'},
-    {'name': 'stimuli/animals/dog2.jpg', 'path': 'stimuli/animals/dog2.jpg'},
-    {'name': 'stimuli/animals/leafinsect.jpg', 'path': 'stimuli/animals/leafinsect.jpg'},
-    {'name': 'phase1_practice.csv', 'path': 'phase1_practice.csv'},
-    {'name': 'stimuli/animals/scorpion.jpg', 'path': 'stimuli/animals/scorpion.jpg'},
-    {'name': 'stimuli/tools/headphones.jpg', 'path': 'stimuli/tools/headphones.jpg'},
-    {'name': 'stimuli/tools/measuringdevice.jpg', 'path': 'stimuli/tools/measuringdevice.jpg'},
-    {'name': 'stimuli/animals/aardvark.jpg', 'path': 'stimuli/animals/aardvark.jpg'},
-    {'name': 'stimuli/animals/seal.jpg', 'path': 'stimuli/animals/seal.jpg'},
-    {'name': 'stimuli/tools/italiangardeningtool.jpg', 'path': 'stimuli/tools/italiangardeningtool.jpg'},
-    {'name': 'stimuli/animals/quail.jpg', 'path': 'stimuli/animals/quail.jpg'},
-    {'name': 'stimuli/animals/stinkbug.jpg', 'path': 'stimuli/animals/stinkbug.jpg'},
-    {'name': 'stimuli/tools/clippers.jpg', 'path': 'stimuli/tools/clippers.jpg'},
-    {'name': 'stimuli/tools/drillbit.jpg', 'path': 'stimuli/tools/drillbit.jpg'},
-    {'name': 'stimuli/tools/floorbuffer.jpg', 'path': 'stimuli/tools/floorbuffer.jpg'},
-    {'name': 'stimuli/animals/dog.jpg', 'path': 'stimuli/animals/dog.jpg'},
-    {'name': 'stimuli/animals/rhino.jpg', 'path': 'stimuli/animals/rhino.jpg'},
-    {'name': 'stimuli/animals/anteater.jpg', 'path': 'stimuli/animals/anteater.jpg'},
-    {'name': 'stimuli_practice/manmade/plasticgallon.jpg', 'path': 'stimuli_practice/manmade/plasticgallon.jpg'},
-    {'name': 'stimuli/tools/lantern.jpg', 'path': 'stimuli/tools/lantern.jpg'},
-    {'name': 'stimuli/tools/hammer.jpg', 'path': 'stimuli/tools/hammer.jpg'},
-    {'name': 'stimuli/tools/paintroller.jpg', 'path': 'stimuli/tools/paintroller.jpg'},
-    {'name': 'stimuli/animals/chicken.jpg', 'path': 'stimuli/animals/chicken.jpg'},
-    {'name': 'stimuli/animals/fox.jpg', 'path': 'stimuli/animals/fox.jpg'},
-    {'name': 'stimuli/animals/bass.jpg', 'path': 'stimuli/animals/bass.jpg'},
-    {'name': 'phase1_order3.csv', 'path': 'phase1_order3.csv'},
-    {'name': 'phase2_practice.csv', 'path': 'phase2_practice.csv'},
-    {'name': 'stimuli/animals/mountainsheep.jpg', 'path': 'stimuli/animals/mountainsheep.jpg'},
-    {'name': 'stimuli/animals/dove.jpg', 'path': 'stimuli/animals/dove.jpg'},
-    {'name': 'stimuli/animals/spider_threat.jpg', 'path': 'stimuli/animals/spider_threat.jpg'},
-    {'name': 'stimuli/animals/jackal.jpg', 'path': 'stimuli/animals/jackal.jpg'},
-    {'name': 'stimuli/tools/transmissionwrench.jpg', 'path': 'stimuli/tools/transmissionwrench.jpg'},
-    {'name': 'stimuli/tools/campingstove.jpg', 'path': 'stimuli/tools/campingstove.jpg'},
-    {'name': 'stimuli/tools/screwdriver.jpg', 'path': 'stimuli/tools/screwdriver.jpg'},
-    {'name': 'stimuli/animals/crab.jpg', 'path': 'stimuli/animals/crab.jpg'},
-    {'name': 'stimuli/tools/padlock.jpg', 'path': 'stimuli/tools/padlock.jpg'},
-    {'name': 'stimuli/animals/elephantafrican.jpg', 'path': 'stimuli/animals/elephantafrican.jpg'},
-    {'name': 'stimuli/animals/angelfish.jpg', 'path': 'stimuli/animals/angelfish.jpg'},
-    {'name': 'stimuli/animals/reindeer.jpg', 'path': 'stimuli/animals/reindeer.jpg'},
-    {'name': 'stimuli/animals/baldeagle.jpg', 'path': 'stimuli/animals/baldeagle.jpg'},
-    {'name': 'stimuli/tools/carabiner.jpg', 'path': 'stimuli/tools/carabiner.jpg'},
-    {'name': 'stimuli/animals/squirel.jpg', 'path': 'stimuli/animals/squirel.jpg'},
-    {'name': 'stimuli/tools/sawblade.jpg', 'path': 'stimuli/tools/sawblade.jpg'},
-    {'name': 'stimuli/tools/rake.jpg', 'path': 'stimuli/tools/rake.jpg'},
-    {'name': 'stimuli/animals/waterbuffalo.jpg', 'path': 'stimuli/animals/waterbuffalo.jpg'},
-    {'name': 'stimuli/animals/zebra.jpg', 'path': 'stimuli/animals/zebra.jpg'},
-    {'name': 'stimuli/tools/pruner.jpg', 'path': 'stimuli/tools/pruner.jpg'},
-    {'name': 'stimuli/animals/shark.jpg', 'path': 'stimuli/animals/shark.jpg'},
-    {'name': 'stimuli/tools/calculator.jpg', 'path': 'stimuli/tools/calculator.jpg'},
-    {'name': 'stimuli/tools/ladel.jpg', 'path': 'stimuli/tools/ladel.jpg'},
-    {'name': 'stimuli/tools/snowbrush.jpg', 'path': 'stimuli/tools/snowbrush.jpg'},
-    {'name': 'stimuli/animals/mink.jpg', 'path': 'stimuli/animals/mink.jpg'},
-    {'name': 'stimuli/tools/avocadoslicer.jpg', 'path': 'stimuli/tools/avocadoslicer.jpg'},
-    {'name': 'stimuli/animals/millipede.jpg', 'path': 'stimuli/animals/millipede.jpg'},
-    {'name': 'stimuli/animals/flamingo.jpg', 'path': 'stimuli/animals/flamingo.jpg'},
-    {'name': 'stimuli/tools/squeegee.jpg', 'path': 'stimuli/tools/squeegee.jpg'},
-    {'name': 'stimuli/tools/umbrella.jpg', 'path': 'stimuli/tools/umbrella.jpg'},
-    {'name': 'stimuli/animals/cricket.jpg', 'path': 'stimuli/animals/cricket.jpg'},
-    {'name': 'stimuli/animals/clownfish.jpg', 'path': 'stimuli/animals/clownfish.jpg'},
-    {'name': 'stimuli/animals/malaysianjunglenymph.jpg', 'path': 'stimuli/animals/malaysianjunglenymph.jpg'},
-    {'name': 'stimuli/tools/ropeandpulley.jpg', 'path': 'stimuli/tools/ropeandpulley.jpg'},
-    {'name': 'stimuli/tools/hoe.jpg', 'path': 'stimuli/tools/hoe.jpg'},
-    {'name': 'stimuli/animals/blackleopard.jpg', 'path': 'stimuli/animals/blackleopard.jpg'},
-    {'name': 'stimuli/animals/penguin2.jpg', 'path': 'stimuli/animals/penguin2.jpg'},
-    {'name': 'stimuli/animals/centipede_threat.jpg', 'path': 'stimuli/animals/centipede_threat.jpg'},
-    {'name': 'stimuli/animals/mole.jpg', 'path': 'stimuli/animals/mole.jpg'},
-    {'name': 'stimuli/animals/snake_threat.jpg', 'path': 'stimuli/animals/snake_threat.jpg'},
-    {'name': 'stimuli/animals/moose.jpg', 'path': 'stimuli/animals/moose.jpg'},
-    {'name': 'stimuli/animals/shrimp.jpg', 'path': 'stimuli/animals/shrimp.jpg'},
-    {'name': 'stimuli/tools/magnifyingglass.jpg', 'path': 'stimuli/tools/magnifyingglass.jpg'},
-    {'name': 'stimuli/tools/benchdogs.jpg', 'path': 'stimuli/tools/benchdogs.jpg'},
-    {'name': 'stimuli/tools/mop.jpg', 'path': 'stimuli/tools/mop.jpg'},
-    {'name': 'stimuli/animals/cranebug.jpg', 'path': 'stimuli/animals/cranebug.jpg'},
-    {'name': 'stimuli/tools/circlecutter.jpg', 'path': 'stimuli/tools/circlecutter.jpg'},
-    {'name': 'stimuli/tools/measuringtape.jpg', 'path': 'stimuli/tools/measuringtape.jpg'},
-    {'name': 'stimuli/animals/sugarglider.jpg', 'path': 'stimuli/animals/sugarglider.jpg'},
-    {'name': 'stimuli/tools/paintgun.jpg', 'path': 'stimuli/tools/paintgun.jpg'},
-    {'name': 'stimuli/animals/bumblebee.jpg', 'path': 'stimuli/animals/bumblebee.jpg'},
-    {'name': 'stimuli/tools/chainsaw.jpg', 'path': 'stimuli/tools/chainsaw.jpg'},
-    {'name': 'stimuli/tools/pizzacutter.jpg', 'path': 'stimuli/tools/pizzacutter.jpg'},
-    {'name': 'stimuli/animals/perch.jpg', 'path': 'stimuli/animals/perch.jpg'},
-    {'name': 'stimuli/animals/camel.jpg', 'path': 'stimuli/animals/camel.jpg'},
-    {'name': 'stimuli/animals/yak.jpg', 'path': 'stimuli/animals/yak.jpg'},
-    {'name': 'stimuli/animals/dramaderry.jpg', 'path': 'stimuli/animals/dramaderry.jpg'},
-    {'name': 'stimuli/tools/electricdrill.jpg', 'path': 'stimuli/tools/electricdrill.jpg'},
-    {'name': 'stimuli/animals/donkey.jpg', 'path': 'stimuli/animals/donkey.jpg'},
-    {'name': 'stimuli/tools/routerplane.jpg', 'path': 'stimuli/tools/routerplane.jpg'},
-    {'name': 'stimuli/tools/coathanger.jpg', 'path': 'stimuli/tools/coathanger.jpg'},
-    {'name': 'stimuli/tools/electricbreaker.jpg', 'path': 'stimuli/tools/electricbreaker.jpg'},
-    {'name': 'stimuli/animals/prairiedog.jpg', 'path': 'stimuli/animals/prairiedog.jpg'},
-    {'name': 'stimuli/tools/scale.jpg', 'path': 'stimuli/tools/scale.jpg'},
-    {'name': 'stimuli/animals/stickinsect.jpg', 'path': 'stimuli/animals/stickinsect.jpg'},
-    {'name': 'stimuli/animals/balloonfish.jpg', 'path': 'stimuli/animals/balloonfish.jpg'},
-    {'name': 'stimuli/tools/pressuregauge.jpg', 'path': 'stimuli/tools/pressuregauge.jpg'},
-    {'name': 'stimuli/tools/lawnmower.jpg', 'path': 'stimuli/tools/lawnmower.jpg'},
-    {'name': 'stimuli/animals/monkey.jpg', 'path': 'stimuli/animals/monkey.jpg'},
-    {'name': 'stimuli/animals/marlin.jpg', 'path': 'stimuli/animals/marlin.jpg'},
-    {'name': 'stimuli/tools/crutches.jpg', 'path': 'stimuli/tools/crutches.jpg'},
-    {'name': 'phase3_order1.csv', 'path': 'phase3_order1.csv'},
-    {'name': 'stimuli/animals/ladybug.jpg', 'path': 'stimuli/animals/ladybug.jpg'},
-    {'name': 'stimuli/tools/washboard.jpg', 'path': 'stimuli/tools/washboard.jpg'},
-    {'name': 'stimuli/animals/tragopan.jpg', 'path': 'stimuli/animals/tragopan.jpg'},
-    {'name': 'stimuli/animals/bison.jpg', 'path': 'stimuli/animals/bison.jpg'},
-    {'name': 'stimuli/animals/boar.jpg', 'path': 'stimuli/animals/boar.jpg'},
-    {'name': 'stimuli/tools/abacus.jpg', 'path': 'stimuli/tools/abacus.jpg'},
-    {'name': 'stimuli/animals/baboon.jpg', 'path': 'stimuli/animals/baboon.jpg'},
-    {'name': 'stimuli/animals/hummingbird.jpg', 'path': 'stimuli/animals/hummingbird.jpg'},
-    {'name': 'stimuli/tools/chainwrench.jpg', 'path': 'stimuli/tools/chainwrench.jpg'},
-    {'name': 'stimuli/animals/iguana2.jpg', 'path': 'stimuli/animals/iguana2.jpg'},
-    {'name': 'stimuli/tools/grapplinghook.jpg', 'path': 'stimuli/tools/grapplinghook.jpg'},
-    {'name': 'stimuli_practice/natural/starfish01.jpg', 'path': 'stimuli_practice/natural/starfish01.jpg'},
-    {'name': 'phase1_order7.csv', 'path': 'phase1_order7.csv'},
-    {'name': 'stimuli/tools/digitalcamera.jpg', 'path': 'stimuli/tools/digitalcamera.jpg'},
-    {'name': 'stimuli/tools/videogamecontroller.jpg', 'path': 'stimuli/tools/videogamecontroller.jpg'},
-    {'name': 'stimuli/animals/fly.jpg', 'path': 'stimuli/animals/fly.jpg'},
-    {'name': 'stimuli/animals/herring.jpg', 'path': 'stimuli/animals/herring.jpg'},
-    {'name': 'stimuli/tools/nailgun.jpg', 'path': 'stimuli/tools/nailgun.jpg'},
-    {'name': 'stimuli/tools/scissors.jpg', 'path': 'stimuli/tools/scissors.jpg'},
-    {'name': 'stimuli/tools/monkeywrench.jpg', 'path': 'stimuli/tools/monkeywrench.jpg'},
-    {'name': 'stimuli/tools/toaster.jpg', 'path': 'stimuli/tools/toaster.jpg'},
-    {'name': 'stimuli/tools/duster.jpg', 'path': 'stimuli/tools/duster.jpg'},
     {'name': 'stimuli_practice/manmade/pictureframe04.jpg', 'path': 'stimuli_practice/manmade/pictureframe04.jpg'},
-    {'name': 'stimuli/animals/caterpillar.jpg', 'path': 'stimuli/animals/caterpillar.jpg'},
-    {'name': 'stimuli/tools/fishtailchisel.jpg', 'path': 'stimuli/tools/fishtailchisel.jpg'},
-    {'name': 'stimuli/tools/compass.jpg', 'path': 'stimuli/tools/compass.jpg'},
-    {'name': 'stimuli_practice/manmade/mousetrap.jpg', 'path': 'stimuli_practice/manmade/mousetrap.jpg'},
-    {'name': 'stimuli/tools/staplegun.jpg', 'path': 'stimuli/tools/staplegun.jpg'},
-    {'name': 'stimuli/tools/solderingtorch.jpg', 'path': 'stimuli/tools/solderingtorch.jpg'},
-    {'name': 'stimuli/animals/ostrich.jpg', 'path': 'stimuli/animals/ostrich.jpg'},
-    {'name': 'stimuli/animals/shieldbug.jpg', 'path': 'stimuli/animals/shieldbug.jpg'},
-    {'name': 'stimuli/tools/fan.jpg', 'path': 'stimuli/tools/fan.jpg'},
-    {'name': 'stimuli/tools/handsander.jpg', 'path': 'stimuli/tools/handsander.jpg'},
-    {'name': 'stimuli/tools/windchime.jpg', 'path': 'stimuli/tools/windchime.jpg'},
-    {'name': 'stimuli/animals/llama.jpg', 'path': 'stimuli/animals/llama.jpg'},
-    {'name': 'stimuli/tools/duffelbag.jpg', 'path': 'stimuli/tools/duffelbag.jpg'},
-    {'name': 'stimuli/animals/goldfish.jpg', 'path': 'stimuli/animals/goldfish.jpg'},
-    {'name': 'stimuli/animals/goat.jpg', 'path': 'stimuli/animals/goat.jpg'},
-    {'name': 'stimuli/tools/drill.jpg', 'path': 'stimuli/tools/drill.jpg'},
-    {'name': 'stimuli/animals/mouse.jpg', 'path': 'stimuli/animals/mouse.jpg'},
-    {'name': 'stimuli/animals/peacock.jpg', 'path': 'stimuli/animals/peacock.jpg'},
-    {'name': 'phase2_order5.csv', 'path': 'phase2_order5.csv'},
-    {'name': 'stimuli/animals/beta.jpg', 'path': 'stimuli/animals/beta.jpg'},
-    {'name': 'stimuli/animals/crow.jpg', 'path': 'stimuli/animals/crow.jpg'},
-    {'name': 'stimuli/tools/mallet.jpg', 'path': 'stimuli/tools/mallet.jpg'},
-    {'name': 'phase2_order8.csv', 'path': 'phase2_order8.csv'},
-    {'name': 'stimuli/tools/crank.jpg', 'path': 'stimuli/tools/crank.jpg'},
-    {'name': 'phase2_order1.csv', 'path': 'phase2_order1.csv'},
-    {'name': 'stimuli/animals/octopus.jpg', 'path': 'stimuli/animals/octopus.jpg'},
-    {'name': 'stimuli/tools/scratchawl.jpg', 'path': 'stimuli/tools/scratchawl.jpg'},
-    {'name': 'stimuli/animals/snapper.jpg', 'path': 'stimuli/animals/snapper.jpg'},
-    {'name': 'stimuli/tools/caliper.jpg', 'path': 'stimuli/tools/caliper.jpg'},
-    {'name': 'stimuli/tools/foodprocessor.jpg', 'path': 'stimuli/tools/foodprocessor.jpg'},
-    {'name': 'stimuli/tools/keys.jpg', 'path': 'stimuli/tools/keys.jpg'},
-    {'name': 'stimuli/tools/whistle.jpg', 'path': 'stimuli/tools/whistle.jpg'},
-    {'name': 'stimuli/tools/sparkplug.jpg', 'path': 'stimuli/tools/sparkplug.jpg'},
-    {'name': 'stimuli/tools/wheeldolly.jpg', 'path': 'stimuli/tools/wheeldolly.jpg'},
-    {'name': 'stimuli/animals/kangaroo.jpg', 'path': 'stimuli/animals/kangaroo.jpg'},
+    {'name': 'stimuli_practice/manmade/plasticgallon.jpg', 'path': 'stimuli_practice/manmade/plasticgallon.jpg'},
     {'name': 'stimuli_practice/cues/cue_green.jpg', 'path': 'stimuli_practice/cues/cue_green.jpg'},
-    {'name': 'stimuli/tools/grill.jpg', 'path': 'stimuli/tools/grill.jpg'},
-    {'name': 'stimuli/animals/horse.jpg', 'path': 'stimuli/animals/horse.jpg'},
-    {'name': 'stimuli/tools/tubingbender.jpg', 'path': 'stimuli/tools/tubingbender.jpg'},
-    {'name': 'stimuli/animals/turtle.jpg', 'path': 'stimuli/animals/turtle.jpg'},
-    {'name': 'stimuli/tools/levelmount.jpg', 'path': 'stimuli/tools/levelmount.jpg'},
-    {'name': 'stimuli/tools/vacuumcleaner.jpg', 'path': 'stimuli/tools/vacuumcleaner.jpg'},
-    {'name': 'stimuli/animals/watusi.jpg', 'path': 'stimuli/animals/watusi.jpg'},
-    {'name': 'stimuli/animals/butterfly.jpg', 'path': 'stimuli/animals/butterfly.jpg'},
-    {'name': 'stimuli/animals/cat.jpg', 'path': 'stimuli/animals/cat.jpg'},
-    {'name': 'stimuli/tools/pencil.jpg', 'path': 'stimuli/tools/pencil.jpg'},
-    {'name': 'stimuli/tools/auger.jpg', 'path': 'stimuli/tools/auger.jpg'},
-    {'name': 'stimuli/animals/tiger_threat.jpg', 'path': 'stimuli/animals/tiger_threat.jpg'},
-    {'name': 'stimuli/animals/beardeddragon.jpg', 'path': 'stimuli/animals/beardeddragon.jpg'},
-    {'name': 'stimuli/animals/flea.jpg', 'path': 'stimuli/animals/flea.jpg'},
-    {'name': 'stimuli/tools/shovel.jpg', 'path': 'stimuli/tools/shovel.jpg'},
-    {'name': 'stimuli/animals/clam.jpg', 'path': 'stimuli/animals/clam.jpg'},
-    {'name': 'stimuli/animals/dragonfly.jpg', 'path': 'stimuli/animals/dragonfly.jpg'},
-    {'name': 'stimuli/animals/shark_threat.jpg', 'path': 'stimuli/animals/shark_threat.jpg'},
-    {'name': 'stimuli/animals/seaslug.jpg', 'path': 'stimuli/animals/seaslug.jpg'},
-    {'name': 'stimuli/tools/typewriter.jpg', 'path': 'stimuli/tools/typewriter.jpg'},
-    {'name': 'stimuli/tools/toolbox.jpg', 'path': 'stimuli/tools/toolbox.jpg'},
-    {'name': 'stimuli/tools/walker.jpg', 'path': 'stimuli/tools/walker.jpg'},
-    {'name': 'stimuli/tools/clamp.jpg', 'path': 'stimuli/tools/clamp.jpg'}
+    {'name': 'stimuli_practice/natural/feather03a.jpg', 'path': 'stimuli_practice/natural/feather03a.jpg'},
+    {'name': 'phase2_practice.csv', 'path': 'phase2_practice.csv'},
+    {'name': 'stimuli_practice/natural/rock01a.jpg', 'path': 'stimuli_practice/natural/rock01a.jpg'},
+    {'name': 'stimuli_practice/natural/starfish01.jpg', 'path': 'stimuli_practice/natural/starfish01.jpg'},
+    {'name': 'stimuli_practice/natural/soil.jpg', 'path': 'stimuli_practice/natural/soil.jpg'},
+    {'name': 'phase1_practice.csv', 'path': 'phase1_practice.csv'},
+    {'name': 'stimuli_practice/cues/cue_white.jpg', 'path': 'stimuli_practice/cues/cue_white.jpg'},
+    {'name': 'stimuli_practice/manmade/mousetrap.jpg', 'path': 'stimuli_practice/manmade/mousetrap.jpg'},
+    {'name': 'stimuli_practice/manmade/baseball01a.jpg', 'path': 'stimuli_practice/manmade/baseball01a.jpg'}
   ]
 });
 
@@ -582,6 +147,8 @@ var isi_4;
 var pre_reward_response_2;
 var skip_2;
 var check_practiceClock;
+var text_6;
+var key_resp;
 var continue_2Clock;
 var text;
 var instructions_continue_3;
@@ -727,6 +294,19 @@ function experimentInit() {
   
   // Initialize components for Routine "check_practice"
   check_practiceClock = new util.Clock();
+  text_6 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_6',
+    text: 'You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target images, using the 1 and 2 keys.\n\nYou will now begin the first phase of the experiment.\n\nPress space bar to continue.',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "continue_2"
   continue_2Clock = new util.Clock();
   text = new visual.TextStim({
@@ -1912,10 +1492,13 @@ function Pre_Reward_PracticeRoutineEnd(snapshot) {
     if (pre_reward_response_2.corr) {
         num_correct += 1;
         console.log("correct");
-    }
-    console.log(pre_reward_response_2.keys);
-    if (skip_2.corr) {
-        num_correct += 1;
+    } else {
+        if (skip_2.corr) {
+            num_correct += 1;
+        } else {
+            practice_failed = true;
+            practice.finished = true;
+        }
     }
     
     // was no response the correct answer?!
@@ -1940,6 +1523,8 @@ function Pre_Reward_PracticeRoutineEnd(snapshot) {
 }
 
 
+var practice_failed;
+var _key_resp_allKeys;
 var check_practiceComponents;
 function check_practiceRoutineBegin(snapshot) {
   return function () {
@@ -1948,16 +1533,24 @@ function check_practiceRoutineBegin(snapshot) {
     check_practiceClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    if ((num_correct === 4)) {
+    if ((! practice_failed)) {
         repeat_practice.finished = true;
         console.log("finished");
+        practice_failed = false;
         num_correct = 0;
     } else {
+        text_6.text = "You must answer correctly on all practice trials to proceed. Restarting practice trials now. Press space bar to continue.";
+        practice_failed = false;
         num_correct = 0;
     }
     
+    key_resp.keys = undefined;
+    key_resp.rt = undefined;
+    _key_resp_allKeys = [];
     // keep track of which components have finished
     check_practiceComponents = [];
+    check_practiceComponents.push(text_6);
+    check_practiceComponents.push(key_resp);
     
     for (const thisComponent of check_practiceComponents)
       if ('status' in thisComponent)
@@ -1976,6 +1569,40 @@ function check_practiceRoutineEachFrame(snapshot) {
     t = check_practiceClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *text_6* updates
+    if (t >= 0.0 && text_6.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_6.tStart = t;  // (not accounting for frame time here)
+      text_6.frameNStart = frameN;  // exact frame index
+      
+      text_6.setAutoDraw(true);
+    }
+
+    
+    // *key_resp* updates
+    if (t >= 0.0 && key_resp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp.tStart = t;  // (not accounting for frame time here)
+      key_resp.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp.clearEvents(); });
+    }
+
+    if (key_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_allKeys = _key_resp_allKeys.concat(theseKeys);
+      if (_key_resp_allKeys.length > 0) {
+        key_resp.keys = _key_resp_allKeys[_key_resp_allKeys.length - 1].name;  // just the last key pressed
+        key_resp.rt = _key_resp_allKeys[_key_resp_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -2011,6 +1638,13 @@ function check_practiceRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('key_resp.keys', key_resp.keys);
+    if (typeof key_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('key_resp.rt', key_resp.rt);
+        routineTimer.reset();
+        }
+    
+    key_resp.stop();
     // the Routine "check_practice" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -3582,6 +3216,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
