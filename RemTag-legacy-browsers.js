@@ -889,7 +889,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'reward_star_2', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.25, 0.25],
+    ori : 0, pos : [0, 0], size : [0.3, 0.3],
     color : new util.Color([1, 1, 1]), opacity : 0,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : false, depth : -6.0 
@@ -900,7 +900,7 @@ function experimentInit() {
     text: 'Miss!',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.15], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.15], height: 0.075,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -7.0 
   });
@@ -992,7 +992,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'reward_star', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.25, 0.25],
+    ori : 0, pos : [0, 0], size : [0.3, 0.3],
     color : new util.Color([1, 1, 1]), opacity : 0,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : false, depth : -6.0 
@@ -1003,7 +1003,7 @@ function experimentInit() {
     text: 'Miss!',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.15], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.15], height: 0.075,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -7.0 
   });
