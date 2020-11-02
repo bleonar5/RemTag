@@ -2468,6 +2468,7 @@ function Pre_RewardRoutineEnd(snapshot) {
     if (pre_reward_response.corr) {
         num_correct += 1;
         prereward_total_corr += 1;
+        console.log(prereward_total_corr);
         console.log("correct");
     }
     console.log(pre_reward_response.keys);
@@ -3325,6 +3326,7 @@ function RewardRoutineBegin(snapshot) {
     _reward_response_allKeys = [];
     reward_star.setImage(corr_image);
     if ((reward_trials.thisN === 0)) {
+        console.log('bagends');
         reward_total_corr = 0;
     }
     reward_text.text = "Miss!";
