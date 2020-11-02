@@ -2476,6 +2476,8 @@ function Pre_RewardRoutineEnd(snapshot) {
         num_correct += 1;
         prereward_total_corr += 1;
         console.log(prereward_total_corr);
+        psychoJS.experiment.addData('prereward_total_corr', prereward_total_corr);
+    
         console.log("correct");
     }
     console.log(pre_reward_response.keys);
@@ -3515,6 +3517,8 @@ function RewardRoutineEachFrame(snapshot) {
             reward_star.opacity = 1.0;
             num_correct += 1;
             reward_total_corr += 1;
+            psychoJS.experiment.addData('reward_total_corr', reward_total_corr);
+    
             console.log(("correct: " + num_correct.toString()));
         }
     }
@@ -3744,7 +3748,7 @@ function quitPsychoJS(message, isCompleted) {
     psychoJS.experiment.nextEntry();
   }
   
-  psychoJS.experiment.addData("prereward_total_corr", prereward_total_corr);
+  psychoJS.experiment.addData('prereward_total_corr', prereward_total_corr);
   
   
   
