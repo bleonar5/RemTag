@@ -1120,6 +1120,8 @@ function instructionsRoutineEachFrame(snapshot) {
 
 
 var num_correct;
+var prereward_total_corr;
+var reward_total_corr;
 var prereward_cond;
 var reward_cond;
 function instructionsRoutineEnd(snapshot) {
@@ -1138,6 +1140,8 @@ function instructionsRoutineEnd(snapshot) {
     
     instructions_continue.stop();
     num_correct = 0;
+    prereward_total_corr = 0;
+    reward_total_corr = 0;
     prereward_cond = (("phase1_order" + expInfo["group"].toString()) + ".csv");
     reward_cond = (("phase2_order" + expInfo["group"].toString()) + ".csv");
     
@@ -2227,7 +2231,6 @@ function continue_2RoutineEnd(snapshot) {
 
 
 var _pre_reward_response_allKeys;
-var prereward_total_corr;
 var _skip_allKeys;
 var Pre_RewardComponents;
 function Pre_RewardRoutineBegin(snapshot) {
@@ -3316,7 +3319,6 @@ function continue_3RoutineEnd(snapshot) {
 
 
 var _reward_response_allKeys;
-var reward_total_corr;
 var _skip2_allKeys;
 var RewardComponents;
 function RewardRoutineBegin(snapshot) {
@@ -3334,10 +3336,7 @@ function RewardRoutineBegin(snapshot) {
     reward_response.rt = undefined;
     _reward_response_allKeys = [];
     reward_star.setImage(corr_image);
-    if ((reward_trials.thisN === 0)) {
-        console.log('bagends');
-        reward_total_corr = 0;
-    }
+    
     reward_text.text = "Miss!";
     reward_star.opacity = 0.0;
     correct = false;
@@ -3745,7 +3744,7 @@ function quitPsychoJS(message, isCompleted) {
     psychoJS.experiment.nextEntry();
   }
   
-  psychoJS.experiment.addData("prereward_total_corr", prereward_total_core);
+  psychoJS.experiment.addData("prereward_total_corr", prereward_total_corr);
   
   
   
