@@ -3324,8 +3324,9 @@ function RewardRoutineBegin(snapshot) {
     reward_response.rt = undefined;
     _reward_response_allKeys = [];
     reward_star.setImage(corr_image);
-    if(reward_trials.thisN == 0)
+    if ((reward_trials.thisN === 0)) {
         reward_total_corr = 0;
+    }
     reward_text.text = "Miss!";
     reward_star.opacity = 0.0;
     correct = false;
