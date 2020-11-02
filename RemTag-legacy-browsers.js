@@ -3319,6 +3319,7 @@ function RewardRoutineBegin(snapshot) {
     t = 0;
     RewardClock.reset(); // clock
     frameN = -1;
+    routineTimer.add(10.100000);
     // update component parameters for each repeat
     enc2.setImage(stim_name_enc);
     left2.setImage(stim_name_left);
@@ -3562,7 +3563,7 @@ function RewardRoutineEachFrame(snapshot) {
     });
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -3597,6 +3598,7 @@ function RewardRoutineEnd(snapshot) {
     reward_response.stop();
     if (skip2.corr) {
         num_correct += 1;
+        reward_total_corr += 1;
     }
     
     // was no response the correct answer?!
@@ -3616,9 +3618,6 @@ function RewardRoutineEnd(snapshot) {
         }
     
     skip2.stop();
-    // the Routine "Reward" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
