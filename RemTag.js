@@ -11,6 +11,7 @@ import * as sound from './lib/sound-2020.2.js';
 import * as util from './lib/util-2020.2.js';
 //some handy aliases as in the psychopy scripts;
 const { abs, sin, cos, PI: pi, sqrt } = Math;
+const { round } = util;
 
 // init psychoJS:
 const psychoJS = new PsychoJS({
@@ -20,7 +21,7 @@ const psychoJS = new PsychoJS({
 // open window:
 psychoJS.openWindow({
   fullscr: true,
-  color: new util.Color([0, 0, 0]),
+  color: new util.Color([(- 0.357), (- 0.357), (- 0.357)]),
   units: 'height',
   waitBlanking: true
 });
@@ -29,6 +30,7 @@ psychoJS.openWindow({
 let expName = 'RemTag';  // from the Builder filename that created this script
 let expInfo = {'participant': '', 'session': '001', 'group': '1'};
 
+// Start code blocks for 'Before Experiment'
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
   dictionary: expInfo,
@@ -91,464 +93,466 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'stimuli/tools/campingstove.jpg', 'path': 'stimuli/tools/campingstove.jpg'},
-    {'name': 'stimuli/tools/drillbit.jpg', 'path': 'stimuli/tools/drillbit.jpg'},
-    {'name': 'stimuli/animals/snake_threat.jpg', 'path': 'stimuli/animals/snake_threat.jpg'},
-    {'name': 'stimuli/animals/tragopan.jpg', 'path': 'stimuli/animals/tragopan.jpg'},
-    {'name': 'stimuli/animals/seahorse.jpg', 'path': 'stimuli/animals/seahorse.jpg'},
-    {'name': 'stimuli/tools/nails.jpg', 'path': 'stimuli/tools/nails.jpg'},
-    {'name': 'stimuli/animals/kangaroo.jpg', 'path': 'stimuli/animals/kangaroo.jpg'},
-    {'name': 'stimuli/tools/spoon.jpg', 'path': 'stimuli/tools/spoon.jpg'},
-    {'name': 'stimuli/animals/jackal.jpg', 'path': 'stimuli/animals/jackal.jpg'},
-    {'name': 'stimuli/tools/tongs.jpg', 'path': 'stimuli/tools/tongs.jpg'},
-    {'name': 'stimuli/tools/beaker.jpg', 'path': 'stimuli/tools/beaker.jpg'},
-    {'name': 'stimuli/animals/marlin.jpg', 'path': 'stimuli/animals/marlin.jpg'},
-    {'name': 'stimuli/animals/wasp.jpg', 'path': 'stimuli/animals/wasp.jpg'},
-    {'name': 'stimuli/animals/salmon.jpg', 'path': 'stimuli/animals/salmon.jpg'},
-    {'name': 'stimuli/animals/owl.jpg', 'path': 'stimuli/animals/owl.jpg'},
-    {'name': 'stimuli/tools/electricsewingmachine.jpg', 'path': 'stimuli/tools/electricsewingmachine.jpg'},
-    {'name': 'stimuli/animals/sugarglider.jpg', 'path': 'stimuli/animals/sugarglider.jpg'},
-    {'name': 'stimuli/animals/llama.jpg', 'path': 'stimuli/animals/llama.jpg'},
-    {'name': 'stimuli/tools/carpetblower.jpg', 'path': 'stimuli/tools/carpetblower.jpg'},
-    {'name': 'phase1_order2.csv', 'path': 'phase1_order2.csv'},
-    {'name': 'stimuli/animals/leopard.jpg', 'path': 'stimuli/animals/leopard.jpg'},
-    {'name': 'stimuli/animals/malaysianjunglenymph.jpg', 'path': 'stimuli/animals/malaysianjunglenymph.jpg'},
-    {'name': 'stimuli/animals/goldfish.jpg', 'path': 'stimuli/animals/goldfish.jpg'},
-    {'name': 'stimuli/tools/level.jpg', 'path': 'stimuli/tools/level.jpg'},
-    {'name': 'stimuli/animals/caterpillarhawkmoth.jpg', 'path': 'stimuli/animals/caterpillarhawkmoth.jpg'},
-    {'name': 'stimuli/tools/generator.jpg', 'path': 'stimuli/tools/generator.jpg'},
-    {'name': 'phase2_order4.csv', 'path': 'phase2_order4.csv'},
-    {'name': 'phase2_order5.csv', 'path': 'phase2_order5.csv'},
-    {'name': 'stimuli/animals/bullfrog.jpg', 'path': 'stimuli/animals/bullfrog.jpg'},
-    {'name': 'phase1_practice.csv', 'path': 'phase1_practice.csv'},
-    {'name': 'stimuli/tools/drill.jpg', 'path': 'stimuli/tools/drill.jpg'},
-    {'name': 'stimuli/tools/tape.jpg', 'path': 'stimuli/tools/tape.jpg'},
-    {'name': 'stimuli/tools/cuttingboard.jpg', 'path': 'stimuli/tools/cuttingboard.jpg'},
-    {'name': 'stimuli/animals/brown_bear.jpg', 'path': 'stimuli/animals/brown_bear.jpg'},
-    {'name': 'stimuli/tools/windchime.jpg', 'path': 'stimuli/tools/windchime.jpg'},
-    {'name': 'stimuli/animals/mealworm.jpg', 'path': 'stimuli/animals/mealworm.jpg'},
-    {'name': 'stimuli/tools/broom.jpg', 'path': 'stimuli/tools/broom.jpg'},
-    {'name': 'stimuli/animals/firebug.jpg', 'path': 'stimuli/animals/firebug.jpg'},
-    {'name': 'stimuli/animals/rabbit.jpg', 'path': 'stimuli/animals/rabbit.jpg'},
-    {'name': 'stimuli/animals/rhino.jpg', 'path': 'stimuli/animals/rhino.jpg'},
-    {'name': 'stimuli/tools/duster.jpg', 'path': 'stimuli/tools/duster.jpg'},
-    {'name': 'stimuli/animals/shark.jpg', 'path': 'stimuli/animals/shark.jpg'},
-    {'name': 'stimuli/tools/laptop.jpg', 'path': 'stimuli/tools/laptop.jpg'},
-    {'name': 'stimuli/animals/palmcockatoo.jpg', 'path': 'stimuli/animals/palmcockatoo.jpg'},
-    {'name': 'stimuli/tools/avocadoslicer.jpg', 'path': 'stimuli/tools/avocadoslicer.jpg'},
-    {'name': 'stimuli/animals/jaguar_threat.jpg', 'path': 'stimuli/animals/jaguar_threat.jpg'},
-    {'name': 'stimuli/tools/saw.jpg', 'path': 'stimuli/tools/saw.jpg'},
-    {'name': 'stimuli/tools/videogamecontroller.jpg', 'path': 'stimuli/tools/videogamecontroller.jpg'},
-    {'name': 'phase2_order8.csv', 'path': 'phase2_order8.csv'},
-    {'name': 'stimuli/animals/hedgehog.jpg', 'path': 'stimuli/animals/hedgehog.jpg'},
-    {'name': 'stimuli/animals/minnow.jpg', 'path': 'stimuli/animals/minnow.jpg'},
-    {'name': 'stimuli/animals/giraffe.jpg', 'path': 'stimuli/animals/giraffe.jpg'},
-    {'name': 'stimuli/tools/blender.jpg', 'path': 'stimuli/tools/blender.jpg'},
-    {'name': 'stimuli/animals/beardeddragon.jpg', 'path': 'stimuli/animals/beardeddragon.jpg'},
-    {'name': 'stimuli/tools/plow.jpg', 'path': 'stimuli/tools/plow.jpg'},
-    {'name': 'stimuli/tools/carjack.jpg', 'path': 'stimuli/tools/carjack.jpg'},
-    {'name': 'stimuli/animals/mink.jpg', 'path': 'stimuli/animals/mink.jpg'},
-    {'name': 'stimuli/animals/pachnoda.jpg', 'path': 'stimuli/animals/pachnoda.jpg'},
-    {'name': 'stimuli/animals/hyena.jpg', 'path': 'stimuli/animals/hyena.jpg'},
-    {'name': 'stimuli/animals/stickinsect.jpg', 'path': 'stimuli/animals/stickinsect.jpg'},
-    {'name': 'stimuli/tools/hammer.jpg', 'path': 'stimuli/tools/hammer.jpg'},
-    {'name': 'stimuli/tools/handsander.jpg', 'path': 'stimuli/tools/handsander.jpg'},
-    {'name': 'stimuli/animals/wolf.jpg', 'path': 'stimuli/animals/wolf.jpg'},
-    {'name': 'stimuli/tools/electricpipethreader.jpg', 'path': 'stimuli/tools/electricpipethreader.jpg'},
-    {'name': 'stimuli/tools/chisel.jpg', 'path': 'stimuli/tools/chisel.jpg'},
-    {'name': 'stimuli/tools/lighterbic.jpg', 'path': 'stimuli/tools/lighterbic.jpg'},
-    {'name': 'stimuli/animals/salamander.jpg', 'path': 'stimuli/animals/salamander.jpg'},
-    {'name': 'stimuli/tools/padlock.jpg', 'path': 'stimuli/tools/padlock.jpg'},
-    {'name': 'stimuli/animals/caiman.jpg', 'path': 'stimuli/animals/caiman.jpg'},
-    {'name': 'stimuli/animals/macaw.jpg', 'path': 'stimuli/animals/macaw.jpg'},
-    {'name': 'stimuli/animals/deer.jpg', 'path': 'stimuli/animals/deer.jpg'},
-    {'name': 'stimuli_practice/manmade/plasticgallon.jpg', 'path': 'stimuli_practice/manmade/plasticgallon.jpg'},
-    {'name': 'stimuli/tools/treadmill.jpg', 'path': 'stimuli/tools/treadmill.jpg'},
-    {'name': 'stimuli/animals/mahimahi.jpg', 'path': 'stimuli/animals/mahimahi.jpg'},
-    {'name': 'stimuli/tools/drillpress.jpg', 'path': 'stimuli/tools/drillpress.jpg'},
-    {'name': 'stimuli/tools/calculator.jpg', 'path': 'stimuli/tools/calculator.jpg'},
-    {'name': 'stimuli/animals/partridge.jpg', 'path': 'stimuli/animals/partridge.jpg'},
-    {'name': 'stimuli/tools/razorblade.jpg', 'path': 'stimuli/tools/razorblade.jpg'},
-    {'name': 'stimuli/animals/elephantasian.jpg', 'path': 'stimuli/animals/elephantasian.jpg'},
-    {'name': 'stimuli/animals/ram.jpg', 'path': 'stimuli/animals/ram.jpg'},
-    {'name': 'stimuli/animals/chimp.jpg', 'path': 'stimuli/animals/chimp.jpg'},
-    {'name': 'stimuli/tools/edger.jpg', 'path': 'stimuli/tools/edger.jpg'},
-    {'name': 'stimuli/tools/carabiner.jpg', 'path': 'stimuli/tools/carabiner.jpg'},
-    {'name': 'stimuli/tools/vicegrips.jpg', 'path': 'stimuli/tools/vicegrips.jpg'},
-    {'name': 'stimuli/animals/cod.jpg', 'path': 'stimuli/animals/cod.jpg'},
-    {'name': 'stimuli/animals/iguana2.jpg', 'path': 'stimuli/animals/iguana2.jpg'},
-    {'name': 'stimuli/tools/sledgehammer.jpg', 'path': 'stimuli/tools/sledgehammer.jpg'},
-    {'name': 'stimuli/tools/typewriter.jpg', 'path': 'stimuli/tools/typewriter.jpg'},
-    {'name': 'stimuli/animals/clownfish.jpg', 'path': 'stimuli/animals/clownfish.jpg'},
-    {'name': 'stimuli/tools/ducttape.jpg', 'path': 'stimuli/tools/ducttape.jpg'},
-    {'name': 'stimuli/tools/grapplinghook.jpg', 'path': 'stimuli/tools/grapplinghook.jpg'},
-    {'name': 'stimuli/tools/stove.jpg', 'path': 'stimuli/tools/stove.jpg'},
-    {'name': 'stimuli/tools/battery.jpg', 'path': 'stimuli/tools/battery.jpg'},
-    {'name': 'stimuli/animals/racoon.jpg', 'path': 'stimuli/animals/racoon.jpg'},
-    {'name': 'stimuli/tools/routerplane.jpg', 'path': 'stimuli/tools/routerplane.jpg'},
-    {'name': 'stimuli/tools/tubeflaring.jpg', 'path': 'stimuli/tools/tubeflaring.jpg'},
-    {'name': 'stimuli_practice/natural/starfish01.jpg', 'path': 'stimuli_practice/natural/starfish01.jpg'},
-    {'name': 'stimuli/animals/chinchilla.jpg', 'path': 'stimuli/animals/chinchilla.jpg'},
-    {'name': 'stimuli/animals/dove.jpg', 'path': 'stimuli/animals/dove.jpg'},
-    {'name': 'stimuli/animals/waterdragon.jpg', 'path': 'stimuli/animals/waterdragon.jpg'},
-    {'name': 'stimuli/animals/pike.jpg', 'path': 'stimuli/animals/pike.jpg'},
-    {'name': 'stimuli/tools/caliper.jpg', 'path': 'stimuli/tools/caliper.jpg'},
-    {'name': 'phase3_order7.csv', 'path': 'phase3_order7.csv'},
-    {'name': 'stimuli/animals/phasmagigas.jpg', 'path': 'stimuli/animals/phasmagigas.jpg'},
-    {'name': 'stimuli/tools/file.jpg', 'path': 'stimuli/tools/file.jpg'},
-    {'name': 'stimuli/animals/pig.jpg', 'path': 'stimuli/animals/pig.jpg'},
-    {'name': 'stimuli/animals/flea.jpg', 'path': 'stimuli/animals/flea.jpg'},
-    {'name': 'stimuli_practice/manmade/mousetrap.jpg', 'path': 'stimuli_practice/manmade/mousetrap.jpg'},
-    {'name': 'stimuli/tools/camera.jpg', 'path': 'stimuli/tools/camera.jpg'},
-    {'name': 'stimuli/tools/pruner.jpg', 'path': 'stimuli/tools/pruner.jpg'},
-    {'name': 'stimuli/animals/starfish.jpg', 'path': 'stimuli/animals/starfish.jpg'},
-    {'name': 'stimuli/tools/lawnmower.jpg', 'path': 'stimuli/tools/lawnmower.jpg'},
-    {'name': 'phase1_order1.csv', 'path': 'phase1_order1.csv'},
-    {'name': 'stimuli/tools/computermouse.jpg', 'path': 'stimuli/tools/computermouse.jpg'},
-    {'name': 'stimuli/animals/springhare.jpg', 'path': 'stimuli/animals/springhare.jpg'},
-    {'name': 'stimuli/animals/moose.jpg', 'path': 'stimuli/animals/moose.jpg'},
-    {'name': 'stimuli/animals/ladybug.jpg', 'path': 'stimuli/animals/ladybug.jpg'},
-    {'name': 'stimuli/tools/gentssaw.jpg', 'path': 'stimuli/tools/gentssaw.jpg'},
-    {'name': 'stimuli/animals/ferret.jpg', 'path': 'stimuli/animals/ferret.jpg'},
-    {'name': 'stimuli/tools/trowel.jpg', 'path': 'stimuli/tools/trowel.jpg'},
-    {'name': 'stimuli/animals/millipede.jpg', 'path': 'stimuli/animals/millipede.jpg'},
-    {'name': 'stimuli/tools/reflexhammer.jpg', 'path': 'stimuli/tools/reflexhammer.jpg'},
-    {'name': 'stimuli/animals/penguin.jpg', 'path': 'stimuli/animals/penguin.jpg'},
-    {'name': 'stimuli/animals/bumblebee.jpg', 'path': 'stimuli/animals/bumblebee.jpg'},
-    {'name': 'stimuli_practice/manmade/pictureframe04.jpg', 'path': 'stimuli_practice/manmade/pictureframe04.jpg'},
-    {'name': 'stimuli/tools/walker.jpg', 'path': 'stimuli/tools/walker.jpg'},
-    {'name': 'stimuli/animals/lobsterspiny.jpg', 'path': 'stimuli/animals/lobsterspiny.jpg'},
-    {'name': 'stimuli/tools/bottleopener.jpg', 'path': 'stimuli/tools/bottleopener.jpg'},
-    {'name': 'stimuli/tools/headphones.jpg', 'path': 'stimuli/tools/headphones.jpg'},
-    {'name': 'stimuli/tools/pliers2.jpg', 'path': 'stimuli/tools/pliers2.jpg'},
-    {'name': 'stimuli/animals/koi.jpg', 'path': 'stimuli/animals/koi.jpg'},
-    {'name': 'stimuli/tools/weedeater.jpg', 'path': 'stimuli/tools/weedeater.jpg'},
-    {'name': 'stimuli/tools/microscope.jpg', 'path': 'stimuli/tools/microscope.jpg'},
-    {'name': 'stimuli/animals/iguana.jpg', 'path': 'stimuli/animals/iguana.jpg'},
-    {'name': 'stimuli/tools/telescope.jpg', 'path': 'stimuli/tools/telescope.jpg'},
-    {'name': 'stimuli/animals/boar.jpg', 'path': 'stimuli/animals/boar.jpg'},
-    {'name': 'stimuli/animals/emu.jpg', 'path': 'stimuli/animals/emu.jpg'},
-    {'name': 'stimuli/animals/shieldbug.jpg', 'path': 'stimuli/animals/shieldbug.jpg'},
-    {'name': 'stimuli/tools/chainsaw.jpg', 'path': 'stimuli/tools/chainsaw.jpg'},
-    {'name': 'stimuli/animals/bat.jpg', 'path': 'stimuli/animals/bat.jpg'},
-    {'name': 'stimuli_practice/cues/cue_white.jpg', 'path': 'stimuli_practice/cues/cue_white.jpg'},
-    {'name': 'stimuli/animals/marmot.jpg', 'path': 'stimuli/animals/marmot.jpg'},
-    {'name': 'stimuli/tools/pressuregauge.jpg', 'path': 'stimuli/tools/pressuregauge.jpg'},
-    {'name': 'phase1_order4.csv', 'path': 'phase1_order4.csv'},
-    {'name': 'stimuli/animals/grasshopper.jpg', 'path': 'stimuli/animals/grasshopper.jpg'},
-    {'name': 'stimuli/tools/mixer.jpg', 'path': 'stimuli/tools/mixer.jpg'},
-    {'name': 'stimuli/animals/wildabeast.jpg', 'path': 'stimuli/animals/wildabeast.jpg'},
-    {'name': 'stimuli/tools/woodchipper.jpg', 'path': 'stimuli/tools/woodchipper.jpg'},
-    {'name': 'stimuli/animals/ostrich.jpg', 'path': 'stimuli/animals/ostrich.jpg'},
-    {'name': 'stimuli_practice/manmade/baseball01a.jpg', 'path': 'stimuli_practice/manmade/baseball01a.jpg'},
-    {'name': 'stimuli/tools/clippers.jpg', 'path': 'stimuli/tools/clippers.jpg'},
-    {'name': 'stimuli/animals/finch.jpg', 'path': 'stimuli/animals/finch.jpg'},
-    {'name': 'phase3_order8.csv', 'path': 'phase3_order8.csv'},
-    {'name': 'stimuli/tools/cheesegrater.jpg', 'path': 'stimuli/tools/cheesegrater.jpg'},
-    {'name': 'stimuli/animals/manatee.jpg', 'path': 'stimuli/animals/manatee.jpg'},
-    {'name': 'stimuli/tools/paintgun.jpg', 'path': 'stimuli/tools/paintgun.jpg'},
-    {'name': 'stimuli/animals/rat.jpg', 'path': 'stimuli/animals/rat.jpg'},
-    {'name': 'phase1_order3.csv', 'path': 'phase1_order3.csv'},
-    {'name': 'phase2_order7.csv', 'path': 'phase2_order7.csv'},
-    {'name': 'stimuli/animals/vulture.jpg', 'path': 'stimuli/animals/vulture.jpg'},
-    {'name': 'stimuli/animals/leafinsect.jpg', 'path': 'stimuli/animals/leafinsect.jpg'},
-    {'name': 'stimuli/tools/television.jpg', 'path': 'stimuli/tools/television.jpg'},
-    {'name': 'stimuli/tools/auger.jpg', 'path': 'stimuli/tools/auger.jpg'},
-    {'name': 'stimuli/tools/cart.jpg', 'path': 'stimuli/tools/cart.jpg'},
-    {'name': 'stimuli/tools/paintroller.jpg', 'path': 'stimuli/tools/paintroller.jpg'},
-    {'name': 'stimuli/animals/prayingmantis.jpg', 'path': 'stimuli/animals/prayingmantis.jpg'},
-    {'name': 'stimuli/tools/dremel.jpg', 'path': 'stimuli/tools/dremel.jpg'},
-    {'name': 'stimuli/tools/shoehorn.jpg', 'path': 'stimuli/tools/shoehorn.jpg'},
-    {'name': 'stimuli/animals/scorpion_threat.jpg', 'path': 'stimuli/animals/scorpion_threat.jpg'},
-    {'name': 'stimuli/tools/scissors.jpg', 'path': 'stimuli/tools/scissors.jpg'},
-    {'name': 'stimuli/animals/peacock.jpg', 'path': 'stimuli/animals/peacock.jpg'},
-    {'name': 'stimuli/animals/rooster.jpg', 'path': 'stimuli/animals/rooster.jpg'},
-    {'name': 'stimuli/animals/carp.jpg', 'path': 'stimuli/animals/carp.jpg'},
-    {'name': 'stimuli/animals/turkey.jpg', 'path': 'stimuli/animals/turkey.jpg'},
-    {'name': 'stimuli/tools/pencil.jpg', 'path': 'stimuli/tools/pencil.jpg'},
-    {'name': 'stimuli/tools/wateringcan.jpg', 'path': 'stimuli/tools/wateringcan.jpg'},
-    {'name': 'stimuli/animals/butterfly.jpg', 'path': 'stimuli/animals/butterfly.jpg'},
-    {'name': 'stimuli/animals/pigeon.jpg', 'path': 'stimuli/animals/pigeon.jpg'},
-    {'name': 'stimuli/tools/airpump.jpg', 'path': 'stimuli/tools/airpump.jpg'},
-    {'name': 'stimuli/animals/baldeagle.jpg', 'path': 'stimuli/animals/baldeagle.jpg'},
-    {'name': 'stimuli/animals/mouse.jpg', 'path': 'stimuli/animals/mouse.jpg'},
-    {'name': 'phase3_order2.csv', 'path': 'phase3_order2.csv'},
-    {'name': 'phase1_order7.csv', 'path': 'phase1_order7.csv'},
-    {'name': 'stimuli/animals/chicken.jpg', 'path': 'stimuli/animals/chicken.jpg'},
-    {'name': 'stimuli/tools/fishtailchisel.jpg', 'path': 'stimuli/tools/fishtailchisel.jpg'},
+    {'name': 'stimuli/tools/screwdriver.jpg', 'path': 'stimuli/tools/screwdriver.jpg'},
+    {'name': 'stimuli/animals/caterpillarpeacockmoth.jpg', 'path': 'stimuli/animals/caterpillarpeacockmoth.jpg'},
     {'name': 'stimuli/tools/pencilsharpener.jpg', 'path': 'stimuli/tools/pencilsharpener.jpg'},
-    {'name': 'stimuli/animals/snapper.jpg', 'path': 'stimuli/animals/snapper.jpg'},
-    {'name': 'stimuli/animals/bison.jpg', 'path': 'stimuli/animals/bison.jpg'},
-    {'name': 'stimuli/animals/rainbowtrout.jpg', 'path': 'stimuli/animals/rainbowtrout.jpg'},
-    {'name': 'phase3_practice.csv', 'path': 'phase3_practice.csv'},
-    {'name': 'stimuli_practice/natural/soil.jpg', 'path': 'stimuli_practice/natural/soil.jpg'},
-    {'name': 'stimuli/tools/blackboard.jpg', 'path': 'stimuli/tools/blackboard.jpg'},
-    {'name': 'stimuli/animals/bass.jpg', 'path': 'stimuli/animals/bass.jpg'},
-    {'name': 'stimuli/animals/earthworm.jpg', 'path': 'stimuli/animals/earthworm.jpg'},
-    {'name': 'stimuli/tools/hairdryer.jpg', 'path': 'stimuli/tools/hairdryer.jpg'},
-    {'name': 'phase2_order2.csv', 'path': 'phase2_order2.csv'},
-    {'name': 'stimuli/tools/sprinkler.jpg', 'path': 'stimuli/tools/sprinkler.jpg'},
-    {'name': 'stimuli/tools/stapler.jpg', 'path': 'stimuli/tools/stapler.jpg'},
-    {'name': 'stimuli/tools/foodprocessor.jpg', 'path': 'stimuli/tools/foodprocessor.jpg'},
-    {'name': 'stimuli/animals/crab.jpg', 'path': 'stimuli/animals/crab.jpg'},
-    {'name': 'stimuli/animals/highlandcow.jpg', 'path': 'stimuli/animals/highlandcow.jpg'},
-    {'name': 'stimuli/tools/sparkplug.jpg', 'path': 'stimuli/tools/sparkplug.jpg'},
-    {'name': 'stimuli/animals/alligator.jpg', 'path': 'stimuli/animals/alligator.jpg'},
+    {'name': 'stimuli/animals/spider_threat.jpg', 'path': 'stimuli/animals/spider_threat.jpg'},
     {'name': 'stimuli/tools/transmissionwrench.jpg', 'path': 'stimuli/tools/transmissionwrench.jpg'},
-    {'name': 'stimuli/animals/flamingo.jpg', 'path': 'stimuli/animals/flamingo.jpg'},
-    {'name': 'stimuli/animals/balloonfish.jpg', 'path': 'stimuli/animals/balloonfish.jpg'},
-    {'name': 'stimuli/tools/monkeywrench.jpg', 'path': 'stimuli/tools/monkeywrench.jpg'},
-    {'name': 'stimuli/tools/tuner.jpg', 'path': 'stimuli/tools/tuner.jpg'},
+    {'name': 'stimuli/tools/microscope.jpg', 'path': 'stimuli/tools/microscope.jpg'},
+    {'name': 'stimuli/animals/grasshopper.jpg', 'path': 'stimuli/animals/grasshopper.jpg'},
+    {'name': 'stimuli/animals/orangutan.jpg', 'path': 'stimuli/animals/orangutan.jpg'},
+    {'name': 'stimuli/tools/avocadoslicer.jpg', 'path': 'stimuli/tools/avocadoslicer.jpg'},
+    {'name': 'stimuli/animals/tragopan.jpg', 'path': 'stimuli/animals/tragopan.jpg'},
+    {'name': 'phase2_order1.csv', 'path': 'phase2_order1.csv'},
+    {'name': 'stimuli/animals/ferret.jpg', 'path': 'stimuli/animals/ferret.jpg'},
+    {'name': 'stimuli/animals/caterpillar.jpg', 'path': 'stimuli/animals/caterpillar.jpg'},
+    {'name': 'stimuli/tools/binoculars.jpg', 'path': 'stimuli/tools/binoculars.jpg'},
+    {'name': 'phase3_practice.csv', 'path': 'phase3_practice.csv'},
+    {'name': 'stimuli/animals/starfish.jpg', 'path': 'stimuli/animals/starfish.jpg'},
+    {'name': 'stimuli/animals/bluejay.jpg', 'path': 'stimuli/animals/bluejay.jpg'},
+    {'name': 'stimuli/tools/stroller.jpg', 'path': 'stimuli/tools/stroller.jpg'},
+    {'name': 'stimuli/tools/typewriter.jpg', 'path': 'stimuli/tools/typewriter.jpg'},
+    {'name': 'stimuli/animals/peacock.jpg', 'path': 'stimuli/animals/peacock.jpg'},
+    {'name': 'stimuli/animals/hermitcrab.jpg', 'path': 'stimuli/animals/hermitcrab.jpg'},
+    {'name': 'stimuli/animals/sparrow.jpg', 'path': 'stimuli/animals/sparrow.jpg'},
+    {'name': 'stimuli/animals/dockbug.jpg', 'path': 'stimuli/animals/dockbug.jpg'},
+    {'name': 'stimuli/animals/fly.jpg', 'path': 'stimuli/animals/fly.jpg'},
+    {'name': 'stimuli/animals/snake_threat.jpg', 'path': 'stimuli/animals/snake_threat.jpg'},
     {'name': 'stimuli/tools/hedgeshears.jpg', 'path': 'stimuli/tools/hedgeshears.jpg'},
-    {'name': 'stimuli/animals/perch.jpg', 'path': 'stimuli/animals/perch.jpg'},
+    {'name': 'stimuli/animals/firebug.jpg', 'path': 'stimuli/animals/firebug.jpg'},
+    {'name': 'stimuli/animals/horse.jpg', 'path': 'stimuli/animals/horse.jpg'},
+    {'name': 'stimuli/animals/turtle.jpg', 'path': 'stimuli/animals/turtle.jpg'},
+    {'name': 'phase2_order6.csv', 'path': 'phase2_order6.csv'},
+    {'name': 'stimuli/tools/electricsewingmachine.jpg', 'path': 'stimuli/tools/electricsewingmachine.jpg'},
+    {'name': 'stimuli/animals/pigeon.jpg', 'path': 'stimuli/animals/pigeon.jpg'},
+    {'name': 'stimuli/animals/herring.jpg', 'path': 'stimuli/animals/herring.jpg'},
+    {'name': 'stimuli/tools/iron.jpg', 'path': 'stimuli/tools/iron.jpg'},
+    {'name': 'stimuli/tools/beadingtool.jpg', 'path': 'stimuli/tools/beadingtool.jpg'},
+    {'name': 'stimuli/animals/toucan.jpg', 'path': 'stimuli/animals/toucan.jpg'},
+    {'name': 'stimuli/animals/porcupine.jpg', 'path': 'stimuli/animals/porcupine.jpg'},
+    {'name': 'stimuli/animals/cow.jpg', 'path': 'stimuli/animals/cow.jpg'},
+    {'name': 'stimuli/animals/hedgehog.jpg', 'path': 'stimuli/animals/hedgehog.jpg'},
+    {'name': 'stimuli/animals/dragonfly.jpg', 'path': 'stimuli/animals/dragonfly.jpg'},
+    {'name': 'phase3_order2.csv', 'path': 'phase3_order2.csv'},
+    {'name': 'stimuli/tools/electricsander.jpg', 'path': 'stimuli/tools/electricsander.jpg'},
+    {'name': 'stimuli/animals/meerkat.jpg', 'path': 'stimuli/animals/meerkat.jpg'},
+    {'name': 'phase3_order5.csv', 'path': 'phase3_order5.csv'},
+    {'name': 'stimuli/tools/razorblade.jpg', 'path': 'stimuli/tools/razorblade.jpg'},
+    {'name': 'stimuli/tools/pliers.jpg', 'path': 'stimuli/tools/pliers.jpg'},
+    {'name': 'stimuli/tools/flashlight.jpg', 'path': 'stimuli/tools/flashlight.jpg'},
+    {'name': 'stimuli/tools/coathanger.jpg', 'path': 'stimuli/tools/coathanger.jpg'},
+    {'name': 'stimuli/tools/wrench.jpg', 'path': 'stimuli/tools/wrench.jpg'},
+    {'name': 'stimuli/tools/gardenhose.jpg', 'path': 'stimuli/tools/gardenhose.jpg'},
+    {'name': 'stimuli/tools/mallet.jpg', 'path': 'stimuli/tools/mallet.jpg'},
+    {'name': 'stimuli/tools/videogamecontroller.jpg', 'path': 'stimuli/tools/videogamecontroller.jpg'},
+    {'name': 'stimuli/animals/owl.jpg', 'path': 'stimuli/animals/owl.jpg'},
+    {'name': 'stimuli/animals/shieldbug.jpg', 'path': 'stimuli/animals/shieldbug.jpg'},
+    {'name': 'phase1_order3.csv', 'path': 'phase1_order3.csv'},
+    {'name': 'stimuli/tools/ladder.jpg', 'path': 'stimuli/tools/ladder.jpg'},
+    {'name': 'stimuli/animals/emu.jpg', 'path': 'stimuli/animals/emu.jpg'},
+    {'name': 'stimuli/animals/rabbit.jpg', 'path': 'stimuli/animals/rabbit.jpg'},
+    {'name': 'stimuli/animals/donkey.jpg', 'path': 'stimuli/animals/donkey.jpg'},
+    {'name': 'stimuli/animals/mealworm.jpg', 'path': 'stimuli/animals/mealworm.jpg'},
+    {'name': 'stimuli/animals/mahimahi.jpg', 'path': 'stimuli/animals/mahimahi.jpg'},
+    {'name': 'stimuli/animals/snail.jpg', 'path': 'stimuli/animals/snail.jpg'},
+    {'name': 'stimuli/animals/stickinsect.jpg', 'path': 'stimuli/animals/stickinsect.jpg'},
+    {'name': 'stimuli/tools/lighterbic.jpg', 'path': 'stimuli/tools/lighterbic.jpg'},
+    {'name': 'stimuli/tools/drillpress.jpg', 'path': 'stimuli/tools/drillpress.jpg'},
+    {'name': 'stimuli/animals/shark_threat.jpg', 'path': 'stimuli/animals/shark_threat.jpg'},
+    {'name': 'stimuli/tools/foodprocessor.jpg', 'path': 'stimuli/tools/foodprocessor.jpg'},
+    {'name': 'stimuli/tools/stove.jpg', 'path': 'stimuli/tools/stove.jpg'},
+    {'name': 'stimuli/tools/grill.jpg', 'path': 'stimuli/tools/grill.jpg'},
+    {'name': 'stimuli/tools/grapplinghook.jpg', 'path': 'stimuli/tools/grapplinghook.jpg'},
+    {'name': 'stimuli/tools/laptop.jpg', 'path': 'stimuli/tools/laptop.jpg'},
+    {'name': 'stimuli/animals/beardeddragon.jpg', 'path': 'stimuli/animals/beardeddragon.jpg'},
+    {'name': 'stimuli/tools/mellonballer.jpg', 'path': 'stimuli/tools/mellonballer.jpg'},
+    {'name': 'stimuli/animals/elephantasian.jpg', 'path': 'stimuli/animals/elephantasian.jpg'},
+    {'name': 'stimuli/tools/generator.jpg', 'path': 'stimuli/tools/generator.jpg'},
+    {'name': 'stimuli/tools/fan.jpg', 'path': 'stimuli/tools/fan.jpg'},
+    {'name': 'stimuli/animals/panda.jpg', 'path': 'stimuli/animals/panda.jpg'},
+    {'name': 'stimuli/tools/measuringtape.jpg', 'path': 'stimuli/tools/measuringtape.jpg'},
+    {'name': 'stimuli/tools/broom.jpg', 'path': 'stimuli/tools/broom.jpg'},
+    {'name': 'stimuli/tools/handdrill.jpg', 'path': 'stimuli/tools/handdrill.jpg'},
+    {'name': 'stimuli/animals/rainbowtrout.jpg', 'path': 'stimuli/animals/rainbowtrout.jpg'},
+    {'name': 'stimuli/animals/finch.jpg', 'path': 'stimuli/animals/finch.jpg'},
+    {'name': 'stimuli/animals/crow.jpg', 'path': 'stimuli/animals/crow.jpg'},
+    {'name': 'stimuli/animals/wolf.jpg', 'path': 'stimuli/animals/wolf.jpg'},
+    {'name': 'stimuli/tools/weldinghelmet.jpg', 'path': 'stimuli/tools/weldinghelmet.jpg'},
+    {'name': 'phase1_order4.csv', 'path': 'phase1_order4.csv'},
+    {'name': 'stimuli/tools/hammer.jpg', 'path': 'stimuli/tools/hammer.jpg'},
+    {'name': 'stimuli/tools/digitalcamera.jpg', 'path': 'stimuli/tools/digitalcamera.jpg'},
+    {'name': 'stimuli/tools/tongs.jpg', 'path': 'stimuli/tools/tongs.jpg'},
+    {'name': 'stimuli_practice/manmade/baseball01a.jpg', 'path': 'stimuli_practice/manmade/baseball01a.jpg'},
+    {'name': 'stimuli/animals/moose.jpg', 'path': 'stimuli/animals/moose.jpg'},
+    {'name': 'stimuli/animals/scorpion.jpg', 'path': 'stimuli/animals/scorpion.jpg'},
+    {'name': 'stimuli/tools/umbrella.jpg', 'path': 'stimuli/tools/umbrella.jpg'},
+    {'name': 'stimuli/animals/mountainsheep.jpg', 'path': 'stimuli/animals/mountainsheep.jpg'},
+    {'name': 'stimuli/animals/elephantafrican.jpg', 'path': 'stimuli/animals/elephantafrican.jpg'},
+    {'name': 'stimuli/animals/hummingbird.jpg', 'path': 'stimuli/animals/hummingbird.jpg'},
+    {'name': 'stimuli/tools/wheelbarrow.jpg', 'path': 'stimuli/tools/wheelbarrow.jpg'},
+    {'name': 'stimuli/animals/redpanda.jpg', 'path': 'stimuli/animals/redpanda.jpg'},
+    {'name': 'stimuli/animals/millipede.jpg', 'path': 'stimuli/animals/millipede.jpg'},
+    {'name': 'stimuli/tools/paintgun.jpg', 'path': 'stimuli/tools/paintgun.jpg'},
+    {'name': 'stimuli/tools/viceclamp.jpg', 'path': 'stimuli/tools/viceclamp.jpg'},
+    {'name': 'stimuli/animals/dove.jpg', 'path': 'stimuli/animals/dove.jpg'},
+    {'name': 'stimuli/animals/bat.jpg', 'path': 'stimuli/animals/bat.jpg'},
+    {'name': 'stimuli/tools/kettle.jpg', 'path': 'stimuli/tools/kettle.jpg'},
+    {'name': 'stimuli/animals/bushdog.jpg', 'path': 'stimuli/animals/bushdog.jpg'},
+    {'name': 'stimuli/tools/mixer.jpg', 'path': 'stimuli/tools/mixer.jpg'},
+    {'name': 'stimuli/animals/waterbuffalo.jpg', 'path': 'stimuli/animals/waterbuffalo.jpg'},
+    {'name': 'stimuli/tools/tuner.jpg', 'path': 'stimuli/tools/tuner.jpg'},
+    {'name': 'stimuli/animals/caiman.jpg', 'path': 'stimuli/animals/caiman.jpg'},
+    {'name': 'stimuli/tools/spoon.jpg', 'path': 'stimuli/tools/spoon.jpg'},
+    {'name': 'stimuli/tools/sparkplug.jpg', 'path': 'stimuli/tools/sparkplug.jpg'},
+    {'name': 'stimuli/tools/plow.jpg', 'path': 'stimuli/tools/plow.jpg'},
+    {'name': 'stimuli/animals/stinkbug.jpg', 'path': 'stimuli/animals/stinkbug.jpg'},
+    {'name': 'stimuli/animals/canary.jpg', 'path': 'stimuli/animals/canary.jpg'},
+    {'name': 'stimuli/animals/crane.jpg', 'path': 'stimuli/animals/crane.jpg'},
+    {'name': 'stimuli/tools/headphones.jpg', 'path': 'stimuli/tools/headphones.jpg'},
+    {'name': 'stimuli/animals/dockbug2.jpg', 'path': 'stimuli/animals/dockbug2.jpg'},
+    {'name': 'stimuli/animals/highlandcow.jpg', 'path': 'stimuli/animals/highlandcow.jpg'},
+    {'name': 'stimuli/animals/sheep.jpg', 'path': 'stimuli/animals/sheep.jpg'},
+    {'name': 'stimuli/animals/chipmunk.jpg', 'path': 'stimuli/animals/chipmunk.jpg'},
+    {'name': 'stimuli/tools/drillbit.jpg', 'path': 'stimuli/tools/drillbit.jpg'},
+    {'name': 'stimuli/tools/stethoscope.jpg', 'path': 'stimuli/tools/stethoscope.jpg'},
+    {'name': 'stimuli/tools/bolt.jpg', 'path': 'stimuli/tools/bolt.jpg'},
+    {'name': 'stimuli/tools/bucket.jpg', 'path': 'stimuli/tools/bucket.jpg'},
+    {'name': 'stimuli/animals/seaslug.jpg', 'path': 'stimuli/animals/seaslug.jpg'},
+    {'name': 'stimuli/tools/duster.jpg', 'path': 'stimuli/tools/duster.jpg'},
+    {'name': 'stimuli/animals/dolphin.jpg', 'path': 'stimuli/animals/dolphin.jpg'},
+    {'name': 'stimuli/animals/lemur.jpg', 'path': 'stimuli/animals/lemur.jpg'},
+    {'name': 'stimuli/animals/ram.jpg', 'path': 'stimuli/animals/ram.jpg'},
+    {'name': 'stimuli/tools/abacus.jpg', 'path': 'stimuli/tools/abacus.jpg'},
+    {'name': 'stimuli/tools/clippers.jpg', 'path': 'stimuli/tools/clippers.jpg'},
+    {'name': 'stimuli/tools/burnisher.jpg', 'path': 'stimuli/tools/burnisher.jpg'},
+    {'name': 'stimuli/tools/circularsaw.jpg', 'path': 'stimuli/tools/circularsaw.jpg'},
+    {'name': 'stimuli/animals/cat.jpg', 'path': 'stimuli/animals/cat.jpg'},
+    {'name': 'stimuli/animals/springhare.jpg', 'path': 'stimuli/animals/springhare.jpg'},
+    {'name': 'stimuli/tools/loom.jpg', 'path': 'stimuli/tools/loom.jpg'},
+    {'name': 'phase3_order1.csv', 'path': 'phase3_order1.csv'},
+    {'name': 'stimuli/tools/benchdogs.jpg', 'path': 'stimuli/tools/benchdogs.jpg'},
+    {'name': 'stimuli/animals/beta.jpg', 'path': 'stimuli/animals/beta.jpg'},
+    {'name': 'stimuli/animals/penguin.jpg', 'path': 'stimuli/animals/penguin.jpg'},
+    {'name': 'stimuli/animals/iguana2.jpg', 'path': 'stimuli/animals/iguana2.jpg'},
+    {'name': 'stimuli/animals/mink.jpg', 'path': 'stimuli/animals/mink.jpg'},
+    {'name': 'phase3_order6.csv', 'path': 'phase3_order6.csv'},
+    {'name': 'stimuli/animals/llama.jpg', 'path': 'stimuli/animals/llama.jpg'},
+    {'name': 'stimuli/tools/paintroller.jpg', 'path': 'stimuli/tools/paintroller.jpg'},
+    {'name': 'stimuli/tools/reflexhammer.jpg', 'path': 'stimuli/tools/reflexhammer.jpg'},
+    {'name': 'stimuli/animals/heckcattle.jpg', 'path': 'stimuli/animals/heckcattle.jpg'},
+    {'name': 'stimuli/tools/jawsoflife.jpg', 'path': 'stimuli/tools/jawsoflife.jpg'},
+    {'name': 'stimuli/tools/electricdrill.jpg', 'path': 'stimuli/tools/electricdrill.jpg'},
+    {'name': 'stimuli/tools/trowel.jpg', 'path': 'stimuli/tools/trowel.jpg'},
+    {'name': 'stimuli/animals/vulture.jpg', 'path': 'stimuli/animals/vulture.jpg'},
+    {'name': 'phase2_order8.csv', 'path': 'phase2_order8.csv'},
+    {'name': 'stimuli/animals/angelfish.jpg', 'path': 'stimuli/animals/angelfish.jpg'},
+    {'name': 'stimuli/animals/palmcockatoo.jpg', 'path': 'stimuli/animals/palmcockatoo.jpg'},
+    {'name': 'stimuli/tools/pencil.jpg', 'path': 'stimuli/tools/pencil.jpg'},
+    {'name': 'stimuli/tools/fertilzerspread.jpg', 'path': 'stimuli/tools/fertilzerspread.jpg'},
+    {'name': 'stimuli/tools/file.jpg', 'path': 'stimuli/tools/file.jpg'},
+    {'name': 'stimuli/tools/telephone.jpg', 'path': 'stimuli/tools/telephone.jpg'},
+    {'name': 'stimuli_practice/natural/starfish01.jpg', 'path': 'stimuli_practice/natural/starfish01.jpg'},
+    {'name': 'stimuli/tools/floorbuffer.jpg', 'path': 'stimuli/tools/floorbuffer.jpg'},
+    {'name': 'stimuli/animals/clam.jpg', 'path': 'stimuli/animals/clam.jpg'},
+    {'name': 'stimuli/tools/measuringcups.jpg', 'path': 'stimuli/tools/measuringcups.jpg'},
+    {'name': 'stimuli/tools/glove.jpg', 'path': 'stimuli/tools/glove.jpg'},
+    {'name': 'stimuli/tools/stapler.jpg', 'path': 'stimuli/tools/stapler.jpg'},
+    {'name': 'stimuli/animals/cockatiel.jpg', 'path': 'stimuli/animals/cockatiel.jpg'},
+    {'name': 'stimuli/tools/vacuumcleaner.jpg', 'path': 'stimuli/tools/vacuumcleaner.jpg'},
+    {'name': 'stimuli/tools/corkscrew.jpg', 'path': 'stimuli/tools/corkscrew.jpg'},
+    {'name': 'stimuli/animals/plantbug.jpg', 'path': 'stimuli/animals/plantbug.jpg'},
+    {'name': 'stimuli/tools/nailgun.jpg', 'path': 'stimuli/tools/nailgun.jpg'},
+    {'name': 'stimuli/animals/rhino.jpg', 'path': 'stimuli/animals/rhino.jpg'},
+    {'name': 'stimuli/tools/solderingtorch.jpg', 'path': 'stimuli/tools/solderingtorch.jpg'},
+    {'name': 'stimuli/animals/halibut.jpg', 'path': 'stimuli/animals/halibut.jpg'},
     {'name': 'stimuli/tools/gong.jpg', 'path': 'stimuli/tools/gong.jpg'},
+    {'name': 'stimuli/animals/ant.jpg', 'path': 'stimuli/animals/ant.jpg'},
+    {'name': 'stimuli/animals/cranebug.jpg', 'path': 'stimuli/animals/cranebug.jpg'},
+    {'name': 'stimuli/tools/tape.jpg', 'path': 'stimuli/tools/tape.jpg'},
+    {'name': 'stimuli/animals/ladybug.jpg', 'path': 'stimuli/animals/ladybug.jpg'},
+    {'name': 'stimuli/tools/staplegun.jpg', 'path': 'stimuli/tools/staplegun.jpg'},
+    {'name': 'stimuli/tools/ropeandpulley.jpg', 'path': 'stimuli/tools/ropeandpulley.jpg'},
+    {'name': 'stimuli_practice/cues/cue_green.jpg', 'path': 'stimuli_practice/cues/cue_green.jpg'},
+    {'name': 'stimuli/tools/paintbrush.jpg', 'path': 'stimuli/tools/paintbrush.jpg'},
+    {'name': 'stimuli/tools/pruner.jpg', 'path': 'stimuli/tools/pruner.jpg'},
+    {'name': 'phase2_order4.csv', 'path': 'phase2_order4.csv'},
+    {'name': 'stimuli/animals/aardvark.jpg', 'path': 'stimuli/animals/aardvark.jpg'},
+    {'name': 'stimuli/tools/lantern.jpg', 'path': 'stimuli/tools/lantern.jpg'},
+    {'name': 'stimuli/tools/pick.jpg', 'path': 'stimuli/tools/pick.jpg'},
+    {'name': 'stimuli/animals/alligator.jpg', 'path': 'stimuli/animals/alligator.jpg'},
+    {'name': 'stimuli/animals/chicken.jpg', 'path': 'stimuli/animals/chicken.jpg'},
+    {'name': 'stimuli/animals/dramaderry.jpg', 'path': 'stimuli/animals/dramaderry.jpg'},
+    {'name': 'stimuli/tools/fishtailchisel.jpg', 'path': 'stimuli/tools/fishtailchisel.jpg'},
+    {'name': 'stimuli/tools/thermometer.jpg', 'path': 'stimuli/tools/thermometer.jpg'},
+    {'name': 'stimuli/animals/moth.jpg', 'path': 'stimuli/animals/moth.jpg'},
+    {'name': 'stimuli/tools/electricpipethreader.jpg', 'path': 'stimuli/tools/electricpipethreader.jpg'},
+    {'name': 'phase3_order3.csv', 'path': 'phase3_order3.csv'},
+    {'name': 'stimuli/tools/circlecutter.jpg', 'path': 'stimuli/tools/circlecutter.jpg'},
+    {'name': 'stimuli/animals/wildabeast.jpg', 'path': 'stimuli/animals/wildabeast.jpg'},
+    {'name': 'stimuli/animals/otter.jpg', 'path': 'stimuli/animals/otter.jpg'},
+    {'name': 'stimuli/animals/carp.jpg', 'path': 'stimuli/animals/carp.jpg'},
+    {'name': 'stimuli/animals/jackal.jpg', 'path': 'stimuli/animals/jackal.jpg'},
+    {'name': 'stimuli/tools/television.jpg', 'path': 'stimuli/tools/television.jpg'},
+    {'name': 'stimuli/tools/chainwrench.jpg', 'path': 'stimuli/tools/chainwrench.jpg'},
+    {'name': 'stimuli/animals/chinchilla.jpg', 'path': 'stimuli/animals/chinchilla.jpg'},
+    {'name': 'stimuli/tools/extensioncord.jpg', 'path': 'stimuli/tools/extensioncord.jpg'},
+    {'name': 'stimuli/tools/carjack.jpg', 'path': 'stimuli/tools/carjack.jpg'},
+    {'name': 'stimuli/tools/clamp.jpg', 'path': 'stimuli/tools/clamp.jpg'},
+    {'name': 'stimuli/tools/carabiner.jpg', 'path': 'stimuli/tools/carabiner.jpg'},
+    {'name': 'stimuli/animals/duck.jpg', 'path': 'stimuli/animals/duck.jpg'},
+    {'name': 'stimuli/tools/snowbrush.jpg', 'path': 'stimuli/tools/snowbrush.jpg'},
+    {'name': 'stimuli/animals/anteater.jpg', 'path': 'stimuli/animals/anteater.jpg'},
+    {'name': 'stimuli/tools/routerplane.jpg', 'path': 'stimuli/tools/routerplane.jpg'},
+    {'name': 'stimuli_practice/manmade/mousetrap.jpg', 'path': 'stimuli_practice/manmade/mousetrap.jpg'},
+    {'name': 'stimuli/animals/malaysianjunglenymph.jpg', 'path': 'stimuli/animals/malaysianjunglenymph.jpg'},
+    {'name': 'phase1_order8.csv', 'path': 'phase1_order8.csv'},
+    {'name': 'stimuli/animals/skunk.jpg', 'path': 'stimuli/animals/skunk.jpg'},
+    {'name': 'phase2_order5.csv', 'path': 'phase2_order5.csv'},
+    {'name': 'stimuli/tools/airhorn.jpg', 'path': 'stimuli/tools/airhorn.jpg'},
+    {'name': 'stimuli/animals/armadillo.jpg', 'path': 'stimuli/animals/armadillo.jpg'},
+    {'name': 'stimuli_practice/natural/soil.jpg', 'path': 'stimuli_practice/natural/soil.jpg'},
+    {'name': 'stimuli/tools/auger.jpg', 'path': 'stimuli/tools/auger.jpg'},
+    {'name': 'phase3_order7.csv', 'path': 'phase3_order7.csv'},
+    {'name': 'stimuli/animals/perch.jpg', 'path': 'stimuli/animals/perch.jpg'},
+    {'name': 'stimuli/animals/shrimp.jpg', 'path': 'stimuli/animals/shrimp.jpg'},
+    {'name': 'stimuli/tools/electricbreaker.jpg', 'path': 'stimuli/tools/electricbreaker.jpg'},
+    {'name': 'stimuli/animals/racoon.jpg', 'path': 'stimuli/animals/racoon.jpg'},
+    {'name': 'stimuli/animals/hippo.jpg', 'path': 'stimuli/animals/hippo.jpg'},
+    {'name': 'stimuli/animals/bass.jpg', 'path': 'stimuli/animals/bass.jpg'},
+    {'name': 'stimuli/animals/quail.jpg', 'path': 'stimuli/animals/quail.jpg'},
+    {'name': 'stimuli/tools/woodchipper.jpg', 'path': 'stimuli/tools/woodchipper.jpg'},
+    {'name': 'stimuli/animals/kangaroo.jpg', 'path': 'stimuli/animals/kangaroo.jpg'},
+    {'name': 'stimuli/animals/goat.jpg', 'path': 'stimuli/animals/goat.jpg'},
+    {'name': 'stimuli/tools/wateringcan.jpg', 'path': 'stimuli/tools/wateringcan.jpg'},
+    {'name': 'stimuli/animals/cricket.jpg', 'path': 'stimuli/animals/cricket.jpg'},
+    {'name': 'stimuli/animals/manatee.jpg', 'path': 'stimuli/animals/manatee.jpg'},
+    {'name': 'stimuli/animals/ostrich.jpg', 'path': 'stimuli/animals/ostrich.jpg'},
+    {'name': 'stimuli/animals/cod.jpg', 'path': 'stimuli/animals/cod.jpg'},
+    {'name': 'stimuli/tools/cheesegrater.jpg', 'path': 'stimuli/tools/cheesegrater.jpg'},
+    {'name': 'stimuli/animals/salamander.jpg', 'path': 'stimuli/animals/salamander.jpg'},
+    {'name': 'stimuli/animals/caracal.jpg', 'path': 'stimuli/animals/caracal.jpg'},
+    {'name': 'stimuli/animals/scorpion_threat.jpg', 'path': 'stimuli/animals/scorpion_threat.jpg'},
+    {'name': 'stimuli/tools/treadmill.jpg', 'path': 'stimuli/tools/treadmill.jpg'},
+    {'name': 'stimuli/animals/flamingo.jpg', 'path': 'stimuli/animals/flamingo.jpg'},
+    {'name': 'stimuli/tools/saw.jpg', 'path': 'stimuli/tools/saw.jpg'},
+    {'name': 'stimuli/animals/koi.jpg', 'path': 'stimuli/animals/koi.jpg'},
+    {'name': 'phase1_order7.csv', 'path': 'phase1_order7.csv'},
+    {'name': 'stimuli/animals/dog.jpg', 'path': 'stimuli/animals/dog.jpg'},
+    {'name': 'stimuli/animals/lobsterspiny.jpg', 'path': 'stimuli/animals/lobsterspiny.jpg'},
+    {'name': 'stimuli/tools/computermouse.jpg', 'path': 'stimuli/tools/computermouse.jpg'},
+    {'name': 'stimuli/tools/battery.jpg', 'path': 'stimuli/tools/battery.jpg'},
+    {'name': 'stimuli/tools/magnet.jpg', 'path': 'stimuli/tools/magnet.jpg'},
+    {'name': 'stimuli/tools/scissors.jpg', 'path': 'stimuli/tools/scissors.jpg'},
+    {'name': 'stimuli/animals/seal.jpg', 'path': 'stimuli/animals/seal.jpg'},
+    {'name': 'stimuli/tools/edger.jpg', 'path': 'stimuli/tools/edger.jpg'},
+    {'name': 'stimuli/tools/italiangardeningtool.jpg', 'path': 'stimuli/tools/italiangardeningtool.jpg'},
+    {'name': 'stimuli/animals/koala.jpg', 'path': 'stimuli/animals/koala.jpg'},
+    {'name': 'stimuli/animals/frog.jpg', 'path': 'stimuli/animals/frog.jpg'},
+    {'name': 'stimuli/animals/minnow.jpg', 'path': 'stimuli/animals/minnow.jpg'},
+    {'name': 'stimuli/animals/bison.jpg', 'path': 'stimuli/animals/bison.jpg'},
+    {'name': 'stimuli/tools/ladel.jpg', 'path': 'stimuli/tools/ladel.jpg'},
+    {'name': 'stimuli/tools/monkeywrench.jpg', 'path': 'stimuli/tools/monkeywrench.jpg'},
+    {'name': 'stimuli/animals/tiger.jpg', 'path': 'stimuli/animals/tiger.jpg'},
+    {'name': 'stimuli/tools/rollingpin.jpg', 'path': 'stimuli/tools/rollingpin.jpg'},
+    {'name': 'stimuli/animals/baboon.jpg', 'path': 'stimuli/animals/baboon.jpg'},
+    {'name': 'stimuli/tools/blower.jpg', 'path': 'stimuli/tools/blower.jpg'},
+    {'name': 'stimuli/tools/hairdryer.jpg', 'path': 'stimuli/tools/hairdryer.jpg'},
+    {'name': 'stimuli/animals/pig.jpg', 'path': 'stimuli/animals/pig.jpg'},
+    {'name': 'stimuli/tools/chainsaw.jpg', 'path': 'stimuli/tools/chainsaw.jpg'},
+    {'name': 'phase1_order6.csv', 'path': 'phase1_order6.csv'},
+    {'name': 'stimuli/cues/cue_green.jpg', 'path': 'stimuli/cues/cue_green.jpg'},
+    {'name': 'stimuli/tools/nails.jpg', 'path': 'stimuli/tools/nails.jpg'},
+    {'name': 'stimuli/tools/bottleopener.jpg', 'path': 'stimuli/tools/bottleopener.jpg'},
+    {'name': 'stimuli/animals/malaysianleafkatayid.jpg', 'path': 'stimuli/animals/malaysianleafkatayid.jpg'},
+    {'name': 'stimuli/animals/prayingmantis.jpg', 'path': 'stimuli/animals/prayingmantis.jpg'},
+    {'name': 'stimuli/tools/crank.jpg', 'path': 'stimuli/tools/crank.jpg'},
+    {'name': 'stimuli/animals/leopard.jpg', 'path': 'stimuli/animals/leopard.jpg'},
+    {'name': 'stimuli/tools/sander.jpg', 'path': 'stimuli/tools/sander.jpg'},
+    {'name': 'stimuli/animals/hyena.jpg', 'path': 'stimuli/animals/hyena.jpg'},
+    {'name': 'stimuli/animals/slug.jpg', 'path': 'stimuli/animals/slug.jpg'},
+    {'name': 'stimuli/animals/catfish.jpg', 'path': 'stimuli/animals/catfish.jpg'},
+    {'name': 'stimuli/tools/ducttape.jpg', 'path': 'stimuli/tools/ducttape.jpg'},
+    {'name': 'stimuli/animals/lion.jpg', 'path': 'stimuli/animals/lion.jpg'},
+    {'name': 'stimuli/animals/earthworm.jpg', 'path': 'stimuli/animals/earthworm.jpg'},
+    {'name': 'stimuli/animals/fox.jpg', 'path': 'stimuli/animals/fox.jpg'},
     {'name': 'stimuli/animals/flounder.jpg', 'path': 'stimuli/animals/flounder.jpg'},
     {'name': 'stimuli/animals/zebra.jpg', 'path': 'stimuli/animals/zebra.jpg'},
-    {'name': 'stimuli/animals/reindeer.jpg', 'path': 'stimuli/animals/reindeer.jpg'},
-    {'name': 'stimuli/animals/redpalmweevil.jpg', 'path': 'stimuli/animals/redpalmweevil.jpg'},
-    {'name': 'stimuli/animals/snail.jpg', 'path': 'stimuli/animals/snail.jpg'},
-    {'name': 'stimuli/tools/whistle.jpg', 'path': 'stimuli/tools/whistle.jpg'},
-    {'name': 'stimuli/animals/sheep.jpg', 'path': 'stimuli/animals/sheep.jpg'},
-    {'name': 'stimuli/animals/gorilla.jpg', 'path': 'stimuli/animals/gorilla.jpg'},
-    {'name': 'stimuli/tools/whisk.jpg', 'path': 'stimuli/tools/whisk.jpg'},
-    {'name': 'stimuli/tools/tubingbender.jpg', 'path': 'stimuli/tools/tubingbender.jpg'},
-    {'name': 'stimuli/tools/hourglass.jpg', 'path': 'stimuli/tools/hourglass.jpg'},
-    {'name': 'stimuli/tools/vegetablepeeler.jpg', 'path': 'stimuli/tools/vegetablepeeler.jpg'},
-    {'name': 'stimuli/animals/ibises.jpg', 'path': 'stimuli/animals/ibises.jpg'},
-    {'name': 'stimuli/animals/mountainsheep.jpg', 'path': 'stimuli/animals/mountainsheep.jpg'},
-    {'name': 'stimuli/animals/prairiedog.jpg', 'path': 'stimuli/animals/prairiedog.jpg'},
-    {'name': 'stimuli/animals/herculesbeetle.jpg', 'path': 'stimuli/animals/herculesbeetle.jpg'},
-    {'name': 'stimuli/tools/suctioncup.jpg', 'path': 'stimuli/tools/suctioncup.jpg'},
-    {'name': 'stimuli/animals/beetle.jpg', 'path': 'stimuli/animals/beetle.jpg'},
-    {'name': 'stimuli/animals/dragonfly.jpg', 'path': 'stimuli/animals/dragonfly.jpg'},
-    {'name': 'stimuli/animals/plantbug.jpg', 'path': 'stimuli/animals/plantbug.jpg'},
-    {'name': 'stimuli/tools/bucket.jpg', 'path': 'stimuli/tools/bucket.jpg'},
-    {'name': 'stimuli/animals/hermitcrab.jpg', 'path': 'stimuli/animals/hermitcrab.jpg'},
-    {'name': 'stimuli/tools/solderingtorch.jpg', 'path': 'stimuli/tools/solderingtorch.jpg'},
-    {'name': 'stimuli/animals/otter.jpg', 'path': 'stimuli/animals/otter.jpg'},
-    {'name': 'stimuli/animals/lion_threat.jpg', 'path': 'stimuli/animals/lion_threat.jpg'},
-    {'name': 'stimuli/cues/cue_white.jpg', 'path': 'stimuli/cues/cue_white.jpg'},
-    {'name': 'stimuli/tools/levelmount.jpg', 'path': 'stimuli/tools/levelmount.jpg'},
-    {'name': 'phase2_order1.csv', 'path': 'phase2_order1.csv'},
-    {'name': 'stimuli/animals/slug.jpg', 'path': 'stimuli/animals/slug.jpg'},
-    {'name': 'stimuli/animals/dockbug.jpg', 'path': 'stimuli/animals/dockbug.jpg'},
-    {'name': 'stimuli/animals/skunk.jpg', 'path': 'stimuli/animals/skunk.jpg'},
-    {'name': 'stimuli/tools/fan.jpg', 'path': 'stimuli/tools/fan.jpg'},
-    {'name': 'stimuli/animals/crow.jpg', 'path': 'stimuli/animals/crow.jpg'},
-    {'name': 'stimuli/animals/angelfish.jpg', 'path': 'stimuli/animals/angelfish.jpg'},
-    {'name': 'stimuli/animals/tiger_threat.jpg', 'path': 'stimuli/animals/tiger_threat.jpg'},
-    {'name': 'stimuli/tools/scratchawl.jpg', 'path': 'stimuli/tools/scratchawl.jpg'},
     {'name': 'stimuli/animals/camel.jpg', 'path': 'stimuli/animals/camel.jpg'},
-    {'name': 'stimuli/animals/waterbuffalo.jpg', 'path': 'stimuli/animals/waterbuffalo.jpg'},
-    {'name': 'phase3_order6.csv', 'path': 'phase3_order6.csv'},
-    {'name': 'stimuli/tools/ladder.jpg', 'path': 'stimuli/tools/ladder.jpg'},
-    {'name': 'stimuli/animals/beta.jpg', 'path': 'stimuli/animals/beta.jpg'},
-    {'name': 'stimuli/animals/baboon.jpg', 'path': 'stimuli/animals/baboon.jpg'},
-    {'name': 'stimuli/tools/handdrill.jpg', 'path': 'stimuli/tools/handdrill.jpg'},
-    {'name': 'stimuli/tools/measuringcups.jpg', 'path': 'stimuli/tools/measuringcups.jpg'},
-    {'name': 'stimuli/animals/fox.jpg', 'path': 'stimuli/animals/fox.jpg'},
-    {'name': 'phase2_order6.csv', 'path': 'phase2_order6.csv'},
-    {'name': 'stimuli/tools/eraser.jpg', 'path': 'stimuli/tools/eraser.jpg'},
-    {'name': 'stimuli/animals/centipede_threat.jpg', 'path': 'stimuli/animals/centipede_threat.jpg'},
-    {'name': 'stimuli/tools/umbrella.jpg', 'path': 'stimuli/tools/umbrella.jpg'},
-    {'name': 'stimuli/tools/anvil.jpg', 'path': 'stimuli/tools/anvil.jpg'},
-    {'name': 'phase2_practice.csv', 'path': 'phase2_practice.csv'},
-    {'name': 'stimuli/tools/pick.jpg', 'path': 'stimuli/tools/pick.jpg'},
-    {'name': 'stimuli/tools/ropeandpulley.jpg', 'path': 'stimuli/tools/ropeandpulley.jpg'},
-    {'name': 'stimuli/tools/vacuumcleaner.jpg', 'path': 'stimuli/tools/vacuumcleaner.jpg'},
-    {'name': 'stimuli/animals/shrimp.jpg', 'path': 'stimuli/animals/shrimp.jpg'},
-    {'name': 'stimuli/animals/gerbil.jpg', 'path': 'stimuli/animals/gerbil.jpg'},
-    {'name': 'stimuli/tools/pizzacutter.jpg', 'path': 'stimuli/tools/pizzacutter.jpg'},
-    {'name': 'stimuli/animals/stinkbug.jpg', 'path': 'stimuli/animals/stinkbug.jpg'},
-    {'name': 'stimuli/tools/abacus.jpg', 'path': 'stimuli/tools/abacus.jpg'},
-    {'name': 'stimuli/animals/spider_threat.jpg', 'path': 'stimuli/animals/spider_threat.jpg'},
-    {'name': 'stimuli/tools/kettle.jpg', 'path': 'stimuli/tools/kettle.jpg'},
-    {'name': 'phase1_order8.csv', 'path': 'phase1_order8.csv'},
-    {'name': 'stimuli/animals/dog2.jpg', 'path': 'stimuli/animals/dog2.jpg'},
-    {'name': 'stimuli/animals/monkey.jpg', 'path': 'stimuli/animals/monkey.jpg'},
-    {'name': 'stimuli/tools/coathanger.jpg', 'path': 'stimuli/tools/coathanger.jpg'},
     {'name': 'stimuli/animals/woodlouse.jpg', 'path': 'stimuli/animals/woodlouse.jpg'},
-    {'name': 'stimuli/animals/mole.jpg', 'path': 'stimuli/animals/mole.jpg'},
-    {'name': 'stimuli/animals/goat.jpg', 'path': 'stimuli/animals/goat.jpg'},
-    {'name': 'stimuli/tools/jawsoflife.jpg', 'path': 'stimuli/tools/jawsoflife.jpg'},
-    {'name': 'stimuli/animals/penguin2.jpg', 'path': 'stimuli/animals/penguin2.jpg'},
-    {'name': 'stimuli/animals/dockbug2.jpg', 'path': 'stimuli/animals/dockbug2.jpg'},
-    {'name': 'stimuli/tools/scale.jpg', 'path': 'stimuli/tools/scale.jpg'},
-    {'name': 'stimuli/tools/faxmachine.jpg', 'path': 'stimuli/tools/faxmachine.jpg'},
-    {'name': 'stimuli/animals/sparrow.jpg', 'path': 'stimuli/animals/sparrow.jpg'},
-    {'name': 'stimuli/tools/screwdriver.jpg', 'path': 'stimuli/tools/screwdriver.jpg'},
-    {'name': 'stimuli/tools/curlingiron.jpg', 'path': 'stimuli/tools/curlingiron.jpg'},
-    {'name': 'stimuli/cues/cue_green.jpg', 'path': 'stimuli/cues/cue_green.jpg'},
-    {'name': 'stimuli/animals/fly.jpg', 'path': 'stimuli/animals/fly.jpg'},
-    {'name': 'stimuli/animals/cranebug.jpg', 'path': 'stimuli/animals/cranebug.jpg'},
-    {'name': 'stimuli/animals/bear.jpg', 'path': 'stimuli/animals/bear.jpg'},
-    {'name': 'stimuli/tools/microwave.jpg', 'path': 'stimuli/tools/microwave.jpg'},
-    {'name': 'stimuli/tools/ladel.jpg', 'path': 'stimuli/tools/ladel.jpg'},
-    {'name': 'stimuli/animals/caterpillar.jpg', 'path': 'stimuli/animals/caterpillar.jpg'},
-    {'name': 'stimuli/tools/weldinghelmet.jpg', 'path': 'stimuli/tools/weldinghelmet.jpg'},
-    {'name': 'stimuli/tools/measuringdevice.jpg', 'path': 'stimuli/tools/measuringdevice.jpg'},
-    {'name': 'stimuli/tools/airhorn.jpg', 'path': 'stimuli/tools/airhorn.jpg'},
-    {'name': 'stimuli_practice/natural/rock01a.jpg', 'path': 'stimuli_practice/natural/rock01a.jpg'},
-    {'name': 'stimuli/tools/magnet.jpg', 'path': 'stimuli/tools/magnet.jpg'},
-    {'name': 'stimuli/animals/toucan.jpg', 'path': 'stimuli/animals/toucan.jpg'},
-    {'name': 'stimuli/animals/watusi.jpg', 'path': 'stimuli/animals/watusi.jpg'},
-    {'name': 'phase2_order3.csv', 'path': 'phase2_order3.csv'},
-    {'name': 'stimuli/animals/hummingbird.jpg', 'path': 'stimuli/animals/hummingbird.jpg'},
-    {'name': 'stimuli/animals/moth.jpg', 'path': 'stimuli/animals/moth.jpg'},
-    {'name': 'stimuli/tools/toaster.jpg', 'path': 'stimuli/tools/toaster.jpg'},
-    {'name': 'stimuli/tools/stroller.jpg', 'path': 'stimuli/tools/stroller.jpg'},
-    {'name': 'stimuli/tools/burnisher.jpg', 'path': 'stimuli/tools/burnisher.jpg'},
-    {'name': 'stimuli/tools/floorbuffer.jpg', 'path': 'stimuli/tools/floorbuffer.jpg'},
-    {'name': 'stimuli/tools/measuringtape.jpg', 'path': 'stimuli/tools/measuringtape.jpg'},
-    {'name': 'stimuli/tools/loom.jpg', 'path': 'stimuli/tools/loom.jpg'},
-    {'name': 'stimuli/animals/hippo.jpg', 'path': 'stimuli/animals/hippo.jpg'},
-    {'name': 'stimuli/tools/corkscrew.jpg', 'path': 'stimuli/tools/corkscrew.jpg'},
-    {'name': 'stimuli/tools/bolt.jpg', 'path': 'stimuli/tools/bolt.jpg'},
-    {'name': 'phase3_order5.csv', 'path': 'phase3_order5.csv'},
+    {'name': 'stimuli/animals/dog2.jpg', 'path': 'stimuli/animals/dog2.jpg'},
+    {'name': 'stimuli_practice/manmade/plasticgallon.jpg', 'path': 'stimuli_practice/manmade/plasticgallon.jpg'},
+    {'name': 'stimuli/tools/pizzacutter.jpg', 'path': 'stimuli/tools/pizzacutter.jpg'},
+    {'name': 'stimuli/tools/suctioncup.jpg', 'path': 'stimuli/tools/suctioncup.jpg'},
+    {'name': 'stimuli/animals/butterfly.jpg', 'path': 'stimuli/animals/butterfly.jpg'},
+    {'name': 'stimuli/tools/lawnmower.jpg', 'path': 'stimuli/tools/lawnmower.jpg'},
     {'name': 'stimuli/animals/gecko.jpg', 'path': 'stimuli/animals/gecko.jpg'},
-    {'name': 'stimuli/tools/stethoscope.jpg', 'path': 'stimuli/tools/stethoscope.jpg'},
-    {'name': 'stimuli/tools/smartphone.jpg', 'path': 'stimuli/tools/smartphone.jpg'},
-    {'name': 'stimuli/tools/sander.jpg', 'path': 'stimuli/tools/sander.jpg'},
-    {'name': 'stimuli/tools/bevelgauge.jpg', 'path': 'stimuli/tools/bevelgauge.jpg'},
-    {'name': 'stimuli/animals/meerkat.jpg', 'path': 'stimuli/animals/meerkat.jpg'},
-    {'name': 'stimuli/tools/stopwatch.jpg', 'path': 'stimuli/tools/stopwatch.jpg'},
-    {'name': 'stimuli/animals/lobster.jpg', 'path': 'stimuli/animals/lobster.jpg'},
-    {'name': 'stimuli/tools/pliers.jpg', 'path': 'stimuli/tools/pliers.jpg'},
-    {'name': 'stimuli/tools/oven.jpg', 'path': 'stimuli/tools/oven.jpg'},
-    {'name': 'stimuli/tools/hairbrush.jpg', 'path': 'stimuli/tools/hairbrush.jpg'},
-    {'name': 'stimuli/tools/electricsander.jpg', 'path': 'stimuli/tools/electricsander.jpg'},
-    {'name': 'stimuli/animals/bluejay.jpg', 'path': 'stimuli/animals/bluejay.jpg'},
-    {'name': 'stimuli/tools/jumpercables.jpg', 'path': 'stimuli/tools/jumpercables.jpg'},
-    {'name': 'stimuli/tools/compass.jpg', 'path': 'stimuli/tools/compass.jpg'},
-    {'name': 'stimuli/tools/engine.jpg', 'path': 'stimuli/tools/engine.jpg'},
-    {'name': 'stimuli/tools/extensioncord.jpg', 'path': 'stimuli/tools/extensioncord.jpg'},
-    {'name': 'phase3_order1.csv', 'path': 'phase3_order1.csv'},
-    {'name': 'stimuli/animals/catfish.jpg', 'path': 'stimuli/animals/catfish.jpg'},
-    {'name': 'stimuli/animals/panda.jpg', 'path': 'stimuli/animals/panda.jpg'},
-    {'name': 'stimuli/tools/sewingmachine.jpg', 'path': 'stimuli/tools/sewingmachine.jpg'},
-    {'name': 'stimuli/tools/rake.jpg', 'path': 'stimuli/tools/rake.jpg'},
-    {'name': 'stimuli/animals/porcupine.jpg', 'path': 'stimuli/animals/porcupine.jpg'},
-    {'name': 'stimuli/animals/crane.jpg', 'path': 'stimuli/animals/crane.jpg'},
-    {'name': 'stimuli/animals/heckcattle.jpg', 'path': 'stimuli/animals/heckcattle.jpg'},
-    {'name': 'stimuli/tools/clamp.jpg', 'path': 'stimuli/tools/clamp.jpg'},
-    {'name': 'stimuli/tools/circularsaw.jpg', 'path': 'stimuli/tools/circularsaw.jpg'},
-    {'name': 'stimuli/animals/dolphin.jpg', 'path': 'stimuli/animals/dolphin.jpg'},
-    {'name': 'stimuli/tools/plunger.jpg', 'path': 'stimuli/tools/plunger.jpg'},
-    {'name': 'stimuli/tools/ruler.jpg', 'path': 'stimuli/tools/ruler.jpg'},
-    {'name': 'phase1_order6.csv', 'path': 'phase1_order6.csv'},
-    {'name': 'stimuli/tools/magnifyingglass.jpg', 'path': 'stimuli/tools/magnifyingglass.jpg'},
-    {'name': 'stimuli/tools/snowbrush.jpg', 'path': 'stimuli/tools/snowbrush.jpg'},
+    {'name': 'stimuli/animals/beetle.jpg', 'path': 'stimuli/animals/beetle.jpg'},
+    {'name': 'stimuli/animals/crab.jpg', 'path': 'stimuli/animals/crab.jpg'},
     {'name': 'phase3_order4.csv', 'path': 'phase3_order4.csv'},
-    {'name': 'stimuli/tools/spraybottle.jpg', 'path': 'stimuli/tools/spraybottle.jpg'},
-    {'name': 'stimuli/animals/seal.jpg', 'path': 'stimuli/animals/seal.jpg'},
-    {'name': 'stimuli/tools/tirespoon.jpg', 'path': 'stimuli/tools/tirespoon.jpg'},
-    {'name': 'stimuli/tools/flashlight.jpg', 'path': 'stimuli/tools/flashlight.jpg'},
-    {'name': 'stimuli/animals/shark_threat.jpg', 'path': 'stimuli/animals/shark_threat.jpg'},
-    {'name': 'stimuli/tools/blower.jpg', 'path': 'stimuli/tools/blower.jpg'},
-    {'name': 'phase1_order5.csv', 'path': 'phase1_order5.csv'},
-    {'name': 'stimuli/animals/seaslug.jpg', 'path': 'stimuli/animals/seaslug.jpg'},
-    {'name': 'stimuli/animals/aardvark.jpg', 'path': 'stimuli/animals/aardvark.jpg'},
-    {'name': 'stimuli/animals/caracal.jpg', 'path': 'stimuli/animals/caracal.jpg'},
-    {'name': 'stimuli/tools/duffelbag.jpg', 'path': 'stimuli/tools/duffelbag.jpg'},
-    {'name': 'stimuli/animals/donkey.jpg', 'path': 'stimuli/animals/donkey.jpg'},
-    {'name': 'stimuli/animals/redpanda.jpg', 'path': 'stimuli/animals/redpanda.jpg'},
-    {'name': 'stimuli/tools/shovel.jpg', 'path': 'stimuli/tools/shovel.jpg'},
-    {'name': 'stimuli/tools/mellonballer.jpg', 'path': 'stimuli/tools/mellonballer.jpg'},
-    {'name': 'stimuli/tools/digitalcamera.jpg', 'path': 'stimuli/tools/digitalcamera.jpg'},
-    {'name': 'stimuli/animals/elephantafrican.jpg', 'path': 'stimuli/animals/elephantafrican.jpg'},
-    {'name': 'stimuli/animals/cockatiel.jpg', 'path': 'stimuli/animals/cockatiel.jpg'},
-    {'name': 'stimuli/animals/blackleopard.jpg', 'path': 'stimuli/animals/blackleopard.jpg'},
-    {'name': 'stimuli/animals/pillmillipede.jpg', 'path': 'stimuli/animals/pillmillipede.jpg'},
-    {'name': 'stimuli/tools/mallet.jpg', 'path': 'stimuli/tools/mallet.jpg'},
-    {'name': 'stimuli/tools/nailgun.jpg', 'path': 'stimuli/tools/nailgun.jpg'},
-    {'name': 'stimuli/tools/viceclamp.jpg', 'path': 'stimuli/tools/viceclamp.jpg'},
-    {'name': 'stimuli/tools/washboard.jpg', 'path': 'stimuli/tools/washboard.jpg'},
-    {'name': 'stimuli/tools/toolbox.jpg', 'path': 'stimuli/tools/toolbox.jpg'},
-    {'name': 'stimuli/tools/watch.jpg', 'path': 'stimuli/tools/watch.jpg'},
-    {'name': 'stimuli/animals/clam.jpg', 'path': 'stimuli/animals/clam.jpg'},
-    {'name': 'stimuli/tools/chainwrench.jpg', 'path': 'stimuli/tools/chainwrench.jpg'},
-    {'name': 'stimuli/animals/quail.jpg', 'path': 'stimuli/animals/quail.jpg'},
-    {'name': 'stimuli/tools/beadingtool.jpg', 'path': 'stimuli/tools/beadingtool.jpg'},
-    {'name': 'stimuli/animals/lemur.jpg', 'path': 'stimuli/animals/lemur.jpg'},
-    {'name': 'stimuli/tools/sawblade.jpg', 'path': 'stimuli/tools/sawblade.jpg'},
-    {'name': 'stimuli/tools/wheelbarrow.jpg', 'path': 'stimuli/tools/wheelbarrow.jpg'},
-    {'name': 'stimuli/tools/italiangardeningtool.jpg', 'path': 'stimuli/tools/italiangardeningtool.jpg'},
-    {'name': 'stimuli_practice/cues/cue_green.jpg', 'path': 'stimuli_practice/cues/cue_green.jpg'},
-    {'name': 'stimuli/animals/orangutan.jpg', 'path': 'stimuli/animals/orangutan.jpg'},
-    {'name': 'stimuli/tools/grill.jpg', 'path': 'stimuli/tools/grill.jpg'},
-    {'name': 'stimuli/animals/armadillo.jpg', 'path': 'stimuli/animals/armadillo.jpg'},
-    {'name': 'stimuli/animals/turtle.jpg', 'path': 'stimuli/animals/turtle.jpg'},
-    {'name': 'stimuli/tools/hoe.jpg', 'path': 'stimuli/tools/hoe.jpg'},
-    {'name': 'stimuli/tools/squeegee.jpg', 'path': 'stimuli/tools/squeegee.jpg'},
-    {'name': 'stimuli/animals/tortoise.jpg', 'path': 'stimuli/animals/tortoise.jpg'},
-    {'name': 'stimuli/tools/planer.jpg', 'path': 'stimuli/tools/planer.jpg'},
-    {'name': 'stimuli/tools/caulkinggun.jpg', 'path': 'stimuli/tools/caulkinggun.jpg'},
-    {'name': 'stimuli/tools/thermometer.jpg', 'path': 'stimuli/tools/thermometer.jpg'},
-    {'name': 'stimuli/animals/dramaderry.jpg', 'path': 'stimuli/animals/dramaderry.jpg'},
-    {'name': 'stimuli/tools/electricbreaker.jpg', 'path': 'stimuli/tools/electricbreaker.jpg'},
-    {'name': 'stimuli/tools/crank.jpg', 'path': 'stimuli/tools/crank.jpg'},
-    {'name': 'stimuli/tools/rollingpin.jpg', 'path': 'stimuli/tools/rollingpin.jpg'},
-    {'name': 'stimuli/tools/staplegun.jpg', 'path': 'stimuli/tools/staplegun.jpg'},
-    {'name': 'stimuli/tools/telephone.jpg', 'path': 'stimuli/tools/telephone.jpg'},
-    {'name': 'stimuli/animals/rosechafer.jpg', 'path': 'stimuli/animals/rosechafer.jpg'},
-    {'name': 'stimuli/tools/lantern.jpg', 'path': 'stimuli/tools/lantern.jpg'},
-    {'name': 'stimuli/tools/weldershammer.jpg', 'path': 'stimuli/tools/weldershammer.jpg'},
-    {'name': 'stimuli/animals/halibut.jpg', 'path': 'stimuli/animals/halibut.jpg'},
-    {'name': 'stimuli/animals/assassinbug.jpg', 'path': 'stimuli/animals/assassinbug.jpg'},
-    {'name': 'stimuli/animals/scorpion.jpg', 'path': 'stimuli/animals/scorpion.jpg'},
-    {'name': 'stimuli/animals/chipmunk.jpg', 'path': 'stimuli/animals/chipmunk.jpg'},
+    {'name': 'stimuli/tools/jumpercables.jpg', 'path': 'stimuli/tools/jumpercables.jpg'},
+    {'name': 'stimuli/tools/anvil.jpg', 'path': 'stimuli/tools/anvil.jpg'},
+    {'name': 'stimuli/animals/tiger_threat.jpg', 'path': 'stimuli/animals/tiger_threat.jpg'},
+    {'name': 'stimuli/animals/clownfish.jpg', 'path': 'stimuli/animals/clownfish.jpg'},
+    {'name': 'stimuli/animals/brown_bear.jpg', 'path': 'stimuli/animals/brown_bear.jpg'},
     {'name': 'stimuli/animals/octopus.jpg', 'path': 'stimuli/animals/octopus.jpg'},
+    {'name': 'stimuli/animals/lobster.jpg', 'path': 'stimuli/animals/lobster.jpg'},
+    {'name': 'stimuli/tools/faxmachine.jpg', 'path': 'stimuli/tools/faxmachine.jpg'},
+    {'name': 'stimuli/animals/rat.jpg', 'path': 'stimuli/animals/rat.jpg'},
     {'name': 'stimuli/animals/pelican.jpg', 'path': 'stimuli/animals/pelican.jpg'},
-    {'name': 'stimuli/animals/cow.jpg', 'path': 'stimuli/animals/cow.jpg'},
-    {'name': 'stimuli/animals/bushdog.jpg', 'path': 'stimuli/animals/bushdog.jpg'},
-    {'name': 'stimuli/animals/ant.jpg', 'path': 'stimuli/animals/ant.jpg'},
-    {'name': 'stimuli/animals/cheetah.jpg', 'path': 'stimuli/animals/cheetah.jpg'},
-    {'name': 'stimuli/tools/sponge.jpg', 'path': 'stimuli/tools/sponge.jpg'},
-    {'name': 'stimuli/animals/anteater.jpg', 'path': 'stimuli/animals/anteater.jpg'},
-    {'name': 'stimuli/animals/horse.jpg', 'path': 'stimuli/animals/horse.jpg'},
-    {'name': 'stimuli/tools/electricdrill.jpg', 'path': 'stimuli/tools/electricdrill.jpg'},
+    {'name': 'phase2_practice.csv', 'path': 'phase2_practice.csv'},
+    {'name': 'stimuli/animals/blackleopard.jpg', 'path': 'stimuli/animals/blackleopard.jpg'},
+    {'name': 'stimuli/tools/hoe.jpg', 'path': 'stimuli/tools/hoe.jpg'},
+    {'name': 'stimuli/animals/flea.jpg', 'path': 'stimuli/animals/flea.jpg'},
+    {'name': 'stimuli/tools/spraybottle.jpg', 'path': 'stimuli/tools/spraybottle.jpg'},
+    {'name': 'stimuli/tools/beaker.jpg', 'path': 'stimuli/tools/beaker.jpg'},
+    {'name': 'stimuli/animals/marmot.jpg', 'path': 'stimuli/animals/marmot.jpg'},
+    {'name': 'stimuli/animals/penguin2.jpg', 'path': 'stimuli/animals/penguin2.jpg'},
+    {'name': 'stimuli/tools/cuttingboard.jpg', 'path': 'stimuli/tools/cuttingboard.jpg'},
+    {'name': 'stimuli/tools/scale.jpg', 'path': 'stimuli/tools/scale.jpg'},
+    {'name': 'phase2_order7.csv', 'path': 'phase2_order7.csv'},
+    {'name': 'stimuli/tools/curlingiron.jpg', 'path': 'stimuli/tools/curlingiron.jpg'},
+    {'name': 'stimuli/tools/ruler.jpg', 'path': 'stimuli/tools/ruler.jpg'},
+    {'name': 'stimuli/tools/engine.jpg', 'path': 'stimuli/tools/engine.jpg'},
     {'name': 'stimuli/tools/fishingpole.jpg', 'path': 'stimuli/tools/fishingpole.jpg'},
-    {'name': 'stimuli/animals/lion.jpg', 'path': 'stimuli/animals/lion.jpg'},
+    {'name': 'stimuli/animals/turkey.jpg', 'path': 'stimuli/animals/turkey.jpg'},
+    {'name': 'stimuli/tools/walker.jpg', 'path': 'stimuli/tools/walker.jpg'},
+    {'name': 'stimuli/tools/caulkinggun.jpg', 'path': 'stimuli/tools/caulkinggun.jpg'},
+    {'name': 'stimuli/animals/boar.jpg', 'path': 'stimuli/animals/boar.jpg'},
+    {'name': 'stimuli/animals/baldeagle.jpg', 'path': 'stimuli/animals/baldeagle.jpg'},
     {'name': 'stimuli/tools/crutches.jpg', 'path': 'stimuli/tools/crutches.jpg'},
-    {'name': 'stimuli/tools/wheeldolly.jpg', 'path': 'stimuli/tools/wheeldolly.jpg'},
-    {'name': 'stimuli/tools/benchdogs.jpg', 'path': 'stimuli/tools/benchdogs.jpg'},
     {'name': 'stimuli/animals/pachnodasinuata.jpg', 'path': 'stimuli/animals/pachnodasinuata.jpg'},
-    {'name': 'stimuli/tools/glove.jpg', 'path': 'stimuli/tools/glove.jpg'},
-    {'name': 'phase3_order3.csv', 'path': 'phase3_order3.csv'},
-    {'name': 'stimuli/tools/paintbrush.jpg', 'path': 'stimuli/tools/paintbrush.jpg'},
-    {'name': 'stimuli/tools/wrench.jpg', 'path': 'stimuli/tools/wrench.jpg'},
-    {'name': 'stimuli/tools/fertilzerspread.jpg', 'path': 'stimuli/tools/fertilzerspread.jpg'},
-    {'name': 'stimuli/animals/frog.jpg', 'path': 'stimuli/animals/frog.jpg'},
+    {'name': 'stimuli/tools/airpump.jpg', 'path': 'stimuli/tools/airpump.jpg'},
+    {'name': 'stimuli/tools/levelmount.jpg', 'path': 'stimuli/tools/levelmount.jpg'},
     {'name': 'stimuli_practice/natural/feather03a.jpg', 'path': 'stimuli_practice/natural/feather03a.jpg'},
-    {'name': 'stimuli/animals/dog.jpg', 'path': 'stimuli/animals/dog.jpg'},
-    {'name': 'stimuli/animals/cat.jpg', 'path': 'stimuli/animals/cat.jpg'},
-    {'name': 'stimuli/animals/lizard.jpg', 'path': 'stimuli/animals/lizard.jpg'},
-    {'name': 'stimuli/tools/iron.jpg', 'path': 'stimuli/tools/iron.jpg'},
+    {'name': 'stimuli/tools/vegetablepeeler.jpg', 'path': 'stimuli/tools/vegetablepeeler.jpg'},
+    {'name': 'stimuli/tools/pliers2.jpg', 'path': 'stimuli/tools/pliers2.jpg'},
+    {'name': 'stimuli/animals/watusi.jpg', 'path': 'stimuli/animals/watusi.jpg'},
+    {'name': 'stimuli/tools/drill.jpg', 'path': 'stimuli/tools/drill.jpg'},
+    {'name': 'stimuli/animals/shark.jpg', 'path': 'stimuli/animals/shark.jpg'},
+    {'name': 'stimuli/tools/eraser.jpg', 'path': 'stimuli/tools/eraser.jpg'},
+    {'name': 'stimuli/tools/blackboard.jpg', 'path': 'stimuli/tools/blackboard.jpg'},
+    {'name': 'stimuli/tools/microwave.jpg', 'path': 'stimuli/tools/microwave.jpg'},
+    {'name': 'stimuli/tools/toolbox.jpg', 'path': 'stimuli/tools/toolbox.jpg'},
+    {'name': 'stimuli/animals/waterdragon.jpg', 'path': 'stimuli/animals/waterdragon.jpg'},
     {'name': 'stimuli/animals/squirel.jpg', 'path': 'stimuli/animals/squirel.jpg'},
-    {'name': 'stimuli/animals/canary.jpg', 'path': 'stimuli/animals/canary.jpg'},
-    {'name': 'stimuli/animals/caterpillarpeacockmoth.jpg', 'path': 'stimuli/animals/caterpillarpeacockmoth.jpg'},
-    {'name': 'stimuli/animals/yak.jpg', 'path': 'stimuli/animals/yak.jpg'},
-    {'name': 'stimuli/tools/binoculars.jpg', 'path': 'stimuli/tools/binoculars.jpg'},
+    {'name': 'stimuli/animals/deer.jpg', 'path': 'stimuli/animals/deer.jpg'},
+    {'name': 'stimuli/animals/bumblebee.jpg', 'path': 'stimuli/animals/bumblebee.jpg'},
+    {'name': 'stimuli/tools/compass.jpg', 'path': 'stimuli/tools/compass.jpg'},
+    {'name': 'stimuli/cues/cue_white.jpg', 'path': 'stimuli/cues/cue_white.jpg'},
+    {'name': 'stimuli/tools/blender.jpg', 'path': 'stimuli/tools/blender.jpg'},
+    {'name': 'stimuli/animals/pillmillipede.jpg', 'path': 'stimuli/animals/pillmillipede.jpg'},
+    {'name': 'stimuli/animals/phasmagigas.jpg', 'path': 'stimuli/animals/phasmagigas.jpg'},
+    {'name': 'stimuli/animals/bullfrog.jpg', 'path': 'stimuli/animals/bullfrog.jpg'},
+    {'name': 'stimuli/animals/chimp.jpg', 'path': 'stimuli/animals/chimp.jpg'},
+    {'name': 'stimuli/tools/carpetblower.jpg', 'path': 'stimuli/tools/carpetblower.jpg'},
+    {'name': 'stimuli/tools/measuringdevice.jpg', 'path': 'stimuli/tools/measuringdevice.jpg'},
+    {'name': 'stimuli/animals/assassinbug.jpg', 'path': 'stimuli/animals/assassinbug.jpg'},
+    {'name': 'stimuli/animals/lizard.jpg', 'path': 'stimuli/animals/lizard.jpg'},
+    {'name': 'stimuli/animals/marlin.jpg', 'path': 'stimuli/animals/marlin.jpg'},
+    {'name': 'stimuli/tools/vicegrips.jpg', 'path': 'stimuli/tools/vicegrips.jpg'},
+    {'name': 'stimuli/animals/redpalmweevil.jpg', 'path': 'stimuli/animals/redpalmweevil.jpg'},
+    {'name': 'stimuli/tools/weedeater.jpg', 'path': 'stimuli/tools/weedeater.jpg'},
+    {'name': 'stimuli/animals/prairiedog.jpg', 'path': 'stimuli/animals/prairiedog.jpg'},
+    {'name': 'stimuli/tools/telescope.jpg', 'path': 'stimuli/tools/telescope.jpg'},
+    {'name': 'stimuli/animals/ibises.jpg', 'path': 'stimuli/animals/ibises.jpg'},
+    {'name': 'stimuli/animals/caterpillarhawkmoth.jpg', 'path': 'stimuli/animals/caterpillarhawkmoth.jpg'},
+    {'name': 'phase1_order2.csv', 'path': 'phase1_order2.csv'},
+    {'name': 'stimuli/animals/jaguar_threat.jpg', 'path': 'stimuli/animals/jaguar_threat.jpg'},
     {'name': 'stimuli/tools/workbench.jpg', 'path': 'stimuli/tools/workbench.jpg'},
-    {'name': 'stimuli/tools/keys.jpg', 'path': 'stimuli/tools/keys.jpg'},
-    {'name': 'stimuli/tools/gardenhose.jpg', 'path': 'stimuli/tools/gardenhose.jpg'},
-    {'name': 'stimuli/animals/duck.jpg', 'path': 'stimuli/animals/duck.jpg'},
-    {'name': 'stimuli/animals/herring.jpg', 'path': 'stimuli/animals/herring.jpg'},
-    {'name': 'stimuli/animals/malaysianleafkatayid.jpg', 'path': 'stimuli/animals/malaysianleafkatayid.jpg'},
-    {'name': 'stimuli/animals/cricket.jpg', 'path': 'stimuli/animals/cricket.jpg'},
-    {'name': 'stimuli/tools/circlecutter.jpg', 'path': 'stimuli/tools/circlecutter.jpg'},
+    {'name': 'stimuli/tools/bevelgauge.jpg', 'path': 'stimuli/tools/bevelgauge.jpg'},
+    {'name': 'stimuli/tools/camera.jpg', 'path': 'stimuli/tools/camera.jpg'},
+    {'name': 'stimuli/tools/pressuregauge.jpg', 'path': 'stimuli/tools/pressuregauge.jpg'},
+    {'name': 'stimuli/animals/mole.jpg', 'path': 'stimuli/animals/mole.jpg'},
+    {'name': 'stimuli/animals/macaw.jpg', 'path': 'stimuli/animals/macaw.jpg'},
+    {'name': 'stimuli/tools/sawblade.jpg', 'path': 'stimuli/tools/sawblade.jpg'},
+    {'name': 'stimuli/tools/shovel.jpg', 'path': 'stimuli/tools/shovel.jpg'},
+    {'name': 'stimuli/tools/sledgehammer.jpg', 'path': 'stimuli/tools/sledgehammer.jpg'},
+    {'name': 'stimuli/animals/partridge.jpg', 'path': 'stimuli/animals/partridge.jpg'},
+    {'name': 'stimuli/animals/sugarglider.jpg', 'path': 'stimuli/animals/sugarglider.jpg'},
+    {'name': 'stimuli/tools/whisk.jpg', 'path': 'stimuli/tools/whisk.jpg'},
+    {'name': 'stimuli/tools/rake.jpg', 'path': 'stimuli/tools/rake.jpg'},
+    {'name': 'stimuli/tools/tubingbender.jpg', 'path': 'stimuli/tools/tubingbender.jpg'},
     {'name': 'stimuli/tools/mop.jpg', 'path': 'stimuli/tools/mop.jpg'},
-    {'name': 'stimuli/animals/tiger.jpg', 'path': 'stimuli/animals/tiger.jpg'},
-    {'name': 'stimuli/animals/koala.jpg', 'path': 'stimuli/animals/koala.jpg'}
+    {'name': 'stimuli/animals/mouse.jpg', 'path': 'stimuli/animals/mouse.jpg'},
+    {'name': 'stimuli_practice/cues/cue_white.jpg', 'path': 'stimuli_practice/cues/cue_white.jpg'},
+    {'name': 'stimuli/animals/herculesbeetle.jpg', 'path': 'stimuli/animals/herculesbeetle.jpg'},
+    {'name': 'stimuli/tools/weldershammer.jpg', 'path': 'stimuli/tools/weldershammer.jpg'},
+    {'name': 'stimuli/tools/watch.jpg', 'path': 'stimuli/tools/watch.jpg'},
+    {'name': 'stimuli/tools/padlock.jpg', 'path': 'stimuli/tools/padlock.jpg'},
+    {'name': 'stimuli/tools/tirespoon.jpg', 'path': 'stimuli/tools/tirespoon.jpg'},
+    {'name': 'stimuli/animals/tortoise.jpg', 'path': 'stimuli/animals/tortoise.jpg'},
+    {'name': 'stimuli/tools/duffelbag.jpg', 'path': 'stimuli/tools/duffelbag.jpg'},
+    {'name': 'stimuli/animals/pachnoda.jpg', 'path': 'stimuli/animals/pachnoda.jpg'},
+    {'name': 'stimuli/animals/rosechafer.jpg', 'path': 'stimuli/animals/rosechafer.jpg'},
+    {'name': 'phase1_order1.csv', 'path': 'phase1_order1.csv'},
+    {'name': 'stimuli/animals/bear.jpg', 'path': 'stimuli/animals/bear.jpg'},
+    {'name': 'stimuli/animals/cheetah.jpg', 'path': 'stimuli/animals/cheetah.jpg'},
+    {'name': 'stimuli/tools/wheeldolly.jpg', 'path': 'stimuli/tools/wheeldolly.jpg'},
+    {'name': 'stimuli/animals/giraffe.jpg', 'path': 'stimuli/animals/giraffe.jpg'},
+    {'name': 'stimuli/tools/planer.jpg', 'path': 'stimuli/tools/planer.jpg'},
+    {'name': 'stimuli/animals/yak.jpg', 'path': 'stimuli/animals/yak.jpg'},
+    {'name': 'stimuli/tools/hourglass.jpg', 'path': 'stimuli/tools/hourglass.jpg'},
+    {'name': 'stimuli/animals/gerbil.jpg', 'path': 'stimuli/animals/gerbil.jpg'},
+    {'name': 'stimuli/tools/caliper.jpg', 'path': 'stimuli/tools/caliper.jpg'},
+    {'name': 'stimuli/tools/smartphone.jpg', 'path': 'stimuli/tools/smartphone.jpg'},
+    {'name': 'stimuli/tools/shoehorn.jpg', 'path': 'stimuli/tools/shoehorn.jpg'},
+    {'name': 'stimuli/animals/rooster.jpg', 'path': 'stimuli/animals/rooster.jpg'},
+    {'name': 'stimuli/tools/hairbrush.jpg', 'path': 'stimuli/tools/hairbrush.jpg'},
+    {'name': 'stimuli/animals/salmon.jpg', 'path': 'stimuli/animals/salmon.jpg'},
+    {'name': 'stimuli/tools/calculator.jpg', 'path': 'stimuli/tools/calculator.jpg'},
+    {'name': 'stimuli/tools/oven.jpg', 'path': 'stimuli/tools/oven.jpg'},
+    {'name': 'stimuli/animals/reindeer.jpg', 'path': 'stimuli/animals/reindeer.jpg'},
+    {'name': 'stimuli/tools/whistle.jpg', 'path': 'stimuli/tools/whistle.jpg'},
+    {'name': 'stimuli/tools/sprinkler.jpg', 'path': 'stimuli/tools/sprinkler.jpg'},
+    {'name': 'stimuli/tools/scratchawl.jpg', 'path': 'stimuli/tools/scratchawl.jpg'},
+    {'name': 'phase3_order8.csv', 'path': 'phase3_order8.csv'},
+    {'name': 'stimuli/tools/keys.jpg', 'path': 'stimuli/tools/keys.jpg'},
+    {'name': 'stimuli/tools/magnifyingglass.jpg', 'path': 'stimuli/tools/magnifyingglass.jpg'},
+    {'name': 'stimuli/animals/lion_threat.jpg', 'path': 'stimuli/animals/lion_threat.jpg'},
+    {'name': 'stimuli/animals/wasp.jpg', 'path': 'stimuli/animals/wasp.jpg'},
+    {'name': 'phase2_order3.csv', 'path': 'phase2_order3.csv'},
+    {'name': 'stimuli/animals/monkey.jpg', 'path': 'stimuli/animals/monkey.jpg'},
+    {'name': 'stimuli/animals/pike.jpg', 'path': 'stimuli/animals/pike.jpg'},
+    {'name': 'stimuli/tools/squeegee.jpg', 'path': 'stimuli/tools/squeegee.jpg'},
+    {'name': 'phase2_order2.csv', 'path': 'phase2_order2.csv'},
+    {'name': 'stimuli/tools/sponge.jpg', 'path': 'stimuli/tools/sponge.jpg'},
+    {'name': 'stimuli/tools/tubeflaring.jpg', 'path': 'stimuli/tools/tubeflaring.jpg'},
+    {'name': 'stimuli/tools/washboard.jpg', 'path': 'stimuli/tools/washboard.jpg'},
+    {'name': 'stimuli/tools/handsander.jpg', 'path': 'stimuli/tools/handsander.jpg'},
+    {'name': 'stimuli/animals/seahorse.jpg', 'path': 'stimuli/animals/seahorse.jpg'},
+    {'name': 'phase1_practice.csv', 'path': 'phase1_practice.csv'},
+    {'name': 'stimuli/tools/windchime.jpg', 'path': 'stimuli/tools/windchime.jpg'},
+    {'name': 'stimuli/tools/toaster.jpg', 'path': 'stimuli/tools/toaster.jpg'},
+    {'name': 'stimuli/tools/plunger.jpg', 'path': 'stimuli/tools/plunger.jpg'},
+    {'name': 'stimuli/tools/campingstove.jpg', 'path': 'stimuli/tools/campingstove.jpg'},
+    {'name': 'stimuli/tools/level.jpg', 'path': 'stimuli/tools/level.jpg'},
+    {'name': 'stimuli_practice/natural/rock01a.jpg', 'path': 'stimuli_practice/natural/rock01a.jpg'},
+    {'name': 'stimuli/animals/centipede_threat.jpg', 'path': 'stimuli/animals/centipede_threat.jpg'},
+    {'name': 'stimuli/animals/iguana.jpg', 'path': 'stimuli/animals/iguana.jpg'},
+    {'name': 'stimuli/animals/balloonfish.jpg', 'path': 'stimuli/animals/balloonfish.jpg'},
+    {'name': 'stimuli/tools/dremel.jpg', 'path': 'stimuli/tools/dremel.jpg'},
+    {'name': 'stimuli/tools/sewingmachine.jpg', 'path': 'stimuli/tools/sewingmachine.jpg'},
+    {'name': 'stimuli/animals/leafinsect.jpg', 'path': 'stimuli/animals/leafinsect.jpg'},
+    {'name': 'stimuli/animals/goldfish.jpg', 'path': 'stimuli/animals/goldfish.jpg'},
+    {'name': 'stimuli_practice/manmade/pictureframe04.jpg', 'path': 'stimuli_practice/manmade/pictureframe04.jpg'},
+    {'name': 'stimuli/animals/snapper.jpg', 'path': 'stimuli/animals/snapper.jpg'},
+    {'name': 'stimuli/tools/cart.jpg', 'path': 'stimuli/tools/cart.jpg'},
+    {'name': 'stimuli/animals/gorilla.jpg', 'path': 'stimuli/animals/gorilla.jpg'},
+    {'name': 'phase1_order5.csv', 'path': 'phase1_order5.csv'},
+    {'name': 'stimuli/tools/chisel.jpg', 'path': 'stimuli/tools/chisel.jpg'},
+    {'name': 'stimuli/tools/stopwatch.jpg', 'path': 'stimuli/tools/stopwatch.jpg'},
+    {'name': 'stimuli/tools/gentssaw.jpg', 'path': 'stimuli/tools/gentssaw.jpg'}
   ]
 });
+
+psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.DEBUG);
 
 
 var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2020.2.2';
+  expInfo['psychopyVersion'] = '2020.2.8';
   expInfo['OS'] = window.navigator.platform;
 
   // store frame rate of monitor if we can measure it successfully
@@ -582,7 +586,12 @@ var left_2;
 var right_2;
 var isi_4;
 var pre_reward_response_2;
+var practice_count;
+var practice_failed;
 var skip_2;
+var text_8;
+var text_9;
+var text_10;
 var check_practiceClock;
 var text_6;
 var key_resp;
@@ -597,6 +606,8 @@ var right;
 var isi;
 var pre_reward_response;
 var skip;
+var text_13;
+var text_14;
 var reward_insClock;
 var instructions_page_2;
 var instructions_continue_4;
@@ -613,6 +624,9 @@ var reward_response_2;
 var reward_star_2;
 var reward_text_2;
 var skip2_2;
+var text_11;
+var text_15;
+var text_16;
 var check_reward_practiceClock;
 var text_7;
 var key_resp_2;
@@ -629,7 +643,12 @@ var reward_response;
 var reward_star;
 var reward_text;
 var skip2;
+var text_17;
+var text_18;
 var finalClock;
+var bonus;
+var text_12;
+var key_resp_3;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -729,7 +748,43 @@ function experimentInit() {
   
   pre_reward_response_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  practice_count = 0;
+  practice_failed = false;
+  
   skip_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  text_8 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_8',
+    text: '(1)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.35), (- 0.3)], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -8.0 
+  });
+  
+  text_9 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_9',
+    text: '(2)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0.35, (- 0.3)], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -9.0 
+  });
+  
+  text_10 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_10',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.75), 0.45], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -10.0 
+  });
   
   // Initialize components for Routine "check_practice"
   check_practiceClock = new util.Clock();
@@ -741,7 +796,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -813,6 +868,28 @@ function experimentInit() {
   pre_reward_response = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   skip = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  text_13 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_13',
+    text: '(1)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.35), (- 0.3)], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -8.0 
+  });
+  
+  text_14 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_14',
+    text: '(2)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0.35, (- 0.3)], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -9.0 
+  });
   
   // Initialize components for Routine "reward_ins"
   reward_insClock = new util.Clock();
@@ -917,6 +994,39 @@ function experimentInit() {
   
   skip2_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  text_11 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_11',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.75), 0.45], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -10.0 
+  });
+  
+  text_15 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_15',
+    text: '(1)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.35), (- 0.3)], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -11.0 
+  });
+  
+  text_16 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_16',
+    text: '(2)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0.35, (- 0.3)], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -12.0 
+  });
+  
   // Initialize components for Routine "check_reward_practice"
   check_reward_practiceClock = new util.Clock();
   text_7 = new visual.TextStim({
@@ -927,7 +1037,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   key_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -1020,8 +1130,45 @@ function experimentInit() {
   
   skip2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  text_17 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_17',
+    text: '(1)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.35), (- 0.3)], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -10.0 
+  });
+  
+  text_18 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_18',
+    text: '(2)',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0.35, (- 0.3)], height: 0.025,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -11.0 
+  });
+  
   // Initialize components for Routine "final"
   finalClock = new util.Clock();
+  bonus = 0;
+  
+  text_12 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_12',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.035,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -3.0 
+  });
+  
+  key_resp_3 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -1052,8 +1199,10 @@ function instructionsRoutineBegin(snapshot) {
     for (const thisComponent of instructionsComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -1131,6 +1280,8 @@ function instructionsRoutineEachFrame(snapshot) {
 var num_correct;
 var prereward_total_corr;
 var reward_total_corr;
+var conditioned_total_corr;
+var unconditioned_total_corr;
 var prereward_cond;
 var reward_cond;
 function instructionsRoutineEnd(snapshot) {
@@ -1151,6 +1302,9 @@ function instructionsRoutineEnd(snapshot) {
     num_correct = 0;
     prereward_total_corr = 0;
     reward_total_corr = 0;
+    conditioned_total_corr = 0;
+    unconditioned_total_corr = 0;
+    bonus = 0;
     prereward_cond = (("phase1_order" + expInfo["group"].toString()) + ".csv");
     reward_cond = (("phase2_order" + expInfo["group"].toString()) + ".csv");
     
@@ -1182,8 +1336,10 @@ function pre_re_insRoutineBegin(snapshot) {
     for (const thisComponent of pre_re_insComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -1300,8 +1456,10 @@ function practice_instructions_pre_rewardRoutineBegin(snapshot) {
     for (const thisComponent of practice_instructions_pre_rewardComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -1637,8 +1795,10 @@ function scriptRoutineBegin(snapshot) {
     for (const thisComponent of scriptComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -1725,9 +1885,12 @@ function Pre_Reward_PracticeRoutineBegin(snapshot) {
     pre_reward_response_2.keys = undefined;
     pre_reward_response_2.rt = undefined;
     _pre_reward_response_2_allKeys = [];
+    practice_count = (practice.thisN + 1);
+    
     skip_2.keys = undefined;
     skip_2.rt = undefined;
     _skip_2_allKeys = [];
+    text_10.setText((("Practice trial #" + practice_count.toString()) + "/4"));
     // keep track of which components have finished
     Pre_Reward_PracticeComponents = [];
     Pre_Reward_PracticeComponents.push(enc_2);
@@ -1737,12 +1900,17 @@ function Pre_Reward_PracticeRoutineBegin(snapshot) {
     Pre_Reward_PracticeComponents.push(isi_4);
     Pre_Reward_PracticeComponents.push(pre_reward_response_2);
     Pre_Reward_PracticeComponents.push(skip_2);
+    Pre_Reward_PracticeComponents.push(text_8);
+    Pre_Reward_PracticeComponents.push(text_9);
+    Pre_Reward_PracticeComponents.push(text_10);
     
     for (const thisComponent of Pre_Reward_PracticeComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -1767,7 +1935,7 @@ function Pre_Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 2.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (enc_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((enc_2.status === PsychoJS.Status.STARTED || enc_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       enc_2.setAutoDraw(false);
     }
     
@@ -1781,7 +1949,7 @@ function Pre_Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 2.0 + 5.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (cross_4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((cross_4.status === PsychoJS.Status.STARTED || cross_4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       cross_4.setAutoDraw(false);
     }
     
@@ -1795,7 +1963,7 @@ function Pre_Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (left_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((left_2.status === PsychoJS.Status.STARTED || left_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       left_2.setAutoDraw(false);
     }
     
@@ -1809,7 +1977,7 @@ function Pre_Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (right_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((right_2.status === PsychoJS.Status.STARTED || right_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       right_2.setAutoDraw(false);
     }
     
@@ -1823,7 +1991,7 @@ function Pre_Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.6 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (isi_4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((isi_4.status === PsychoJS.Status.STARTED || isi_4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       isi_4.setAutoDraw(false);
     }
     
@@ -1840,7 +2008,7 @@ function Pre_Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (pre_reward_response_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((pre_reward_response_2.status === PsychoJS.Status.STARTED || pre_reward_response_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       pre_reward_response_2.status = PsychoJS.Status.FINISHED;
   }
 
@@ -1873,7 +2041,7 @@ function Pre_Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 9.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (skip_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((skip_2.status === PsychoJS.Status.STARTED || skip_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       skip_2.status = PsychoJS.Status.FINISHED;
   }
 
@@ -1894,6 +2062,48 @@ function Pre_Reward_PracticeRoutineEachFrame(snapshot) {
       }
     }
     
+    
+    // *text_8* updates
+    if (t >= 7 && text_8.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_8.tStart = t;  // (not accounting for frame time here)
+      text_8.frameNStart = frameN;  // exact frame index
+      
+      text_8.setAutoDraw(true);
+    }
+
+    frameRemains = 7 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_8.status === PsychoJS.Status.STARTED || text_8.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_8.setAutoDraw(false);
+    }
+    
+    // *text_9* updates
+    if (t >= 7 && text_9.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_9.tStart = t;  // (not accounting for frame time here)
+      text_9.frameNStart = frameN;  // exact frame index
+      
+      text_9.setAutoDraw(true);
+    }
+
+    frameRemains = 7 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_9.status === PsychoJS.Status.STARTED || text_9.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_9.setAutoDraw(false);
+    }
+    
+    // *text_10* updates
+    if (t >= 0.0 && text_10.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_10.tStart = t;  // (not accounting for frame time here)
+      text_10.frameNStart = frameN;  // exact frame index
+      
+      text_10.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 7.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_10.status === PsychoJS.Status.STARTED || text_10.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_10.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1979,7 +2189,6 @@ function Pre_Reward_PracticeRoutineEnd(snapshot) {
 }
 
 
-var practice_failed;
 var _key_resp_allKeys;
 var check_practiceComponents;
 function check_practiceRoutineBegin(snapshot) {
@@ -2011,8 +2220,10 @@ function check_practiceRoutineBegin(snapshot) {
     for (const thisComponent of check_practiceComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -2129,8 +2340,10 @@ function continue_2RoutineBegin(snapshot) {
     for (const thisComponent of continue_2Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -2261,12 +2474,16 @@ function Pre_RewardRoutineBegin(snapshot) {
     Pre_RewardComponents.push(isi);
     Pre_RewardComponents.push(pre_reward_response);
     Pre_RewardComponents.push(skip);
+    Pre_RewardComponents.push(text_13);
+    Pre_RewardComponents.push(text_14);
     
     for (const thisComponent of Pre_RewardComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -2290,7 +2507,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 2.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (enc.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((enc.status === PsychoJS.Status.STARTED || enc.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       enc.setAutoDraw(false);
     }
     
@@ -2304,7 +2521,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 2.0 + 5.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (cross.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((cross.status === PsychoJS.Status.STARTED || cross.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       cross.setAutoDraw(false);
     }
     
@@ -2318,7 +2535,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (left.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((left.status === PsychoJS.Status.STARTED || left.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       left.setAutoDraw(false);
     }
     
@@ -2332,7 +2549,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (right.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((right.status === PsychoJS.Status.STARTED || right.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       right.setAutoDraw(false);
     }
     
@@ -2346,7 +2563,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.6 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (isi.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((isi.status === PsychoJS.Status.STARTED || isi.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       isi.setAutoDraw(false);
     }
     
@@ -2363,7 +2580,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (pre_reward_response.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((pre_reward_response.status === PsychoJS.Status.STARTED || pre_reward_response.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       pre_reward_response.status = PsychoJS.Status.FINISHED;
   }
 
@@ -2396,7 +2613,7 @@ function Pre_RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 9.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (skip.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((skip.status === PsychoJS.Status.STARTED || skip.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       skip.status = PsychoJS.Status.FINISHED;
   }
 
@@ -2417,6 +2634,34 @@ function Pre_RewardRoutineEachFrame(snapshot) {
       }
     }
     
+    
+    // *text_13* updates
+    if (t >= 7 && text_13.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_13.tStart = t;  // (not accounting for frame time here)
+      text_13.frameNStart = frameN;  // exact frame index
+      
+      text_13.setAutoDraw(true);
+    }
+
+    frameRemains = 7 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_13.status === PsychoJS.Status.STARTED || text_13.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_13.setAutoDraw(false);
+    }
+    
+    // *text_14* updates
+    if (t >= 7 && text_14.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_14.tStart = t;  // (not accounting for frame time here)
+      text_14.frameNStart = frameN;  // exact frame index
+      
+      text_14.setAutoDraw(true);
+    }
+
+    frameRemains = 7 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_14.status === PsychoJS.Status.STARTED || text_14.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_14.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -2528,8 +2773,10 @@ function reward_insRoutineBegin(snapshot) {
     for (const thisComponent of reward_insComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -2640,6 +2887,8 @@ function practice_instructions_rewardRoutineBegin(snapshot) {
     instruction_continue_6.keys = undefined;
     instruction_continue_6.rt = undefined;
     _instruction_continue_6_allKeys = [];
+    practice_count = 0;
+    
     // keep track of which components have finished
     practice_instructions_rewardComponents = [];
     practice_instructions_rewardComponents.push(text_5);
@@ -2648,8 +2897,10 @@ function practice_instructions_rewardRoutineBegin(snapshot) {
     for (const thisComponent of practice_instructions_rewardComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -2769,10 +3020,12 @@ function Reward_PracticeRoutineBegin(snapshot) {
     reward_star_2.opacity = 0.0;
     correct = false;
     console.log("setting text to miss");
+    practice_count = (reward_practice.thisN + 1);
     
     skip2_2.keys = undefined;
     skip2_2.rt = undefined;
     _skip2_2_allKeys = [];
+    text_11.setText((("Practice trial #" + practice_count.toString()) + "/4"));
     // keep track of which components have finished
     Reward_PracticeComponents = [];
     Reward_PracticeComponents.push(enc2_2);
@@ -2784,12 +3037,17 @@ function Reward_PracticeRoutineBegin(snapshot) {
     Reward_PracticeComponents.push(reward_star_2);
     Reward_PracticeComponents.push(reward_text_2);
     Reward_PracticeComponents.push(skip2_2);
+    Reward_PracticeComponents.push(text_11);
+    Reward_PracticeComponents.push(text_15);
+    Reward_PracticeComponents.push(text_16);
     
     for (const thisComponent of Reward_PracticeComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -2813,7 +3071,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 2.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (enc2_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((enc2_2.status === PsychoJS.Status.STARTED || enc2_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       enc2_2.setAutoDraw(false);
     }
     
@@ -2827,7 +3085,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 2.0 + 5.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (cross_3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((cross_3.status === PsychoJS.Status.STARTED || cross_3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       cross_3.setAutoDraw(false);
     }
     
@@ -2841,7 +3099,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (left2_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((left2_2.status === PsychoJS.Status.STARTED || left2_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       left2_2.setAutoDraw(false);
     }
     
@@ -2855,7 +3113,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (right2_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((right2_2.status === PsychoJS.Status.STARTED || right2_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       right2_2.setAutoDraw(false);
     }
     
@@ -2869,7 +3127,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 8.6 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (isi_3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((isi_3.status === PsychoJS.Status.STARTED || isi_3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       isi_3.setAutoDraw(false);
     }
     
@@ -2886,7 +3144,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (reward_response_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((reward_response_2.status === PsychoJS.Status.STARTED || reward_response_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       reward_response_2.status = PsychoJS.Status.FINISHED;
   }
 
@@ -2916,7 +3174,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.6 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (reward_star_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((reward_star_2.status === PsychoJS.Status.STARTED || reward_star_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       reward_star_2.setAutoDraw(false);
     }
     
@@ -2930,7 +3188,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.6 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (reward_text_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((reward_text_2.status === PsychoJS.Status.STARTED || reward_text_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       reward_text_2.setAutoDraw(false);
     }
     console.log("frame");
@@ -2959,7 +3217,7 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 10.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (skip2_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((skip2_2.status === PsychoJS.Status.STARTED || skip2_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       skip2_2.status = PsychoJS.Status.FINISHED;
   }
 
@@ -2980,6 +3238,48 @@ function Reward_PracticeRoutineEachFrame(snapshot) {
       }
     }
     
+    
+    // *text_11* updates
+    if (t >= 0.0 && text_11.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_11.tStart = t;  // (not accounting for frame time here)
+      text_11.frameNStart = frameN;  // exact frame index
+      
+      text_11.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 7.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_11.status === PsychoJS.Status.STARTED || text_11.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_11.setAutoDraw(false);
+    }
+    
+    // *text_15* updates
+    if (t >= 7 && text_15.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_15.tStart = t;  // (not accounting for frame time here)
+      text_15.frameNStart = frameN;  // exact frame index
+      
+      text_15.setAutoDraw(true);
+    }
+
+    frameRemains = 7 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_15.status === PsychoJS.Status.STARTED || text_15.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_15.setAutoDraw(false);
+    }
+    
+    // *text_16* updates
+    if (t >= 7 && text_16.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_16.tStart = t;  // (not accounting for frame time here)
+      text_16.frameNStart = frameN;  // exact frame index
+      
+      text_16.setAutoDraw(true);
+    }
+
+    frameRemains = 7 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_16.status === PsychoJS.Status.STARTED || text_16.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_16.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -3095,8 +3395,10 @@ function check_reward_practiceRoutineBegin(snapshot) {
     for (const thisComponent of check_reward_practiceComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -3213,8 +3515,10 @@ function continue_3RoutineBegin(snapshot) {
     for (const thisComponent of continue_3Components)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -3349,12 +3653,16 @@ function RewardRoutineBegin(snapshot) {
     RewardComponents.push(reward_star);
     RewardComponents.push(reward_text);
     RewardComponents.push(skip2);
+    RewardComponents.push(text_17);
+    RewardComponents.push(text_18);
     
     for (const thisComponent of RewardComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -3378,7 +3686,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 2.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (enc2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((enc2.status === PsychoJS.Status.STARTED || enc2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       enc2.setAutoDraw(false);
     }
     
@@ -3392,7 +3700,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 2.0 + 5.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (cross_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((cross_2.status === PsychoJS.Status.STARTED || cross_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       cross_2.setAutoDraw(false);
     }
     
@@ -3406,7 +3714,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (left2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((left2.status === PsychoJS.Status.STARTED || left2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       left2.setAutoDraw(false);
     }
     
@@ -3420,7 +3728,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (right2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((right2.status === PsychoJS.Status.STARTED || right2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       right2.setAutoDraw(false);
     }
     
@@ -3434,7 +3742,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 8.6 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (isi_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((isi_2.status === PsychoJS.Status.STARTED || isi_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       isi_2.setAutoDraw(false);
     }
     
@@ -3451,7 +3759,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.0 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (reward_response.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((reward_response.status === PsychoJS.Status.STARTED || reward_response.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       reward_response.status = PsychoJS.Status.FINISHED;
   }
 
@@ -3481,7 +3789,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.6 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (reward_star.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((reward_star.status === PsychoJS.Status.STARTED || reward_star.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       reward_star.setAutoDraw(false);
     }
     
@@ -3495,7 +3803,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 7.6 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (reward_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((reward_text.status === PsychoJS.Status.STARTED || reward_text.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       reward_text.setAutoDraw(false);
     }
     console.log("frame");
@@ -3507,7 +3815,13 @@ function RewardRoutineEachFrame(snapshot) {
             reward_star.opacity = 1.0;
             num_correct += 1;
             reward_total_corr += 1;
+            if(conditionedCat === stim_cat_enc)
+                conditioned_total_corr += 1;
+            else
+                unconditioned_total_corr += 1;
             psychoJS.experiment.addData('reward_total_corr', reward_total_corr);
+            psychoJS.experiment.addData('conditioned_total_corr', conditioned_total_corr);
+            psychoJS.experiment.addData('unconditioned_total_corr', unconditioned_total_corr);
     
             console.log(("correct: " + num_correct.toString()));
         }
@@ -3527,7 +3841,7 @@ function RewardRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 10.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (skip2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((skip2.status === PsychoJS.Status.STARTED || skip2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       skip2.status = PsychoJS.Status.FINISHED;
   }
 
@@ -3548,6 +3862,34 @@ function RewardRoutineEachFrame(snapshot) {
       }
     }
     
+    
+    // *text_17* updates
+    if (t >= 7 && text_17.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_17.tStart = t;  // (not accounting for frame time here)
+      text_17.frameNStart = frameN;  // exact frame index
+      
+      text_17.setAutoDraw(true);
+    }
+
+    frameRemains = 7 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_17.status === PsychoJS.Status.STARTED || text_17.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_17.setAutoDraw(false);
+    }
+    
+    // *text_18* updates
+    if (t >= 7 && text_18.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_18.tStart = t;  // (not accounting for frame time here)
+      text_18.frameNStart = frameN;  // exact frame index
+      
+      text_18.setAutoDraw(true);
+    }
+
+    frameRemains = 7 + 0.6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_18.status === PsychoJS.Status.STARTED || text_18.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_18.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -3627,6 +3969,7 @@ function RewardRoutineEnd(snapshot) {
 
 
 var reward_accuracy;
+var _key_resp_3_allKeys;
 var finalComponents;
 function finalRoutineBegin(snapshot) {
   return function () {
@@ -3637,14 +3980,29 @@ function finalRoutineBegin(snapshot) {
     // update component parameters for each repeat
     reward_accuracy = num_correct;
     
+    if ((conditioned_total_corr >= 27)) {
+        bonus += 5;
+    }
+    if ((unconditioned_total_corr >= 27)) {
+        bonus += 0.25;
+    }
+    
+    text_12.setText((("You have completed this part of the experiment.\n\nYou earned a bonus of \\$" + bonus.toString()) + " based on your performance.\n\nDon't forget to return for the second day of the experiment tomorrow! You will only receive your bonus payment if you return for the second day of the experiment.\n\nPress spacebar to confirm."));
+    key_resp_3.keys = undefined;
+    key_resp_3.rt = undefined;
+    _key_resp_3_allKeys = [];
     // keep track of which components have finished
     finalComponents = [];
+    finalComponents.push(text_12);
+    finalComponents.push(key_resp_3);
     
     for (const thisComponent of finalComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -3657,6 +4015,40 @@ function finalRoutineEachFrame(snapshot) {
     t = finalClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *text_12* updates
+    if (t >= 0.0 && text_12.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_12.tStart = t;  // (not accounting for frame time here)
+      text_12.frameNStart = frameN;  // exact frame index
+      
+      text_12.setAutoDraw(true);
+    }
+
+    
+    // *key_resp_3* updates
+    if (t >= 0.0 && key_resp_3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp_3.tStart = t;  // (not accounting for frame time here)
+      key_resp_3.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp_3.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_3.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_3.clearEvents(); });
+    }
+
+    if (key_resp_3.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp_3.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_3_allKeys = _key_resp_3_allKeys.concat(theseKeys);
+      if (_key_resp_3_allKeys.length > 0) {
+        key_resp_3.keys = _key_resp_3_allKeys[_key_resp_3_allKeys.length - 1].name;  // just the last key pressed
+        key_resp_3.rt = _key_resp_3_allKeys[_key_resp_3_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -3692,6 +4084,13 @@ function finalRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('key_resp_3.keys', key_resp_3.keys);
+    if (typeof key_resp_3.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('key_resp_3.rt', key_resp_3.rt);
+        routineTimer.reset();
+        }
+    
+    key_resp_3.stop();
     // the Routine "final" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -3742,6 +4141,15 @@ function quitPsychoJS(message, isCompleted) {
   
   
   psychoJS.experiment.addData("reward_total_corr", reward_total_corr);
+  psychoJS.experiment.addData('conditioned_total_corr', conditioned_total_corr);
+  psychoJS.experiment.addData('unconditioned_total_corr', unconditioned_total_corr);
+  
+  
+  
+  
+  
+  
+  
   
   
   
