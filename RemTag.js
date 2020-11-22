@@ -1885,7 +1885,7 @@ function Pre_Reward_PracticeRoutineBegin(snapshot) {
     pre_reward_response_2.keys = undefined;
     pre_reward_response_2.rt = undefined;
     _pre_reward_response_2_allKeys = [];
-    practice_count = (practice.thisN + 1);
+    practice_count = (trials.thisN + 1);
     
     skip_2.keys = undefined;
     skip_2.rt = undefined;
