@@ -2203,10 +2203,12 @@ function check_practiceRoutineBegin(snapshot) {
         console.log("finished");
         practice_failed = false;
         num_correct = 0;
+        practice_count = 0;
     } else {
         text_6.text = "You must answer correctly on all practice trials to proceed. Restarting practice trials now. Press space bar to continue.";
         practice_failed = false;
         num_correct = 0;
+        practice_count = 0;
     }
     
     key_resp.keys = undefined;
@@ -3020,7 +3022,7 @@ function Reward_PracticeRoutineBegin(snapshot) {
     reward_star_2.opacity = 0.0;
     correct = false;
     console.log("setting text to miss");
-    practice_count = (reward_practice.thisN + 1);
+    practice_count += 1;
     
     skip2_2.keys = undefined;
     skip2_2.rt = undefined;
@@ -3378,10 +3380,12 @@ function check_reward_practiceRoutineBegin(snapshot) {
         console.log("finished");
         practice_failed = false;
         num_correct = 0;
+        practice_count = 0;
     } else {
         text_7.text = "You must answer correctly on all practice trials to proceed. Restarting practice trials now. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. Press space bar to continue.";
         num_correct = 0;
         practice_failed = false;
+        practice_count = 0;
     }
     
     key_resp_2.keys = undefined;
