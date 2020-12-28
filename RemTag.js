@@ -565,6 +565,8 @@ function updateInfo() {
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
   
+  psychoJS.setRedirectUrls('https://harvard.az1.qualtrics.com/jfe/form/SV_eIJNfYb5MRm3Px3?PROLIFIC_PID='+expInfo['participant'],'');
+  
   return Scheduler.Event.NEXT;
 }
 
