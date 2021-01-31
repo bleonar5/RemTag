@@ -706,7 +706,7 @@ function experimentInit() {
   image = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image', units : undefined, 
-    image : 'stimuli_practice\\manmade\\baseball01a', mask : undefined,
+    image : 'stimuli_practice\\manmade\\baseball01a.jpg', mask : undefined,
     ori : 0, pos : [0.25, (- 0.15)], size : [0.25, 0.25],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -715,7 +715,7 @@ function experimentInit() {
   image_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_2', units : undefined, 
-    image : 'stimuli_practice\\natural\\starfish01', mask : undefined,
+    image : 'stimuli_practice\\natural\\starfish01.jpg', mask : undefined,
     ori : 0, pos : [(- 0.25), (- 0.15)], size : [0.25, 0.25],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -998,7 +998,7 @@ function experimentInit() {
   image_3 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_3', units : undefined, 
-    image : 'stimuli_practice\\manmade\\baseball01a', mask : undefined,
+    image : 'stimuli_practice\\manmade\\baseball01a.jpg', mask : undefined,
     ori : 0, pos : [0.25, (- 0.2)], size : [0.25, 0.25],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1007,7 +1007,7 @@ function experimentInit() {
   image_4 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_4', units : undefined, 
-    image : 'stimuli_practice\\natural\\starfish01', mask : undefined,
+    image : 'stimuli_practice\\natural\\starfish01.jpg', mask : undefined,
     ori : 0, pos : [(- 0.25), (- 0.2)], size : [0.25, 0.25],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
