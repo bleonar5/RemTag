@@ -556,7 +556,7 @@ function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  psychoJS.setRedirectUrls(((('https://harvard.az1.qualtrics.com/jfe/form/SV_eIJNfYb5MRm3Px3?PROLIFIC_PID=' + expInfo['participant']) + '&bonus_amt=') + expInfo['bonus'].toString()), '');
+  psychoJS.setRedirectUrls(('https://harvard.az1.qualtrics.com/jfe/form/SV_eIJNfYb5MRm3Px3?PROLIFIC_PID=' + expInfo['participant']), '');
 
   return Scheduler.Event.NEXT;
 }
@@ -656,6 +656,7 @@ var text_17;
 var text_18;
 var skip_4;
 var finalClock;
+var bonus;
 var text_12;
 var key_resp_3;
 var globalClock;
@@ -1314,7 +1315,7 @@ function experimentInit() {
   
   // Initialize components for Routine "final"
   finalClock = new util.Clock();
-  expInfo["bonus"] = 0;
+  bonus = 0;
   
   text_12 = new visual.TextStim({
     win: psychoJS.window,
@@ -1438,7 +1439,6 @@ var prereward_total_corr;
 var reward_total_corr;
 var conditioned_total_corr;
 var unconditioned_total_corr;
-var bonus;
 var prereward_cond;
 var reward_cond;
 function instructionsRoutineEnd(snapshot) {
@@ -4536,10 +4536,10 @@ function finalRoutineBegin(snapshot) {
     reward_accuracy = num_correct;
     
     if ((conditioned_total_corr >= 27)) {
-        expInfo["bonus"] += 5;
+        bonus += 5;
     }
     if ((unconditioned_total_corr >= 27)) {
-        expInfo["bonus"] += 0.25;
+        bonus += 0.25;
     }
     
     text_12.setText((("You have completed this part of the experiment.\n\nYou earned a bonus of \\$" + bonus.toString()) + " based on your performance.\n\nDon't forget to return for the second day of the experiment tomorrow! You will only receive your bonus payment if you return for the second day of the experiment.\n\nPress spacebar to confirm, and you will be routed to a post-experiment survey."));
@@ -4705,6 +4705,8 @@ function quitPsychoJS(message, isCompleted) {
   
   
   
+  
+  psychoJS.experiment.addData("bonus", bonus);
   
   
   
