@@ -556,7 +556,7 @@ function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  psychoJS.setRedirectUrls(((('https://harvard.az1.qualtrics.com/jfe/form/SV_eIJNfYb5MRm3Px3?PROLIFIC_PID=' + expInfo['participant']) + '&bonus_amt=') + bonus.toString()), '');
+  psychoJS.setRedirectUrls(((('https://harvard.az1.qualtrics.com/jfe/form/SV_eIJNfYb5MRm3Px3?PROLIFIC_PID=' + expInfo['participant']) + '&bonus_amt=') + expInfo['bonus'].toString()), '');
 
   return Scheduler.Event.NEXT;
 }
