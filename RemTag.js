@@ -2441,7 +2441,7 @@ function Pre_Reward_PracticeRoutineEnd(snapshot) {
             num_correct += 1;
         } else {
             practice_failed = true;
-            practice.finished = true;
+            trials.finished = true;
         }
     }
     
@@ -2477,7 +2477,7 @@ function check_practiceRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     if ((! practice_failed)) {
-        repeat_practice.finished = true;
+        trials.finished = true;
         console.log("finished");
         practice_failed = false;
         num_correct = 0;
@@ -3886,7 +3886,7 @@ function Reward_PracticeRoutineEnd(snapshot) {
             console.log("null");
         } else {
             practice_failed = true;
-            reward_practice.finished = true;
+            trials.finished = true;
         }
     }
     
@@ -3922,7 +3922,7 @@ function check_reward_practiceRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     if ((! practice_failed)) {
-        repeat_reward_practice.finished = true;
+        trials.finished = true;
         console.log("finished");
         practice_failed = false;
         num_correct = 0;
