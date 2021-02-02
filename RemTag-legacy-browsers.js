@@ -2443,7 +2443,7 @@ function Pre_Reward_PracticeRoutineEnd(snapshot) {
             num_correct += 1;
         } else {
             practice_failed = true;
-            currentLoop.finished = true;
+            practice.finished = true;
         }
     }
     
@@ -2479,7 +2479,7 @@ function check_practiceRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     if ((! practice_failed)) {
-        currentLoop.finished = true;
+        repeat_practice.finished = true;
         console.log("finished");
         practice_failed = false;
         num_correct = 0;
@@ -3028,7 +3028,6 @@ function routine_1RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(20.000000);
     // update component parameters for each repeat
-    text_19.setText((("You have completed block " + block_count.toString()) + "/2.\n\nIn 20 seconds, you will proceed to the next section.\n\nTo proceed immediately, press the spacebar to continue."));
     key_resp_4.keys = undefined;
     key_resp_4.rt = undefined;
     _key_resp_4_allKeys = [];
@@ -3072,6 +3071,10 @@ function routine_1RoutineEachFrame(snapshot) {
     frameRemains = 0.0 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_19.status === PsychoJS.Status.STARTED || text_19.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_19.setAutoDraw(false);
+    }
+    
+    if (text_19.status === PsychoJS.Status.STARTED){ // only update if being drawn
+      text_19.setText((("You have completed block " + block_count.toString()) + "/2.\n\nIn 20 seconds, you will proceed to the next section.\n\nTo proceed immediately, press the spacebar to continue."), false);
     }
     
     // *key_resp_4* updates
@@ -3893,7 +3896,7 @@ function Reward_PracticeRoutineEnd(snapshot) {
             console.log("null");
         } else {
             practice_failed = true;
-            currentLoop.finished = true;
+            reward_practice.finished = true;
         }
     }
     
@@ -3929,7 +3932,7 @@ function check_reward_practiceRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     if ((! practice_failed)) {
-        currentLoop.finished = true;
+        repeat_reward_practice.finished = true;
         console.log("finished");
         practice_failed = false;
         num_correct = 0;
