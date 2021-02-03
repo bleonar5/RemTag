@@ -1040,7 +1040,7 @@ function experimentInit() {
   instructions_page_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions_page_2',
-    text: 'For this phase, if you give the correct answer, you will get either a green star or a white star. Green stars indicate more money than white stars. If you respond correctly on at least 90% of GREEN star trials, you will receive a bonus of 5 dollars. If you respond correctly on at least 90% of WHITE star trials, you will receive a bonus of 25 cents. \n\nYou will receive information about the total bonus you earned tomorrow, at the end of the experiment. NOTE: You must return for day 2 and pass all attention and comprehension checks to receive any bonus.\n\nPress the spacebar to continue.',
+    text: 'For this phase, if you give the correct answer, you will get either a green star or a white star. Green stars indicate more money than white stars. If you respond correctly on at least 90% of GREEN star trials, you will receive a bonus of 5 dollars. If you respond correctly on at least 90% of WHITE star trials, you will receive a bonus of 25 cents. \n\nNOTE: You must return for day 2 and pass all attention and comprehension checks to receive any bonus.\n\nPress the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
@@ -4534,7 +4534,7 @@ function finalRoutineBegin(snapshot) {
         bonus += 0.25;
     }
     
-    text_12.setText((("You have completed this part of the experiment.\n\nYou earned a bonus of " + bonus.toString()) + "  dollars based on your performance.\n\nDon't forget to return for the second day of the experiment tomorrow! You will only receive your bonus payment if you return for the second day of the experiment.\n\nPress spacebar to confirm, and you will be routed to a post-experiment survey."));
+    text_12.setText("You have completed this part of the experiment.\nDon't forget to return for the second day of the experiment tomorrow! \nYou will only receive your bonus payment if you return for the second day of the experiment.\nPress spacebar to confirm, and you will be routed to a post-experiment survey.");
     key_resp_3.keys = undefined;
     key_resp_3.rt = undefined;
     _key_resp_3_allKeys = [];
