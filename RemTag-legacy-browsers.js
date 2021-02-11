@@ -1877,7 +1877,7 @@ function pre_reward_trialsLoopBegin(pre_reward_trialsLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, prereward_cond, (((((block_count - 1) * 30) + 1).toString() + ":") + (((block_count - 1) * 30) + 31).toString())),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, prereward_cond, ((((block_count - 1) * 30).toString() + ":") + (((block_count - 1) * 30) + 30).toString())),
     seed: undefined, name: 'pre_reward_trials'
   });
   psychoJS.experiment.addLoop(pre_reward_trials); // add the loop to the experiment
@@ -2031,7 +2031,7 @@ function reward_trialsLoopBegin(reward_trialsLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, reward_cond, (((((block_count - 1) * 30) + 1).toString() + ":") + (((block_count - 1) * 30) + 31).toString())),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, reward_cond, ((((block_count - 1) * 30).toString() + ":") + (((block_count - 1) * 30) + 30).toString())),
     seed: undefined, name: 'reward_trials'
   });
   psychoJS.experiment.addLoop(reward_trials); // add the loop to the experiment
