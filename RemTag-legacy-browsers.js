@@ -3936,20 +3936,6 @@ function check_reward_practiceRoutineBegin(snapshot) {
     check_reward_practiceClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    if ((! practice_failed)) {
-        text_7.text = "You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. You will now begin the first phase of the experiment. Press space bar to continue."
-        repeat_reward_practice.finished = true;
-        console.log("finished");
-        practice_failed = false;
-        num_correct = 0;
-        practice_count = 0;
-    } else {
-        text_7.text = "You must answer correctly on all practice trials to proceed. Restarting practice trials now. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. Press space bar to continue.";
-        num_correct = 0;
-        practice_failed = false;
-        practice_count = 0;
-    }
-    
     key_resp_2.keys = undefined;
     key_resp_2.rt = undefined;
     _key_resp_2_allKeys = [];
@@ -3978,6 +3964,20 @@ function check_reward_practiceRoutineEachFrame(snapshot) {
     t = check_reward_practiceClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    if ((! practice_failed)) {
+        text_7.text = "You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. You will now begin the first phase of the experiment. Press space bar to continue."
+        repeat_reward_practice.finished = true;
+        console.log("finished");
+        practice_failed = false;
+        num_correct = 0;
+        practice_count = 0;
+    } else {
+        text_7.text = "You must answer correctly on all practice trials to proceed. Restarting practice trials now. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. Press space bar to continue.";
+        num_correct = 0;
+        practice_failed = false;
+        practice_count = 0;
+    }
+    
     
     // *text_7* updates
     if (t >= 0.0 && text_7.status === PsychoJS.Status.NOT_STARTED) {
