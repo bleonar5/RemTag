@@ -3959,8 +3959,10 @@ function check_reward_practiceRoutineEachFrame(snapshot) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     if ((! practice_failed)) {
-        text_7.text = "You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. You will now begin the first phase of the experiment. Press space bar to continue."
+        text_7.text = "You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. You will now begin the first phase of the experiment. Press space bar to continue.";
+        console.log('go');
     } else {
+        console.log('stop');
         text_7.text = "You must answer correctly on all practice trials to proceed. Restarting practice trials now. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. Press space bar to continue.";
     }
     
