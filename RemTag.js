@@ -1189,7 +1189,7 @@ function experimentInit() {
   text_7 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_7',
-    text: 'default text',
+    text: 'You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys.\n\nYou will now begin the second phase of the experiment.\n\nPress space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
@@ -3101,7 +3101,7 @@ function routine_1RoutineEachFrame(snapshot) {
     }
     
     if ((block_count === 2)) {
-        msg = "end of the experiment";
+        msg = "end of the section";
     }
     
     // check if the Routine should terminate
@@ -3940,7 +3940,6 @@ function check_reward_practiceRoutineBegin(snapshot) {
         practice_count = 0;
     }
     
-    text_7.setText('You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys.\n\nYou will now begin the first phase of the experiment.\n\nPress space bar to continue.');
     key_resp_2.keys = undefined;
     key_resp_2.rt = undefined;
     _key_resp_2_allKeys = [];
