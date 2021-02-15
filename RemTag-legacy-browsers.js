@@ -853,7 +853,7 @@ function experimentInit() {
   text_6 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_6',
-    text: 'default text',
+    text: 'You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys.\n\nPress space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
@@ -2482,6 +2482,7 @@ function check_practiceRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     if ((! practice_failed)) {
+        text_6.text = "You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. Press space bar to continue.";
         repeat_practice.finished = true;
         console.log("finished");
         practice_failed = false;
@@ -2494,7 +2495,6 @@ function check_practiceRoutineBegin(snapshot) {
         practice_count = 0;
     }
     
-    text_6.setText('You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys.\n\nPress space bar to continue.');
     key_resp.keys = undefined;
     key_resp.rt = undefined;
     _key_resp_allKeys = [];
@@ -3937,6 +3937,7 @@ function check_reward_practiceRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     if ((! practice_failed)) {
+        text_7.text = "You have completed the practice trials. As a reminder, your task is to indicate which of the two images is the target image, using the 1 and 2 keys. You will now begin the first phase of the experiment. Press space bar to continue."
         repeat_reward_practice.finished = true;
         console.log("finished");
         practice_failed = false;
