@@ -3939,13 +3939,6 @@ function check_reward_practiceRoutineBegin(snapshot) {
     if ((! practice_failed)) {
         repeat_reward_practice.finished = true;
         console.log("finished");
-        practice_failed = false;
-        num_correct = 0;
-        practice_count = 0;
-    } else {
-        num_correct = 0;
-        practice_failed = false;
-        practice_count = 0;
     }
     
     key_resp_2.keys = undefined;
@@ -4046,6 +4039,9 @@ function check_reward_practiceRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    num_correct = 0;
+    practice_failed = false;
+    practice_count = 0;
     psychoJS.experiment.addData('key_resp_2.keys', key_resp_2.keys);
     if (typeof key_resp_2.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_2.rt', key_resp_2.rt);
